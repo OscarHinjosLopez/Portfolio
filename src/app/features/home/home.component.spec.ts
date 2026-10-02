@@ -16,8 +16,10 @@ describe('HomeComponent', () => {
       'APP-CREDENTIALS-STRIP',
       'APP-TECH-STACK',
       'APP-SELECTED-WORK',
+      'APP-EXPERIENCE-SECTION',
     ]);
     expect(element.querySelector('#work')).toBeTruthy();
     expect(element.querySelector('#skills')).toBeTruthy();
+    expect(element.querySelector('#experience')).toBeTruthy();
   });
 });

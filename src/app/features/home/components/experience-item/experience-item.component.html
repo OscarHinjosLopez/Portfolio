@@ -1,0 +1,35 @@
+<article
+  [attr.data-prominence]="experience().prominence"
+  [attr.aria-labelledby]="experience().id + '-heading'"
+>
+  <div class="metadata">
+    <span class="index" aria-hidden="true">{{ index() < 10 ? '0' + index() : index() }}</span>
+    <p class="years">
+      {{ experience().startDate.slice(0, 4) }} — {{ experience().endDate.slice(0, 4) }}
+    </p>
+  </div>
+  <div class="content">
+    <header>
+      <p class="sector">{{ experience().sector }}</p>
+      <h3 [id]="experience().id + '-heading'">
+        {{ experience().role }} <span class="company">{{ experience().company }}</span>
+      </h3>
+      <p class="location">{{ experience().location }}</p>
+      <p class="period">
+        <time [attr.datetime]="experience().startDate">{{ experience().startLabel }}</time> —
+        <time [attr.datetime]="experience().endDate">{{ experience().endLabel }}</time>
+      </p>
+    </header>
+    <p class="summary">{{ experience().summary }}</p>
+    <ul class="highlights">
+      @for (highlight of experience().highlights; track highlight) {
+        <li>{{ highlight }}</li>
+      }
+    </ul>
+    <ul class="technologies" aria-label="Tecnologías utilizadas">
+      @for (technology of experience().technologies; track technology) {
+        <li><app-tech-chip [label]="technology" /></li>
+      }
+    </ul>
+  </div>
+</article>

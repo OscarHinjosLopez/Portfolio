@@ -1,0 +1,119 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+article {
+  padding-block: v.$space-10;
+  border-bottom: 1px solid v.$border;
+}
+.metadata {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-4;
+  margin-bottom: v.$space-6;
+  font-family: v.$font-mono;
+}
+.index {
+  color: v.$text-primary;
+  font-size: v.$font-body-lg;
+}
+.years,
+.sector,
+.location,
+.period {
+  color: v.$text-secondary;
+  font-size: v.$font-body-sm;
+}
+.sector {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: v.$font-caption;
+  margin-bottom: v.$space-3;
+}
+h3 {
+  @include m.heading(v.$font-heading-3);
+}
+.company {
+  display: block;
+  margin-top: v.$space-2;
+  font-size: v.$font-body-lg;
+  font-weight: v.$font-weight-medium;
+}
+.location {
+  margin-top: v.$space-4;
+}
+.period {
+  margin-top: v.$space-1;
+}
+.summary {
+  margin-top: v.$space-6;
+  max-width: 65ch;
+}
+.highlights {
+  padding-left: v.$space-5;
+  margin-block: v.$space-5 v.$space-6;
+  color: v.$text-secondary;
+}
+.highlights li + li {
+  margin-top: v.$space-2;
+}
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+  list-style: none;
+  padding: 0;
+}
+.content {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+article[data-prominence='primary'] .company {
+  font-size: v.$font-heading-3;
+}
+article[data-prominence='compact'] {
+  padding-block: v.$space-6;
+}
+@include m.min-width(v.$breakpoint-tablet) {
+  article {
+    display: grid;
+    grid-template-columns: 11rem minmax(0, 1fr);
+  }
+  .metadata {
+    display: block;
+    margin: 0;
+    padding-right: v.$space-6;
+  }
+  .years {
+    margin-top: v.$space-3;
+  }
+  .content {
+    position: relative;
+    padding-left: v.$space-8;
+    border-left: 1px solid v.$border;
+    @include m.transition(border-color);
+  }
+  .content::before {
+    content: '';
+    position: absolute;
+    top: v.$space-1;
+    left: -3px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: v.$text-secondary;
+  }
+  article:hover .content {
+    border-color: v.$border-hover;
+  }
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  article {
+    grid-template-columns: 12.5rem minmax(0, 1fr);
+  }
+  .content {
+    padding-left: v.$space-12;
+  }
+}
