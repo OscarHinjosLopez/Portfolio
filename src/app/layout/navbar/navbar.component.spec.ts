@@ -3,6 +3,18 @@ import { Router, provideRouter } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
 
 describe('NavbarComponent', () => {
+  it('navigates to Contact and closes the mobile menu', async () => {
+    const fixture = TestBed.createComponent(NavbarComponent);
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    element.querySelector<HTMLButtonElement>('button')?.click();
+    await fixture.whenStable();
+    element.querySelector<HTMLAnchorElement>('a[href="/#contact"]')?.click();
+    await fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#contact');
+    expect(fixture.componentInstance.menuOpen()).toBe(false);
+    expect(element.querySelector('button')?.getAttribute('aria-expanded')).toBe('false');
+  });
   beforeEach(() =>
     TestBed.configureTestingModule({
       imports: [NavbarComponent],

@@ -1,0 +1,78 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+#contact {
+  border-top: 1px solid v.$border;
+  padding-block: clamp(5rem, 8vw, 10rem);
+  scroll-margin-top: calc(var(--navbar-height) + #{v.$space-4});
+}
+.eyebrow {
+  color: v.$text-secondary;
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+  letter-spacing: 0.06em;
+  margin-bottom: v.$space-8;
+}
+h2 {
+  max-width: 14ch;
+  margin-bottom: v.$space-6;
+}
+.contact-copy {
+  max-width: 58ch;
+  color: v.$text-secondary;
+  font-size: v.$font-body-lg;
+}
+.contact-email {
+  display: inline-block;
+  max-width: 100%;
+  margin-block: v.$space-12;
+  font-size: clamp(1.5rem, 0.75rem + 2.5vw, 3.5rem);
+  font-weight: v.$font-weight-medium;
+  letter-spacing: v.$letter-spacing-heading;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+.contact-bottom {
+  display: grid;
+  gap: v.$space-12;
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-4 v.$space-6;
+  padding: 0;
+  list-style: none;
+  color: v.$text-secondary;
+}
+.contact-links a {
+  display: inline-block;
+  padding-block: v.$space-3;
+  text-decoration: none;
+}
+a {
+  @include m.transition(color);
+}
+a:hover {
+  color: v.$accent-secondary;
+}
+.contact-availability {
+  font-size: v.$font-body-sm;
+}
+.contact-availability > p + p {
+  margin-top: v.$space-2;
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  .contact-bottom {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: end;
+    gap: v.$space-16;
+  }
+  .contact-email {
+    margin-block: v.$space-16;
+  }
+}

@@ -3,7 +3,9 @@ import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../../../shared/components/button/button.component';
 import { TechChipComponent } from '../../../../shared/components/tech-chip/tech-chip.component';
 
-export const CV_URL = '/assets/cv-oscar-hinjos.pdf';
+import { PROFILE } from '../../../../core/config/profile.config';
+
+export const CV_URL = PROFILE.cv;
 
 @Component({
   selector: 'app-hero',
