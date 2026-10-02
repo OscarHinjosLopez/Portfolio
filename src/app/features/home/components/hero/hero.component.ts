@@ -15,5 +15,5 @@ export const CV_URL = '/assets/cv-oscar-hinjos.pdf';
 })
 export class HeroComponent {
   readonly cvUrl = CV_URL;
-  readonly technologies = ['Angular', 'TypeScript', 'React', 'RxJS', 'JavaScript', 'HTML', 'CSS'] as const;
+  readonly technologies = ['Angular', 'TypeScript', 'React', 'RxJS'] as const;
 }

@@ -1,0 +1,122 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+.stack-layout {
+  display: grid;
+  gap: v.$space-4;
+  margin-top: v.$space-12;
+}
+.stack-category {
+  @include m.card;
+  min-width: 0;
+  padding: v.$space-6;
+}
+h3 {
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+  font-weight: v.$font-weight-medium;
+  line-height: v.$line-height-body;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.category-description {
+  max-width: 48ch;
+  margin-top: v.$space-4;
+  color: v.$text-secondary;
+  font-size: v.$font-body-sm;
+}
+.technology-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-2;
+  padding: 0;
+  margin-top: v.$space-6;
+  list-style: none;
+}
+.technology-list li {
+  max-width: 100%;
+}
+.frontend-core {
+  background: v.$surface-elevated;
+}
+.core-technologies {
+  margin-top: v.$space-8;
+  gap: v.$space-3;
+  li:first-child {
+    flex-basis: 100%;
+    margin-bottom: v.$space-2;
+  }
+  li:first-child app-tech-chip {
+    font-size: v.$font-heading-3;
+    padding: v.$space-2 v.$space-4;
+    border-radius: v.$radius-md;
+  }
+  li:nth-child(2) app-tech-chip,
+  li:nth-child(3) app-tech-chip {
+    color: v.$text-primary;
+    font-size: v.$font-body-sm;
+  }
+}
+.backend-knowledge {
+  background: transparent;
+}
+.training {
+  margin-top: v.$space-8;
+  padding-top: v.$space-8;
+  border-top: 1px solid v.$border;
+}
+.training-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-3;
+  color: v.$text-secondary;
+}
+.training-label {
+  padding: v.$space-1 v.$space-2;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-sm;
+  font-size: v.$font-caption;
+}
+
+@include m.min-width(v.$breakpoint-tablet) {
+  .stack-layout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .frontend-core,
+  .angular-ecosystem {
+    padding: v.$space-8;
+  }
+}
+
+@include m.min-width(v.$breakpoint-desktop) {
+  .stack-layout {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: v.$space-6;
+  }
+  .frontend-core {
+    grid-column: span 7;
+  }
+  .angular-ecosystem {
+    grid-column: span 5;
+  }
+  .frontend-core,
+  .angular-ecosystem {
+    padding: v.$space-10;
+  }
+  .react-ecosystem,
+  .quality-performance {
+    grid-column: span 6;
+    padding: v.$space-8;
+  }
+  .apis-delivery {
+    grid-column: span 8;
+  }
+  .backend-knowledge {
+    grid-column: span 4;
+  }
+}

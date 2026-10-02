@@ -1,0 +1,42 @@
+<section id="skills" class="section" aria-label="Tecnologías con las que construyo">
+  <div class="container">
+    <app-section-heading
+      eyebrow="02 / STACK"
+      title="Tecnologías con las que construyo"
+      description="Herramientas y tecnologías con las que desarrollo aplicaciones web mantenibles, escalables y orientadas a producto."
+    />
+    <div class="stack-layout">
+      @for (category of categories; track category.id) {
+        <article
+          class="stack-category"
+          [class]="category.id"
+          [attr.aria-labelledby]="category.id + '-title'"
+        >
+          <h3 [id]="category.id + '-title'">{{ category.title }}</h3>
+          <p class="category-description">{{ category.description }}</p>
+          <ul class="technology-list" [class.core-technologies]="category.id === 'frontend-core'">
+            @for (technology of category.technologies; track technology) {
+              <li>
+                <app-tech-chip
+                  [label]="technology"
+                  [variant]="technology === 'Angular' ? 'emphasis' : 'default'"
+                />
+              </li>
+            }
+          </ul>
+        </article>
+      }
+    </div>
+    <aside class="training" aria-labelledby="training-title">
+      <div class="training-heading">
+        <h3 id="training-title">Formación / Exploración</h3>
+        <span class="training-label">Formación práctica</span>
+      </div>
+      <ul class="technology-list">
+        @for (technology of training; track technology) {
+          <li><app-tech-chip [label]="technology" variant="subtle" /></li>
+        }
+      </ul>
+    </aside>
+  </div>
+</section>

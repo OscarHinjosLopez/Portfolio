@@ -1,6 +1,6 @@
 # Oscar Hinjos — Frontend Portfolio
 
-Base Angular de los Sprints 0, 1 y 2: standalone components, Router, SCSS y TypeScript estricto. Sin SSR.
+Base Angular de los Sprints 0 a 3: standalone components, Router, SCSS y TypeScript estricto. Sin SSR.
 
 ## Desarrollo
 
@@ -25,7 +25,7 @@ No hay lint configurado. Prettier viene incluido en la base de Angular CLI.
 ## Estructura
 
 - `src/app/layout/`: navbar y footer.
-- `src/app/features/home/`: página inicial y Hero.
+- `src/app/features/home/`: Hero, credenciales y Tech Stack.
 - `src/app/features/projects/`: placeholder de case studies.
 - `src/app/features/not-found/`: página 404.
 - `src/app/features/design-system/`: catálogo temporal de desarrollo, lazy-loaded.
@@ -56,7 +56,8 @@ borde en hover. El mixin `transition` respeta `prefers-reduced-motion`.
   `disabled` y `(click)` nativos para acciones; `routerLink` o `href` para enlaces.
   `disabled` solo corresponde a botones nativos. Los enlaces externos en una nueva
   pestaña deben llevar `rel="noopener noreferrer"`.
-- `TechChipComponent`: selector `app-tech-chip`; input `label` obligatorio.
+- `TechChipComponent`: selector `app-tech-chip`; input `label` obligatorio y
+  `variant` opcional (`default`, `emphasis`, `subtle`; por defecto `default`).
 - `SectionHeadingComponent`: selector `app-section-heading`; input `title`
   obligatorio, `eyebrow` y `description` opcionales. Renderiza un `h2`.
 - `DesignSystemComponent`: catálogo sin inputs públicos, en `/design-system`.
@@ -81,11 +82,11 @@ cambiar de ruta o pulsar Escape; Escape devuelve el foco al botón de menú.
 
 Home contiene un único main y el Hero, con un solo h1. El título usa display-xl
 (48–88 px), el copy tiene un máximo de 600 px y la metadata aparece a la derecha
-desde 1024 px. La altura mínima usa 100svh para adaptarse a la interfaz móvil.
+desde 1024 px. La altura mínima usa 90svh para dar continuidad a las credenciales.
 El footer existente se conserva.
 
-Los enlaces Work, Experience, Skills, About, Contact y Ver proyectos apuntan a
-anchors futuros de Home. No se han creado destinos ni secciones ficticias. El
+Skills apunta a la sección real `#skills`. Los enlaces Work, Experience, About,
+Contact y Ver proyectos apuntan a anchors futuros de Home. El
 router queda preparado para desplazar a esos anchors cuando existan, con offset
 para la navbar y scroll automático al activar movimiento reducido.
 
@@ -101,8 +102,36 @@ El enlace del Hero lo descarga como `CV_Oscar_Hinjos.pdf`.
 - Comprueba apertura/cierre del menú, aria-expanded, Escape y navegación con Tab.
 - Desde `/design-system`, pulsa Work: debe volver a Home con `#work`.
 - Comprueba foco visible, skip-link, navbar sticky y movimiento reducido.
-- Comprueba la descarga del CV; los anchors tendrán contenido en futuros sprints.
+- Comprueba la descarga del CV; los anchors restantes tendrán contenido en futuros sprints.
 - `/design-system` sigue disponible y no aparece en la navbar.
+
+## Tech Stack y credenciales — Sprint 3
+
+Contenido contrastado con el CV real de Oscar, sin niveles de dominio ni años calculados.
+Las credenciales son Desde 2022 / Experiencia profesional, Angular / Especialización
+principal, TypeScript / Stack principal y React / Experiencia profesional.
+
+El stack se organiza en Frontend Core, Angular Ecosystem, React Ecosystem,
+Quality & Performance, APIs & Delivery y Backend Knowledge. Angular, TypeScript
+y RxJS tienen mayor relevancia; backend se presenta como conocimiento complementario.
+Reactive Forms y Routing se muestran como capacidades del stack Angular.
+
+Next.js, React Query, Zustand, MERN y PERN aparecen únicamente en Formación / Exploración,
+etiquetados como Formación práctica. No se incluyen tecnologías ausentes del CV.
+
+La composición pasa de una columna en móvil a dos en tablet y una distribución
+editorial de 12 columnas desde 1024 px. Las credenciales usan 2 × 2 en móvil y
+cuatro columnas desde 768 px. Los chips envuelven su contenido sin ocultar texto.
+
+### Revisión del Sprint 3
+
+- Abre http://127.0.0.1:4200/#skills o pulsa Skills en la navbar.
+- Comprueba 375, 430, 768, 1024, 1440 y 1920 px.
+- Revisa la transición Hero → credenciales → Tech Stack.
+- Comprueba la jerarquía de Angular y la separación de formación y backend.
+- Desde `/design-system`, Skills debe volver a Home y desplazar hasta la sección.
+- Comprueba menú móvil, foco visible y preferencia de movimiento reducido.
+- El CV y `/design-system` siguen disponibles; no se han creado secciones del Sprint 4.
 
 ## Comprobaciones manuales
 
