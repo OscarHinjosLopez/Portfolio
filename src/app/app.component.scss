@@ -1,0 +1,19 @@
+@use '../styles/variables' as styles;
+
+:host {
+  display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: styles.$spacing-base;
+  top: styles.$spacing-base;
+  padding: styles.$spacing-base;
+  background: styles.$background-secondary;
+  color: styles.$text-primary;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

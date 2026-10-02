@@ -1,0 +1,10 @@
+@use './styles/index' as styles;
+
+body {
+  background: styles.$background-primary;
+  color: styles.$text-primary;
+}
+
+a {
+  color: inherit;
+}
