@@ -6,6 +6,8 @@ import { HomeComponent } from './features/home/home.component';
 import { ProjectPlaceholderComponent } from './features/projects/project-placeholder.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
 import { DesignSystemComponent } from './features/design-system/design-system.component';
+import { PortfolioEngineeringComponent } from './features/projects/portfolio-engineering/portfolio-engineering.component';
+import { Title } from '@angular/platform-browser';
 
 describe('Application routes', () => {
   beforeEach(() => {
@@ -34,17 +36,40 @@ describe('Application routes', () => {
 
   it('should show a placeholder for a project slug', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/portfolio-engineering', ProjectPlaceholderComponent);
+    await harness.navigateByUrl('/projects/unknown-project', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('Case study en construcción');
   });
 
   it('updates the project title when reusing the placeholder route', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/portfolio-engineering', ProjectPlaceholderComponent);
-    expect(harness.routeNativeElement?.textContent).toContain('Portfolio Engineering');
+    await harness.navigateByUrl('/projects/ai-knowledge-assistant', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('AI Knowledge Assistant');
     await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('LoL Scenario Trainer');
     expect(harness.routeNativeElement?.querySelector('a')?.getAttribute('href')).toBe('/#work');
+  });
+
+  it('loads the portfolio case study and returns to projects and contact', async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/projects/portfolio-engineering', PortfolioEngineeringComponent);
+    expect(TestBed.inject(Title).getTitle()).toBe('Portfolio Engineering | Oscar Hinjos');
+    expect(harness.routeNativeElement?.querySelector('#architecture')).toBeTruthy();
+    const contextLink = harness.routeNativeElement?.querySelector<HTMLAnchorElement>('.toc a');
+    expect(contextLink?.getAttribute('href')).toBe('/projects/portfolio-engineering#context');
+    contextLink?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/projects/portfolio-engineering#context');
+    harness.routeNativeElement
+      ?.querySelector<HTMLAnchorElement>('.closing a[href="/#work"]')
+      ?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#work');
+    await harness.navigateByUrl('/projects/portfolio-engineering', PortfolioEngineeringComponent);
+    harness.routeNativeElement
+      ?.querySelector<HTMLAnchorElement>('.closing a[href="/#contact"]')
+      ?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#contact');
   });
 
   it('should show 404 and return Home through routerLink', async () => {
