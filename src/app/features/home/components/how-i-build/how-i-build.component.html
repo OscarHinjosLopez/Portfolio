@@ -1,0 +1,22 @@
+<section id="how-i-build" class="section" aria-labelledby="how-i-build-heading">
+  <div class="container">
+    <app-section-heading
+      id="how-i-build-heading"
+      eyebrow="05 / HOW I BUILD"
+      title="Cómo construyo frontend"
+      description="Principios que aplico para construir interfaces mantenibles, rápidas y preparadas para evolucionar."
+    />
+    <ol class="principles">
+      @for (principle of principles; track principle.index) {
+        <li class="principle">
+          <div class="principle-marker" aria-hidden="true">
+            <span class="index">{{ principle.index }}</span
+            ><span class="label">{{ principle.label }}</span>
+          </div>
+          <h3>{{ principle.title }}</h3>
+          <p>{{ principle.description }}</p>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

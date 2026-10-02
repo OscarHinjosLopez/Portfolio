@@ -1,0 +1,63 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+#about {
+  border-top: 1px solid v.$border;
+  scroll-margin-top: calc(var(--navbar-height) + #{v.$space-4});
+}
+.about-layout {
+  display: grid;
+  gap: v.$space-10;
+  margin-top: v.$space-8;
+}
+.about-copy {
+  min-width: 0;
+  max-width: 65ch;
+}
+.about-copy p {
+  color: v.$text-secondary;
+}
+.about-copy p + p {
+  margin-top: v.$space-6;
+}
+.about-copy .intro {
+  color: v.$text-primary;
+  font-size: v.$font-body-lg;
+}
+.metadata {
+  display: grid;
+  gap: v.$space-5;
+  margin: 0;
+}
+.metadata div {
+  min-width: 0;
+}
+dt {
+  color: v.$text-secondary;
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+  margin-bottom: v.$space-2;
+}
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+@include m.min-width(v.$breakpoint-tablet) {
+  .metadata {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  .about-layout {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: v.$space-16;
+  }
+  .metadata {
+    grid-template-columns: 1fr;
+    border-left: 1px solid v.$border-hover;
+    padding-left: v.$space-10;
+  }
+}
