@@ -5,17 +5,28 @@ import { routes } from './app.routes';
 import { HomeComponent } from './features/home/home.component';
 import { ProjectPlaceholderComponent } from './features/projects/project-placeholder.component';
 import { NotFoundComponent } from './features/not-found/not-found.component';
+import { DesignSystemComponent } from './features/design-system/design-system.component';
 
 describe('Application routes', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({ providers: [provideRouter(routes)] });
   });
 
+  it('should show the design system catalog at /design-system', async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/design-system', DesignSystemComponent);
+    const element = harness.routeNativeElement;
+    expect(element?.querySelector('h1')?.textContent).toBe('Design System');
+    expect(element?.querySelectorAll('section').length).toBe(6);
+    expect(element?.querySelectorAll('button[appButton]').length).toBe(12);
+    expect(element?.querySelector('main')?.id).toBe('main-content');
+  });
+
   it('should show Home at / with an accessible main target', async () => {
     const harness = await RouterTestingHarness.create();
     await harness.navigateByUrl('/', HomeComponent);
     const main = harness.routeNativeElement?.querySelector('main');
-    expect(main?.textContent).toBe('Oscar Hinjos — Frontend Portfolio');
+    expect(main?.textContent?.trim()).toBe('Oscar Hinjos — Frontend Portfolio');
     expect(main?.id).toBe('main-content');
     expect(main?.getAttribute('tabindex')).toBe('-1');
   });

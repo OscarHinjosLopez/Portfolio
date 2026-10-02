@@ -1,4 +1,40 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
 body {
-  font-family: Inter, system-ui, sans-serif;
-  line-height: 1.5;
+  font-family: v.$font-family;
+  font-size: v.$font-body;
+  font-weight: v.$font-weight-regular;
+  line-height: v.$line-height-body;
+}
+
+.display-xl {
+  @include m.heading(v.$font-display-xl);
+}
+.display-lg {
+  @include m.heading(v.$font-display-lg);
+}
+h1,
+.heading-1 {
+  @include m.heading(v.$font-heading-1);
+}
+h2,
+.heading-2 {
+  @include m.heading(v.$font-heading-2);
+}
+h3,
+.heading-3 {
+  @include m.heading(v.$font-heading-3);
+}
+.body-lg {
+  font-size: v.$font-body-lg;
+}
+.body {
+  font-size: v.$font-body;
+}
+.body-sm {
+  font-size: v.$font-body-sm;
+}
+.caption {
+  font-size: v.$font-caption;
 }

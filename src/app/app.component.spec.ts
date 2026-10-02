@@ -1,5 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { provideRouter, Router } from '@angular/router';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
 
@@ -15,12 +15,25 @@ describe('AppComponent', () => {
     expect(TestBed.createComponent(AppComponent).componentInstance).toBeTruthy();
   });
 
+  it('should focus the main content without navigating away from the catalog', async () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    await fixture.whenStable();
+    const router = TestBed.inject(Router);
+    await router.navigateByUrl('/design-system');
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    element.querySelector<HTMLAnchorElement>('.skip-link')?.click();
+    await fixture.whenStable();
+    expect(router.url).toBe('/design-system');
+    expect(document.activeElement).toBe(element.querySelector('main'));
+  });
+
   it('should render the layout and skip link', async () => {
     const fixture = TestBed.createComponent(AppComponent);
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelector('header nav')?.textContent).toBe('Oscar Hinjos');
-    expect(element.querySelector('footer')?.textContent).toBe('© Oscar Hinjos');
+    expect(element.querySelector('footer')?.textContent?.trim()).toBe('© Oscar Hinjos');
     expect(element.querySelector('router-outlet')).toBeTruthy();
     expect(element.querySelector('.skip-link')?.getAttribute('href')).toBe('#main-content');
   });

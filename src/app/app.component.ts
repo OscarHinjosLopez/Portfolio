@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DOCUMENT, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -11,4 +11,14 @@ import { FooterComponent } from './layout/footer/footer.component';
   styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class AppComponent {
+  private readonly document = inject(DOCUMENT);
+
+  protected skipToContent(event: MouseEvent): void {
+    const main = this.document.getElementById('main-content');
+    if (main) {
+      event.preventDefault();
+      main.focus();
+    }
+  }
+}

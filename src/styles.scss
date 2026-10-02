@@ -8,3 +8,29 @@ body {
 a {
   color: inherit;
 }
+
+::selection {
+  background: rgba(styles.$accent, 0.3);
+  color: styles.$text-primary;
+}
+
+:focus-visible {
+  outline: 2px solid styles.$accent-secondary;
+  outline-offset: 4px;
+}
+
+html {
+  scrollbar-color: styles.$text-secondary styles.$background-primary;
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0s;
+    animation-duration: 0s;
+    animation-iteration-count: 1;
+    scroll-behavior: auto;
+  }
+}
