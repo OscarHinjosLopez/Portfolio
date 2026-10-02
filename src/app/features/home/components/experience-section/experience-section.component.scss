@@ -1,0 +1,10 @@
+@use '../../../../../styles/variables' as v;
+:host {
+  display: block;
+}
+#experience {
+  scroll-margin-top: calc(var(--navbar-height) + #{v.$space-4});
+}
+.timeline {
+  margin-top: v.$space-8;
+}

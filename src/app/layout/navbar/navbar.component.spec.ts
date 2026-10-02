@@ -84,4 +84,16 @@ describe('NavbarComponent', () => {
     await fixture.whenStable();
     expect(fixture.componentInstance.menuOpen()).toBe(false);
   });
+
+  it('navigates to Experience and closes the mobile menu', async () => {
+    const fixture = TestBed.createComponent(NavbarComponent);
+    await fixture.whenStable();
+    fixture.componentInstance.toggleMenu();
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    element.querySelector<HTMLAnchorElement>('a[href="/#experience"]')?.click();
+    await fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#experience');
+    expect(fixture.componentInstance.menuOpen()).toBe(false);
+  });
 });
