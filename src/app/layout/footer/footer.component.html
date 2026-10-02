@@ -1,0 +1,18 @@
+<footer>
+  <div class="container footer-layout">
+    <a class="brand" routerLink="/" fragment="top" aria-label="Oscar Hinjos · Inicio"
+      >OH<span aria-hidden="true">.</span></a
+    >
+    <p>© {{ currentYear }} Oscar Hinjos</p>
+    <p>Built with Angular</p>
+    <nav aria-label="Enlaces del pie de página">
+      <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer"
+        >LinkedIn <span aria-hidden="true">↗</span></a
+      >
+      <a [href]="profile.github" target="_blank" rel="noopener noreferrer"
+        >GitHub <span aria-hidden="true">↗</span></a
+      >
+      <a routerLink="/" fragment="top">Volver arriba <span aria-hidden="true">↑</span></a>
+    </nav>
+  </div>
+</footer>

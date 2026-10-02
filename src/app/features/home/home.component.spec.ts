@@ -19,11 +19,17 @@ describe('HomeComponent', () => {
       'APP-EXPERIENCE-SECTION',
       'APP-HOW-I-BUILD',
       'APP-ABOUT',
+      'APP-CONTACT',
     ]);
     expect(element.querySelector('#work')).toBeTruthy();
     expect(element.querySelector('#skills')).toBeTruthy();
     expect(element.querySelector('#experience')).toBeTruthy();
     expect(element.querySelector('#how-i-build')).toBeTruthy();
     expect(element.querySelector('#about')).toBeTruthy();
+    const contact = element.querySelector('#contact')!;
+    const about = element.querySelector('#about')!;
+    expect(contact).toBeTruthy();
+    expect(about.compareDocumentPosition(contact) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(element.querySelector('#top')).toBeTruthy();
   });
 });

@@ -35,7 +35,10 @@ describe('AppComponent', () => {
     expect(element.querySelector('header nav .brand')?.getAttribute('aria-label')).toBe(
       'Oscar Hinjos · Inicio',
     );
-    expect(element.querySelector('footer')?.textContent?.trim()).toBe('© Oscar Hinjos');
+    expect(element.querySelector('footer')?.textContent).toContain(
+      `© ${new Date().getFullYear()} Oscar Hinjos`,
+    );
+    expect(element.querySelector('footer')?.textContent).toContain('Built with Angular');
     expect(element.querySelector('router-outlet')).toBeTruthy();
     expect(element.querySelector('.skip-link')?.getAttribute('href')).toBe('#main-content');
   });

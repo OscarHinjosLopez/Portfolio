@@ -1,0 +1,45 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+footer {
+  border-top: 1px solid v.$border;
+  padding-block: v.$space-8;
+}
+.footer-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-4 v.$space-6;
+  color: v.$text-secondary;
+  font-size: v.$font-body-sm;
+}
+.brand {
+  font-size: v.$font-heading-3;
+  font-weight: v.$font-weight-bold;
+  color: v.$text-primary;
+}
+.brand span {
+  color: v.$accent-secondary;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-4 v.$space-6;
+  flex-basis: 100%;
+}
+a {
+  padding-block: v.$space-2;
+  text-decoration: none;
+  @include m.transition(color);
+}
+a:hover {
+  color: v.$accent-secondary;
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  .footer-layout {
+    justify-content: space-between;
+  }
+  nav {
+    flex-basis: auto;
+  }
+}

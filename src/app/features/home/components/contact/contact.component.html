@@ -1,0 +1,38 @@
+<section id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <p class="eyebrow">07 / CONTACT</p>
+    <h2 id="contact-heading" class="display-xl">¿Construimos algo?</h2>
+    <p class="contact-copy">
+      Estoy abierto a nuevas oportunidades como Frontend Engineer, especialmente en proyectos donde
+      pueda aportar con Angular, TypeScript y desarrollo de producto.
+    </p>
+    <a class="contact-email" [href]="'mailto:' + profile.email">{{ profile.email }}</a>
+    <div class="contact-bottom">
+      <ul class="contact-links" aria-label="Enlaces profesionales">
+        <li>
+          <a [href]="profile.linkedin" target="_blank" rel="noopener noreferrer"
+            >LinkedIn <span aria-hidden="true">↗</span></a
+          >
+        </li>
+        <li>
+          <a [href]="profile.github" target="_blank" rel="noopener noreferrer"
+            >GitHub <span aria-hidden="true">↗</span></a
+          >
+        </li>
+        <li>
+          <a [href]="profile.cv" download="CV_Oscar_Hinjos.pdf"
+            >Descargar CV <span aria-hidden="true">↓</span></a
+          >
+        </li>
+      </ul>
+      <div class="contact-availability">
+        <p class="availability">
+          <span class="availability-dot" aria-hidden="true"></span>Disponible para nuevas
+          oportunidades
+        </p>
+        <p>Madrid · España</p>
+        <p class="text-secondary">Remoto / Híbrido</p>
+      </div>
+    </div>
+  </div>
+</section>
