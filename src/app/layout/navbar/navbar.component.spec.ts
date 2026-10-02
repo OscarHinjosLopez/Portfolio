@@ -75,13 +75,15 @@ describe('NavbarComponent', () => {
     expect(TestBed.inject(Router).url).toBe('/#work');
   });
 
-  it('closes on route changes', async () => {
+  it('navigates to About and closes the mobile menu', async () => {
     const fixture = TestBed.createComponent(NavbarComponent);
     await fixture.whenStable();
     fixture.componentInstance.toggleMenu();
     await fixture.whenStable();
-    await TestBed.inject(Router).navigateByUrl('/#about');
+    const element = fixture.nativeElement as HTMLElement;
+    element.querySelector<HTMLAnchorElement>('a[href="/#about"]')?.click();
     await fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#about');
     expect(fixture.componentInstance.menuOpen()).toBe(false);
   });
 

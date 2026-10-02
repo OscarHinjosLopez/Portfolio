@@ -1,0 +1,58 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+#how-i-build {
+  scroll-margin-top: calc(var(--navbar-height) + #{v.$space-4});
+}
+.principles {
+  display: grid;
+  gap: v.$space-8;
+  margin-top: v.$space-12;
+  padding: 0;
+  list-style: none;
+}
+.principle {
+  min-width: 0;
+  border-top: 1px solid v.$border-hover;
+  padding-top: v.$space-5;
+}
+.principle-marker {
+  display: flex;
+  align-items: baseline;
+  gap: v.$space-4;
+}
+.index {
+  color: v.$accent-secondary;
+  font-family: v.$font-mono;
+  font-size: v.$font-heading-3;
+}
+.label {
+  color: v.$text-secondary;
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+}
+h3 {
+  @include m.heading(v.$font-body-lg);
+  margin-block: v.$space-5 v.$space-3;
+}
+.principle p {
+  color: v.$text-secondary;
+  font-size: v.$font-body-sm;
+}
+@include m.min-width(v.$breakpoint-tablet) {
+  .principles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  .principles {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .principle-marker {
+    flex-direction: column;
+    gap: v.$space-3;
+  }
+}

@@ -17,9 +17,13 @@ describe('HomeComponent', () => {
       'APP-TECH-STACK',
       'APP-SELECTED-WORK',
       'APP-EXPERIENCE-SECTION',
+      'APP-HOW-I-BUILD',
+      'APP-ABOUT',
     ]);
     expect(element.querySelector('#work')).toBeTruthy();
     expect(element.querySelector('#skills')).toBeTruthy();
     expect(element.querySelector('#experience')).toBeTruthy();
+    expect(element.querySelector('#how-i-build')).toBeTruthy();
+    expect(element.querySelector('#about')).toBeTruthy();
   });
 });
