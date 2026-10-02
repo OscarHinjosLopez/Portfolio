@@ -32,7 +32,9 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
-    expect(element.querySelector('header nav')?.textContent).toBe('Oscar Hinjos');
+    expect(element.querySelector('header nav .brand')?.getAttribute('aria-label')).toBe(
+      'Oscar Hinjos · Inicio',
+    );
     expect(element.querySelector('footer')?.textContent?.trim()).toBe('© Oscar Hinjos');
     expect(element.querySelector('router-outlet')).toBeTruthy();
     expect(element.querySelector('.skip-link')?.getAttribute('href')).toBe('#main-content');

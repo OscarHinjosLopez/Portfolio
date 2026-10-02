@@ -1,5 +1,12 @@
 @use './styles/index' as styles;
 
+:root {
+  --navbar-height: #{styles.$navbar-height-mobile};
+  @include styles.min-width(styles.$breakpoint-tablet) {
+    --navbar-height: #{styles.$navbar-height-desktop};
+  }
+}
+
 body {
   background: styles.$background-primary;
   color: styles.$text-primary;
@@ -20,11 +27,16 @@ a {
 }
 
 html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--navbar-height) + #{styles.$space-4});
   scrollbar-color: styles.$text-secondary styles.$background-primary;
   scrollbar-width: thin;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   *,
   *::before,
   *::after {

@@ -1,6 +1,6 @@
 # Oscar Hinjos — Frontend Portfolio
 
-Base Angular de los Sprints 0 y 1: standalone components, Router, SCSS y TypeScript estricto. Sin SSR.
+Base Angular de los Sprints 0, 1 y 2: standalone components, Router, SCSS y TypeScript estricto. Sin SSR.
 
 ## Desarrollo
 
@@ -25,7 +25,7 @@ No hay lint configurado. Prettier viene incluido en la base de Angular CLI.
 ## Estructura
 
 - `src/app/layout/`: navbar y footer.
-- `src/app/features/home/`: página inicial mínima.
+- `src/app/features/home/`: página inicial y Hero.
 - `src/app/features/projects/`: placeholder de case studies.
 - `src/app/features/not-found/`: página 404.
 - `src/app/features/design-system/`: catálogo temporal de desarrollo, lazy-loaded.
@@ -72,6 +72,37 @@ La paleta base solicitada se conserva. No se descargan fuentes ni se añaden dep
 - Comprueba hover, active, disabled y navegación interna/externa.
 - Usa Tab y Enter para comprobar foco y salto al contenido en la ruta actual.
 - Activa la preferencia de movimiento reducido: las transiciones deben desaparecer.
+
+## Navbar y Hero — Sprint 2
+
+Abre http://127.0.0.1:4200/. La navbar sticky usa la marca OH., enlaces internos
+y un menú móvil por debajo de 768 px. El menú se cierra al seleccionar un enlace,
+cambiar de ruta o pulsar Escape; Escape devuelve el foco al botón de menú.
+
+Home contiene un único main y el Hero, con un solo h1. El título usa display-xl
+(48–88 px), el copy tiene un máximo de 600 px y la metadata aparece a la derecha
+desde 1024 px. La altura mínima usa 100svh para adaptarse a la interfaz móvil.
+El footer existente se conserva.
+
+Los enlaces Work, Experience, Skills, About, Contact y Ver proyectos apuntan a
+anchors futuros de Home. No se han creado destinos ni secciones ficticias. El
+router queda preparado para desplazar a esos anchors cuando existan, con offset
+para la navbar y scroll automático al activar movimiento reducido.
+
+### CV
+
+`CV_URL` en `hero.component.ts` apunta a `/assets/cv-oscar-hinjos.pdf`.
+El PDF proporcionado por Oscar está en `public/assets/cv-oscar-hinjos.pdf`.
+El enlace del Hero lo descarga como `CV_Oscar_Hinjos.pdf`.
+
+### Revisión del Sprint 2
+
+- Comprueba Home a 375, 430, 768, 1024, 1440 y 1920 px.
+- Comprueba apertura/cierre del menú, aria-expanded, Escape y navegación con Tab.
+- Desde `/design-system`, pulsa Work: debe volver a Home con `#work`.
+- Comprueba foco visible, skip-link, navbar sticky y movimiento reducido.
+- Comprueba la descarga del CV; los anchors tendrán contenido en futuros sprints.
+- `/design-system` sigue disponible y no aparece en la navbar.
 
 ## Comprobaciones manuales
 

@@ -1,0 +1,118 @@
+@use '../../../../../styles/variables' as v;
+@use '../../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--navbar-height));
+  padding-block: clamp(3rem, 5vw, 6rem);
+}
+
+.hero-layout {
+  display: grid;
+  align-items: end;
+  gap: v.$space-12;
+}
+
+.hero-content {
+  min-width: 0;
+}
+
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: v.$space-2;
+  max-width: 100%;
+  padding: v.$space-2 v.$space-3;
+  margin-bottom: v.$space-8;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-pill;
+  color: v.$text-secondary;
+  font-size: v.$font-caption;
+  line-height: 1.4;
+}
+
+.availability-dot {
+  flex: 0 0 v.$space-2;
+  height: v.$space-2;
+  border-radius: v.$radius-pill;
+  background: v.$success;
+}
+
+.hero-name {
+  margin-bottom: v.$space-4;
+  color: v.$text-primary;
+  font-size: v.$font-body-lg;
+  font-weight: v.$font-weight-medium;
+}
+
+h1 {
+  margin-bottom: v.$space-6;
+  line-height: 0.98;
+  font-weight: v.$font-weight-semibold;
+}
+
+.title-dot {
+  color: v.$accent-secondary;
+}
+
+.hero-description {
+  max-width: 37.5rem;
+  color: v.$text-secondary;
+  font-size: v.$font-body-lg;
+  line-height: v.$line-height-body;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: v.$space-3;
+  margin-top: v.$space-8;
+}
+
+.hero-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2;
+  list-style: none;
+  padding: 0;
+  margin-top: v.$space-8;
+}
+
+.hero-metadata {
+  padding-left: v.$space-5;
+  border-left: 1px solid v.$border-hover;
+  color: v.$text-secondary;
+}
+
+.metadata-label {
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+  letter-spacing: 0.06em;
+}
+
+.metadata-location {
+  margin-top: v.$space-4;
+  color: v.$text-primary;
+  font-size: v.$font-body-sm;
+}
+
+.metadata-availability {
+  margin-top: v.$space-1;
+  font-size: v.$font-caption;
+}
+
+@include m.min-width(v.$breakpoint-desktop) {
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: v.$space-16;
+  }
+  .hero-metadata {
+    margin-bottom: v.$space-2;
+  }
+}
