@@ -1,0 +1,115 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: v.$z-header;
+}
+
+header {
+  background: rgba(v.$background-primary, 0.94);
+  border-bottom: 1px solid v.$border;
+  @supports (backdrop-filter: blur(12px)) {
+    background: rgba(v.$background-primary, 0.78);
+    backdrop-filter: blur(12px);
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--navbar-height);
+}
+
+.brand {
+  color: v.$text-primary;
+  font-size: 1.5rem;
+  font-weight: v.$font-weight-bold;
+  letter-spacing: v.$letter-spacing-heading;
+  text-decoration: none;
+  span {
+    color: v.$accent-secondary;
+  }
+}
+
+.menu-toggle {
+  min-height: v.$space-12;
+  gap: v.$space-3;
+}
+
+.menu-icon {
+  display: grid;
+  gap: v.$space-1;
+  width: v.$space-4;
+  span {
+    height: 1px;
+    background: currentColor;
+  }
+  &.is-open {
+    gap: 0;
+  }
+  &.is-open span:first-child {
+    transform: rotate(45deg);
+  }
+  &.is-open span:last-child {
+    transform: rotate(-45deg);
+  }
+}
+
+.navigation-panel {
+  display: none;
+  position: absolute;
+  top: 100%;
+  inset-inline: 0;
+  padding: v.$space-4 v.$container-padding-mobile v.$space-6;
+  background: v.$background-primary;
+  border-bottom: 1px solid v.$border;
+  box-shadow: v.$shadow-sm;
+  &.is-open {
+    display: grid;
+    gap: v.$space-4;
+  }
+}
+
+.navigation-links {
+  display: grid;
+  list-style: none;
+  padding: 0;
+  a {
+    display: block;
+    padding-block: v.$space-3;
+    color: v.$text-secondary;
+    font-size: v.$font-body-sm;
+    font-weight: v.$font-weight-medium;
+    text-decoration: none;
+    @include m.transition(color);
+    &:hover {
+      color: v.$text-primary;
+    }
+  }
+}
+
+@include m.min-width(v.$breakpoint-tablet) {
+  .menu-toggle {
+    display: none;
+  }
+  .navigation-panel,
+  .navigation-panel.is-open {
+    position: static;
+    display: flex;
+    align-items: center;
+    gap: v.$space-8;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+  .navigation-links {
+    display: flex;
+    align-items: center;
+    gap: v.$space-6;
+  }
+}

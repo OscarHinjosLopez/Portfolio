@@ -1,0 +1,36 @@
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero-layout">
+    <div class="hero-content">
+      <p class="availability">
+        <span class="availability-dot" aria-hidden="true"></span>Disponible para nuevas
+        oportunidades
+      </p>
+      <p class="hero-name">Oscar Hinjos</p>
+      <h1 id="hero-title" class="display-xl">
+        Frontend<br />Engineer<span class="title-dot">.</span>
+      </h1>
+      <p class="hero-description">
+        Construyo aplicaciones web modernas, escalables y orientadas a producto con Angular, React y
+        TypeScript.
+      </p>
+      <div class="hero-actions">
+        <a appButton [routerLink]="['/']" fragment="work"
+          >Ver proyectos <span aria-hidden="true">↓</span></a
+        >
+        <a appButton variant="secondary" [href]="cvUrl" download="CV_Oscar_Hinjos.pdf"
+          >Descargar CV <span aria-hidden="true">↗</span></a
+        >
+      </div>
+      <ul class="hero-technologies" aria-label="Stack principal">
+        @for (technology of technologies; track technology) {
+          <li><app-tech-chip [label]="technology" /></li>
+        }
+      </ul>
+    </div>
+    <aside class="hero-metadata" aria-label="Ubicación y modalidad de trabajo">
+      <p class="metadata-label">01 / FRONTEND ENGINEER</p>
+      <p class="metadata-location">Madrid · España</p>
+      <p class="metadata-availability">Disponible para remoto / híbrido</p>
+    </aside>
+  </div>
+</section>

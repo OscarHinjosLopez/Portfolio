@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { HeroComponent } from './components/hero/hero.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  template: `<main id="main-content" tabindex="-1" class="container section body-lg">
-    Oscar Hinjos — Frontend Portfolio
-  </main>`,
+  imports: [HeroComponent],
+  template: '<main id="main-content" tabindex="-1"><app-hero /></main>',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {}

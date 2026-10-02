@@ -26,7 +26,8 @@ describe('Application routes', () => {
     const harness = await RouterTestingHarness.create();
     await harness.navigateByUrl('/', HomeComponent);
     const main = harness.routeNativeElement?.querySelector('main');
-    expect(main?.textContent?.trim()).toBe('Oscar Hinjos — Frontend Portfolio');
+    expect(main?.querySelector('app-hero')).toBeTruthy();
+    expect(main?.querySelector('h1')?.textContent).toContain('Frontend');
     expect(main?.id).toBe('main-content');
     expect(main?.getAttribute('tabindex')).toBe('-1');
   });
@@ -50,6 +51,6 @@ describe('Application routes', () => {
     await harness.fixture.whenStable();
     harness.detectChanges();
     expect(TestBed.inject(Router).url).toBe('/');
-    expect(harness.routeNativeElement?.textContent).toContain('Oscar Hinjos — Frontend Portfolio');
+    expect(harness.routeNativeElement?.querySelector('app-hero')).toBeTruthy();
   });
 });

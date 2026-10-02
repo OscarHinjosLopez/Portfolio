@@ -1,0 +1,44 @@
+<header>
+  <nav class="container navbar" aria-label="Navegación principal">
+    <a class="brand" routerLink="/" aria-label="Oscar Hinjos · Inicio" (click)="closeMenu()"
+      >OH<span aria-hidden="true">.</span></a
+    >
+    <button
+      #menuToggle
+      appButton
+      variant="ghost"
+      size="sm"
+      type="button"
+      class="menu-toggle"
+      aria-controls="primary-navigation"
+      [attr.aria-expanded]="menuOpen()"
+      [attr.aria-label]="menuOpen() ? 'Cerrar menú de navegación' : 'Abrir menú de navegación'"
+      (click)="toggleMenu()"
+    >
+      <span class="menu-icon" [class.is-open]="menuOpen()" aria-hidden="true"
+        ><span></span><span></span
+      ></span>
+      <span>Menú</span>
+    </button>
+    <div id="primary-navigation" class="navigation-panel" [class.is-open]="menuOpen()">
+      <ul class="navigation-links">
+        @for (link of links; track link.fragment) {
+          <li>
+            <a [routerLink]="['/']" [fragment]="link.fragment" (click)="closeMenu(true)">{{
+              link.label
+            }}</a>
+          </li>
+        }
+      </ul>
+      <a
+        appButton
+        variant="secondary"
+        size="sm"
+        [routerLink]="['/']"
+        fragment="contact"
+        (click)="closeMenu(true)"
+        >Contact</a
+      >
+    </div>
+  </nav>
+</header>

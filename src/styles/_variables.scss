@@ -69,7 +69,7 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
-$font-display-xl: clamp(2.5rem, 1.5rem + 4vw, 5rem);
+$font-display-xl: clamp(3rem, 2rem + 4vw, 5.5rem);
 $font-display-lg: clamp(2.25rem, 1.5rem + 3vw, 4rem);
 $font-heading-1: clamp(2rem, 1.5rem + 2vw, 3rem);
 $font-heading-2: clamp(1.75rem, 1.25rem + 1.5vw, 2.5rem);
@@ -81,3 +81,6 @@ $font-caption: clamp(0.75rem, 0.725rem + 0.1vw, 0.8125rem);
 $line-height-heading: 1.15;
 $line-height-body: 1.6;
 $letter-spacing-heading: -0.035em;
+
+$navbar-height-mobile: 4.5rem;
+$navbar-height-desktop: 5rem;
