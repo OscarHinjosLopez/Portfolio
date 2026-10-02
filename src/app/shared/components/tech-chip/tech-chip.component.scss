@@ -14,3 +14,14 @@
   line-height: v.$line-height-body;
   overflow-wrap: anywhere;
 }
+
+:host([data-variant='emphasis']) {
+  background: rgba(v.$accent, 0.08);
+  border-color: rgba(v.$accent-secondary, 0.4);
+  color: v.$text-primary;
+}
+
+:host([data-variant='subtle']) {
+  background: transparent;
+  color: v.$text-secondary;
+}
