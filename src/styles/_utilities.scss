@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.container {
+  @include m.container;
+}
+.section {
+  padding-block: v.$section-spacing;
+}
+.grid {
+  @include m.grid;
+}
+.card {
+  @include m.card;
+  padding: v.$space-6;
+}
+.text-secondary {
+  color: v.$text-secondary;
+}
+.layout-spacing {
+  padding-block: v.$space-6;
+}

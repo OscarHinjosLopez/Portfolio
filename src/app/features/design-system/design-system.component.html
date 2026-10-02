@@ -1,0 +1,129 @@
+<main id="main-content" tabindex="-1" class="container section catalog">
+  <div class="catalog-intro">
+    <p class="caption text-secondary">SPRINT 1 / CATÁLOGO DE DESARROLLO</p>
+    <h1>Design System</h1>
+    <p class="body-lg text-secondary">Tokens y componentes de la base visual del portfolio.</p>
+  </div>
+
+  <section aria-label="Colores" class="catalog-section">
+    <app-section-heading
+      eyebrow="01 / TOKENS"
+      title="Colores"
+      description="Superficies neutrales y un accent reservado para las acciones."
+    />
+    <div class="swatches">
+      @for (color of colors; track color.token) {
+        <div class="swatch">
+          <div class="swatch-color" [attr.data-color]="color.token" aria-hidden="true"></div>
+          <p class="body-sm">{{ color.token }}</p>
+          <code class="caption text-secondary">{{ color.value }}</code>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section aria-label="Tipografía" class="catalog-section">
+    <app-section-heading
+      eyebrow="02 / TEXTO"
+      title="Tipografía"
+      description="Escala fluida con la fuente del sistema, sin descargas externas."
+    />
+    <div class="type-list">
+      @for (sample of typography; track sample.token) {
+        <div class="type-row">
+          <code class="caption text-secondary">{{ sample.token }}</code>
+          <p [class]="sample.token">{{ sample.label }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section aria-label="Botones" class="catalog-section">
+    <app-section-heading
+      eyebrow="03 / ACCIONES"
+      title="Botones"
+      description="Variantes, tamaños y estados sobre controles nativos."
+    />
+    @for (variant of variants; track variant) {
+      <div class="button-group">
+        <h3 class="body-sm variant-label">{{ variant }}</h3>
+        <div class="example-row">
+          @for (size of sizes; track size) {
+            <button appButton type="button" [variant]="variant" [size]="size">
+              {{ variant }} · {{ size }}
+            </button>
+          }
+          <button appButton type="button" [variant]="variant" disabled>Deshabilitado</button>
+        </div>
+      </div>
+    }
+    <div class="link-examples">
+      <h3 class="body-sm">Enlaces</h3>
+      <div class="example-row">
+        <a appButton variant="secondary" routerLink="/">Enlace interno · Inicio</a>
+        <a
+          appButton
+          variant="ghost"
+          href="https://angular.dev/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Angular · enlace externo ↗</a
+        >
+      </div>
+    </div>
+    <p class="caption text-secondary">
+      Usa Tab para comprobar el foco. Hover y active se inspeccionan con el puntero. Disabled
+      utiliza el comportamiento nativo de button.
+    </p>
+  </section>
+
+  <section aria-label="Tech chips" class="catalog-section">
+    <app-section-heading eyebrow="04 / ETIQUETAS" title="Tech chips" />
+    <div class="example-row">
+      @for (technology of technologies; track technology) {
+        <app-tech-chip [label]="technology" />
+      }
+    </div>
+  </section>
+
+  <section aria-label="Cards" class="catalog-section">
+    <app-section-heading
+      eyebrow="05 / SUPERFICIES"
+      title="Cards"
+      description="Base de superficie reutilizable. El hover solo modifica el borde."
+    />
+    <div class="grid">
+      <article class="card example-card">
+        <h3>Card de ejemplo</h3>
+        <p class="text-secondary">
+          Contenido de muestra para revisar espaciado, tipografía y componentes.
+        </p>
+        <div class="example-row">
+          <app-tech-chip label="Angular" /><app-tech-chip label="TypeScript" />
+        </div>
+        <a appButton variant="secondary" routerLink="/">Volver al inicio</a>
+      </article>
+      <article class="card example-card elevated">
+        <h3>Surface elevated</h3>
+        <p class="text-secondary">Una superficie alternativa para comprobar la jerarquía visual.</p>
+        <div class="example-row"><app-tech-chip label="RxJS" /><app-tech-chip label="React" /></div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-label="Espaciado" class="catalog-section">
+    <app-section-heading
+      eyebrow="06 / LAYOUT"
+      title="Espaciado"
+      description="Selección de la escala base de 4 px."
+    />
+    <div class="spacing-list">
+      @for (space of spacing; track space) {
+        <div class="spacing-row">
+          <code class="caption text-secondary">space-{{ space }}</code>
+          <span class="spacing-bar" [attr.data-space]="space" aria-hidden="true"></span>
+        </div>
+      }
+    </div>
+  </section>
+</main>

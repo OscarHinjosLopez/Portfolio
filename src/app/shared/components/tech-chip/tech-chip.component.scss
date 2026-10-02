@@ -1,0 +1,16 @@
+@use '../../../../styles/variables' as v;
+
+:host {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: v.$space-1 v.$space-3;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-pill;
+  background: v.$surface-primary;
+  color: v.$text-secondary;
+  font-family: v.$font-mono;
+  font-size: v.$font-caption;
+  line-height: v.$line-height-body;
+  overflow-wrap: anywhere;
+}

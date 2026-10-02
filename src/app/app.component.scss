@@ -6,6 +6,7 @@
 
 .skip-link {
   position: absolute;
+  z-index: styles.$z-overlay;
   left: styles.$spacing-base;
   top: styles.$spacing-base;
   padding: styles.$spacing-base;

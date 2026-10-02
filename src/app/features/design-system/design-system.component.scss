@@ -1,0 +1,111 @@
+@use '../../../styles/variables' as v;
+@use '../../../styles/mixins' as m;
+
+.catalog {
+  display: grid;
+  gap: v.$space-20;
+}
+.catalog-intro {
+  display: grid;
+  gap: v.$space-4;
+}
+.catalog-section {
+  display: grid;
+  gap: v.$space-8;
+  min-width: 0;
+}
+.swatches {
+  @include m.grid(12rem, v.$space-4);
+}
+.swatch {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.swatch-color {
+  height: v.$space-24;
+  margin-bottom: v.$space-3;
+  border: 1px solid v.$border-hover;
+  border-radius: v.$radius-md;
+}
+$swatches: (
+  'background-primary': v.$background-primary,
+  'surface-primary': v.$surface-primary,
+  'surface-elevated': v.$surface-elevated,
+  'accent': v.$accent,
+  'accent-secondary': v.$accent-secondary,
+  'text-primary': v.$text-primary,
+  'text-secondary': v.$text-secondary,
+  'success': v.$success,
+  'danger': v.$danger,
+);
+@each $name, $color in $swatches {
+  [data-color='#{$name}'] {
+    background: $color;
+  }
+}
+.type-list {
+  display: grid;
+}
+.type-row {
+  display: grid;
+  gap: v.$space-3;
+  padding-block: v.$space-6;
+  border-bottom: 1px solid v.$border;
+  min-width: 0;
+}
+.example-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-3;
+}
+.button-group,
+.link-examples {
+  display: grid;
+  gap: v.$space-4;
+}
+.variant-label {
+  text-transform: capitalize;
+}
+.example-card {
+  display: grid;
+  justify-items: start;
+  align-content: start;
+  gap: v.$space-5;
+  min-width: 0;
+}
+.elevated {
+  background: v.$surface-elevated;
+}
+.spacing-list {
+  display: grid;
+  gap: v.$space-4;
+}
+.spacing-row {
+  display: flex;
+  align-items: center;
+  gap: v.$space-6;
+}
+.spacing-row code {
+  flex: 0 0 5rem;
+}
+.spacing-bar {
+  display: block;
+  height: v.$space-4;
+  background: v.$text-secondary;
+  border-radius: v.$radius-sm;
+}
+$spaces: (
+  '1': v.$space-1,
+  '2': v.$space-2,
+  '4': v.$space-4,
+  '6': v.$space-6,
+  '8': v.$space-8,
+  '12': v.$space-12,
+  '16': v.$space-16,
+);
+@each $name, $space in $spaces {
+  [data-space='#{$name}'] {
+    width: $space;
+  }
+}
