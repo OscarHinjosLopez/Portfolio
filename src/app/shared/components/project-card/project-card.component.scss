@@ -1,0 +1,300 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+:host {
+  --mono: #{v.$font-mono};
+  --caption: #{v.$font-caption};
+  --border: 1px solid #{v.$border};
+  display: block;
+  min-width: 0;
+  height: 100%;
+}
+article,
+a {
+  transition: v.$transition-fast v.$ease-ui;
+}
+article,
+.status,
+.mini-grid span,
+.scenario-map {
+  border: var(--border);
+}
+article,
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+.metadata,
+ul,
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.metadata,
+.actions {
+  align-items: center;
+}
+article,
+.interface,
+.scenario,
+.knowledge {
+  background: v.$surface-primary;
+}
+article {
+  border-radius: v.$radius-lg;
+  box-shadow: v.$shadow-sm;
+  overflow: hidden;
+  height: 100%;
+  transition-property: border-color, transform;
+}
+article:hover {
+  border-color: v.$border-hover;
+}
+@media (prefers-reduced-motion: reduce) {
+  article,
+  a {
+    transition-duration: 0s;
+  }
+}
+@media (hover: hover) {
+  article:hover {
+    transform: translateY(-2px);
+  }
+}
+.project-content,
+.interface-body {
+  padding: v.$space-6;
+}
+.project-content {
+  flex: 1;
+  min-width: 0;
+}
+.metadata {
+  gap: v.$space-3;
+  justify-content: space-between;
+}
+.metadata p,
+.label,
+dt,
+.visual-label,
+.visual-caption {
+  font: var(--caption)/#{v.$line-height-body} var(--mono);
+  color: v.$text-secondary;
+}
+.status,
+.current {
+  font-size: var(--caption);
+}
+.status,
+.description,
+dd,
+.current,
+.repository-link {
+  color: v.$text-secondary;
+}
+.status {
+  padding: v.$space-1 v.$space-2;
+  border-radius: v.$radius-pill;
+}
+.status[data-status='live'] {
+  color: v.$success;
+  background: rgba(v.$success, 0.07);
+}
+.status[data-status='development'] {
+  color: #b8b2ff;
+  background: rgba(v.$accent, 0.09);
+}
+h3,
+.actions {
+  margin-top: v.$space-8;
+}
+.description,
+.headline-block,
+.scenario-map,
+:is(.scenario, .knowledge) p {
+  margin-top: v.$space-4;
+}
+.reasoning {
+  display: grid;
+  gap: v.$space-5;
+  margin-block: v.$space-8;
+}
+dt {
+  color: v.$text-primary;
+  margin-bottom: v.$space-2;
+}
+dd,
+.actions {
+  font-size: v.$font-body-sm;
+}
+dd {
+  margin: 0;
+}
+.stack {
+  margin-top: auto;
+}
+ul {
+  gap: v.$space-2;
+  list-style: none;
+  padding: 0;
+  margin-top: v.$space-3;
+}
+li {
+  max-width: 100%;
+}
+.actions {
+  gap: v.$space-4 v.$space-6;
+}
+a {
+  text-decoration: none;
+  text-underline-offset: 0.3em;
+  transition-property: color;
+  &:hover {
+    color: #b8b2ff;
+    text-decoration: underline;
+  }
+}
+.project-link {
+  font-weight: v.$font-weight-semibold;
+}
+.visual {
+  min-width: 0;
+  padding: v.$space-8 v.$space-6;
+  background: v.$background-primary;
+  border-top: var(--border);
+  display: grid;
+  align-content: center;
+  gap: v.$space-6;
+}
+.interface,
+.scenario,
+.knowledge {
+  width: 100%;
+  margin-inline: auto;
+  border: 1px solid v.$border-hover;
+  border-radius: v.$radius-md;
+}
+.interface,
+.knowledge {
+  max-width: 28rem;
+}
+.scenario,
+.knowledge {
+  padding: v.$space-5;
+}
+.interface-nav {
+  padding: v.$space-4;
+  border-bottom: var(--border);
+}
+.headline-block,
+.mini-grid span {
+  height: 3rem;
+}
+.headline-block {
+  background: linear-gradient(90deg, v.$text-secondary, rgba(v.$text-secondary, 0.2));
+}
+.text-lines {
+  margin-top: v.$space-5;
+  height: 2.5rem;
+  background: repeating-linear-gradient(
+    transparent 0 8px,
+    v.$border-hover 8px 11px,
+    transparent 11px 16px
+  );
+}
+.mini-grid,
+.source-blocks {
+  margin-top: v.$space-6;
+}
+.mini-grid,
+.choices,
+.source-blocks {
+  display: grid;
+  gap: v.$space-2;
+}
+.mini-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.source-blocks {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+:is(.mini-grid, .choices, .source-blocks) span {
+  background: v.$surface-elevated;
+}
+.visual-caption {
+  text-align: center;
+  font-size: 0.75rem;
+}
+.scenario-map {
+  position: relative;
+  height: 8rem;
+  background: linear-gradient(
+    135deg,
+    transparent 48%,
+    rgba(v.$accent, 0.3) 49% 51%,
+    transparent 52%
+  );
+}
+:is(.choices, .source-blocks) span,
+.query-block {
+  padding: v.$space-2;
+}
+:is(.choices, .source-blocks) span {
+  font: var(--caption) var(--mono);
+  color: v.$text-secondary;
+}
+.scenario {
+  max-width: 16rem;
+}
+.scenario-map span {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: v.$accent-secondary;
+  border-radius: 50%;
+}
+.scenario-map span:nth-child(1) {
+  left: 20%;
+  top: 65%;
+}
+.scenario-map span:nth-child(2) {
+  left: 50%;
+  top: 45%;
+}
+.scenario-map span:nth-child(3) {
+  left: 75%;
+  top: 20%;
+}
+.choices {
+  grid-template-columns: minmax(0, 1fr);
+  margin-top: v.$space-2;
+}
+.query-block {
+  border: 1px solid v.$border-hover;
+}
+.headline-block,
+.short {
+  width: 70%;
+}
+@include m.min-width(v.$breakpoint-tablet) {
+  .project-content {
+    padding: v.$space-8;
+  }
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  :host(.featured) article {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  }
+  :host(.featured) .project-content {
+    padding: v.$space-10;
+  }
+  :host(.featured) h3 {
+    font-size: v.$font-heading-2;
+  }
+  :host(.featured) .visual {
+    border-top: 0;
+    border-left: var(--border);
+    padding: v.$space-8;
+  }
+}

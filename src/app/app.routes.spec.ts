@@ -17,7 +17,7 @@ describe('Application routes', () => {
     await harness.navigateByUrl('/design-system', DesignSystemComponent);
     const element = harness.routeNativeElement;
     expect(element?.querySelector('h1')?.textContent).toBe('Design System');
-    expect(element?.querySelectorAll('section').length).toBe(6);
+    expect(element?.querySelectorAll('section').length).toBe(7);
     expect(element?.querySelectorAll('button[appButton]').length).toBe(12);
     expect(element?.querySelector('main')?.id).toBe('main-content');
   });
@@ -34,10 +34,17 @@ describe('Application routes', () => {
 
   it('should show a placeholder for a project slug', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/example', ProjectPlaceholderComponent);
-    expect(harness.routeNativeElement?.textContent).toContain(
-      'El proyecto se implementará posteriormente.',
-    );
+    await harness.navigateByUrl('/projects/portfolio-engineering', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('Case study en construcción');
+  });
+
+  it('updates the project title when reusing the placeholder route', async () => {
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/projects/portfolio-engineering', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('Portfolio Engineering');
+    await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('LoL Scenario Trainer');
+    expect(harness.routeNativeElement?.querySelector('a')?.getAttribute('href')).toBe('/#work');
   });
 
   it('should show 404 and return Home through routerLink', async () => {

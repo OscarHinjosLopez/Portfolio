@@ -1,0 +1,102 @@
+<article [attr.aria-labelledby]="'project-' + project().slug">
+  <div class="project-content">
+    <div class="metadata">
+      <p>{{ project().index }} / {{ project().category }}</p>
+      <span class="status" [attr.data-status]="project().status">{{
+        statusLabels[project().status]
+      }}</span>
+    </div>
+    <h3 [id]="'project-' + project().slug">{{ project().title }}</h3>
+    <p class="description">{{ project().shortDescription }}</p>
+    <dl class="reasoning">
+      <div>
+        <dt>CHALLENGE</dt>
+        <dd>{{ project().problem }}</dd>
+      </div>
+      <div>
+        <dt>{{ project().stackStatus === 'planned' ? 'PLANNED APPROACH' : 'APPROACH' }}</dt>
+        <dd>{{ project().solution }}</dd>
+      </div>
+    </dl>
+    <div class="stack">
+      <p class="label">
+        {{ project().stackStatus === 'planned' ? 'Stack planificado' : 'Stack implementado' }}
+      </p>
+      <ul aria-label="Tecnologías">
+        @for (technology of project().technologies.slice(0, 6); track technology) {
+          <li><app-tech-chip [label]="technology" variant="subtle" /></li>
+        }
+      </ul>
+    </div>
+    <div class="actions">
+      @if (project().status !== 'coming-soon') {
+        <a
+          class="project-link"
+          [routerLink]="['/projects', project().slug]"
+          [attr.aria-label]="
+            (project().status === 'live' ? 'Ver caso de estudio de ' : 'Ver detalles de ') +
+            project().title
+          "
+        >
+          {{ project().status === 'live' ? 'Ver caso de estudio' : 'Ver detalles del proyecto' }}
+          <span aria-hidden="true">↗</span>
+        </a>
+      }
+      @if (project().repositoryUrl) {
+        <a
+          class="repository-link"
+          [href]="project().repositoryUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="'Repositorio de ' + project().title + ' (nueva pestaña)'"
+          >GitHub <span aria-hidden="true">↗</span></a
+        >
+      }
+      @if (project().currentProject) {
+        <span class="current">Estás viendo este proyecto</span>
+      } @else if (project().status === 'live' && project().liveUrl) {
+        <a [href]="project().liveUrl" target="_blank" rel="noopener noreferrer"
+          >Ver proyecto <span aria-hidden="true">↗</span></a
+        >
+      }
+    </div>
+  </div>
+  <div class="visual" [attr.data-status]="project().status" aria-hidden="true">
+    @switch (project().status) {
+      @case ('live') {
+        <div class="interface">
+          <div class="interface-nav">
+            <span class="mark">OH.</span><span class="nav-lines"></span>
+          </div>
+          <div class="interface-body">
+            <span class="visual-label">FRONTEND ENGINEER</span>
+            <div class="headline-block"></div>
+            <div class="text-lines"></div>
+            <div class="mini-action"></div>
+            <div class="mini-grid"><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <p class="visual-caption">COMPONENTS / SYSTEM / EXPERIENCE</p>
+      }
+      @case ('development') {
+        <div class="scenario">
+          <span class="visual-label">SCENARIO 04</span>
+          <div class="scenario-map"><span></span><span></span><span></span></div>
+          <p class="visual-label">¿Qué harías?</p>
+          <div class="choices"><span>Opción A</span><span>Opción B</span></div>
+        </div>
+        <p class="visual-caption">EXPLORACIÓN CONCEPTUAL / EN DESARROLLO</p>
+      }
+      @case ('coming-soon') {
+        <div class="knowledge">
+          <div class="query-block"><span class="visual-label">QUERY</span></div>
+          <p class="visual-label">RESPONSE</p>
+          <div class="text-lines"></div>
+          <div class="text-lines short"></div>
+          <div class="source-blocks"><span>SOURCE 01</span><span>SOURCE 02</span></div>
+        </div>
+        <p class="visual-caption">EXPLORACIÓN CONCEPTUAL</p>
+      }
+    }
+  </div>
+</article>
