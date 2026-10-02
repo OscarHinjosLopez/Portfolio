@@ -8,15 +8,25 @@ import {
 import { TechChipComponent } from '../../shared/components/tech-chip/tech-chip.component';
 import { SectionHeadingComponent } from '../../shared/components/section-heading/section-heading.component';
 
+import { ProjectCardComponent } from '../../shared/components/project-card/project-card.component';
+import { PROJECTS } from '../home/data/projects.data';
+
 @Component({
   selector: 'app-design-system',
   standalone: true,
-  imports: [ButtonComponent, RouterLink, TechChipComponent, SectionHeadingComponent],
+  imports: [
+    ButtonComponent,
+    RouterLink,
+    TechChipComponent,
+    SectionHeadingComponent,
+    ProjectCardComponent,
+  ],
   templateUrl: './design-system.component.html',
   styleUrl: './design-system.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DesignSystemComponent {
+  readonly sampleProject = PROJECTS[0];
   readonly variants: readonly ButtonVariant[] = ['primary', 'secondary', 'ghost'];
   readonly sizes: readonly ButtonSize[] = ['sm', 'md', 'lg'];
   readonly technologies = ['Angular', 'TypeScript', 'RxJS', 'React'] as const;
