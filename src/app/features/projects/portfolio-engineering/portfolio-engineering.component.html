@@ -1,0 +1,405 @@
+<main id="main-content" tabindex="-1" class="container">
+  <article>
+    <header class="case-hero">
+      <div class="actions">
+        <a routerLink="/" fragment="work">← Volver a proyectos</a>
+        @if (project.repositoryUrl) {
+          <a [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer"
+            >Ver código en GitHub ↗</a
+          >
+        }
+      </div>
+      <div class="hero-label">
+        <p class="eyebrow">CASE STUDY / 01</p>
+        <span class="status">LIVE</span>
+      </div>
+      <h1 class="display-xl">Portfolio<br />Engineering<span class="accent">.</span></h1>
+      <p class="intro body-lg">
+        Diseño y desarrollo de un portfolio profesional construido desde cero con Angular y
+        TypeScript.
+      </p>
+      <dl class="metadata">
+        <div>
+          <dt>ROLE</dt>
+          <dd>Frontend Engineering</dd>
+        </div>
+        <div>
+          <dt>TYPE</dt>
+          <dd>Personal Product</dd>
+        </div>
+        <div>
+          <dt>STATUS</dt>
+          <dd>Live</dd>
+        </div>
+        <div>
+          <dt>YEAR</dt>
+          <dd>{{ year }}</dd>
+        </div>
+      </dl>
+      <ul class="chips" aria-label="Stack implementado">
+        @for (technology of project.technologies; track technology) {
+          <li><app-tech-chip [label]="technology" /></li>
+        }
+      </ul>
+    </header>
+
+    <div class="reading-layout">
+      <nav class="toc" aria-label="Índice del case study">
+        <p class="eyebrow">EN ESTA PÁGINA</p>
+        <ol>
+          @for (section of sections; track section.id) {
+            <li>
+              <a routerLink="." [fragment]="section.id">{{ section.label }}</a>
+            </li>
+          }
+        </ol>
+      </nav>
+      <div class="story">
+        <section id="context" aria-labelledby="context-title">
+          <app-section-heading id="context-title" eyebrow="01 / CONTEXT" title="El problema" />
+          <p class="body-lg">
+            Un portfolio técnico tiene pocos segundos para explicar quién eres, qué sabes hacer y
+            por qué merece la pena revisar tu trabajo. El objetivo era comunicar todo eso con una
+            experiencia propia, sin recurrir a una plantilla genérica ni a una lista interminable de
+            tecnologías.
+          </p>
+          <p>
+            La propia aplicación debía funcionar como evidencia del nivel de frontend: arquitectura,
+            responsive, testing, accesibilidad y atención al detalle.
+          </p>
+          <h3>Objetivos del proyecto</h3>
+          <ol class="goals tiles">
+            @for (goal of goals; track goal.title; let index = $index) {
+              <li>
+                <span class="eyebrow">0{{ index + 1 }}</span>
+                <h3>{{ goal.title }}</h3>
+                <p>{{ goal.text }}</p>
+              </li>
+            }
+          </ol>
+        </section>
+
+        <section id="architecture" aria-labelledby="architecture-title">
+          <app-section-heading
+            id="architecture-title"
+            eyebrow="02 / ARCHITECTURE"
+            title="Una base preparada para crecer"
+          />
+          <p>
+            La estructura separa configuración y modelos, UI compartida, layout y features. Home
+            organiza sus propios datos y secciones; projects incorpora esta página sin ampliar el
+            componente de inicio.
+          </p>
+          <pre aria-label="Estructura simplificada del repositorio"><code>{{ tree }}</code></pre>
+          <ol class="decisions">
+            @for (decision of decisions; track decision.title; let index = $index) {
+              <li>
+                <h3>
+                  <span class="accent">0{{ index + 1 }} /</span> {{ decision.title }}
+                </h3>
+                <p>{{ decision.text }}</p>
+              </li>
+            }
+          </ol>
+        </section>
+
+        <section id="design-system" aria-labelledby="design-system-title">
+          <app-section-heading
+            id="design-system-title"
+            eyebrow="03 / DESIGN SYSTEM"
+            title="Consistencia antes que decoración"
+          />
+          <p>
+            La base visual define colores, surfaces, tipografía, spacing, borders y breakpoints.
+            Buttons, tech chips y section headings reutilizan ese vocabulario en cada sección; el
+            catálogo /design-system permite revisarlos juntos.
+          </p>
+          <div class="system-sample">
+            <ul class="palette" aria-label="Paleta del sistema">
+              <li>
+                <span class="swatch background" aria-hidden="true"></span>Background
+                <code>#090B10</code>
+              </li>
+              <li>
+                <span class="swatch surface" aria-hidden="true"></span>Surface <code>#11151C</code>
+              </li>
+              <li>
+                <span class="swatch violet" aria-hidden="true"></span>Accent <code>#6C63FF</code>
+              </li>
+            </ul>
+            <p class="heading-2">Aa / Jerarquía visible</p>
+            <p>
+              Inter, Geist y fuentes del sistema como alternativas; monospace para labels
+              editoriales. Tamaños fluidos con clamp().
+            </p>
+            <div class="actions">
+              <a appButton routerLink="/" fragment="work">Explorar proyectos</a>
+              <a appButton variant="secondary" routerLink="/" fragment="contact">Contactar</a>
+              <app-tech-chip label="Angular" variant="emphasis" />
+              <app-tech-chip label="SCSS" />
+            </div>
+          </div>
+          <dl class="component-map">
+            <div>
+              <dt>SHARED UI</dt>
+              <dd>Button · TechChip · SectionHeading · ProjectCard</dd>
+            </div>
+            <div>
+              <dt>HOME COMPONENTS</dt>
+              <dd>ExperienceItem · Hero · TechStack · Contact</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="responsive" aria-labelledby="responsive-title">
+          <app-section-heading
+            id="responsive-title"
+            eyebrow="04 / RESPONSIVE & ACCESSIBILITY"
+            title="Diseñado desde 375px hasta escritorio"
+          />
+          <p>
+            Durante el desarrollo se ha validado la interfaz en estos seis tamaños. Son puntos de
+            revisión concretos, no una afirmación de soporte universal. Los grids cambian de
+            columnas, los chips hacen wrapping y la timeline de Experience se simplifica en móvil.
+          </p>
+          <ul class="chips viewport-list" aria-label="Anchuras de validación">
+            @for (width of widths; track width) {
+              <li>{{ width }} px</li>
+            }
+          </ul>
+          <figure>
+            <div class="devices" aria-hidden="true">
+              <div class="device desktop">
+                <span></span>
+                <div><i></i><i></i><i></i></div>
+              </div>
+              <div class="device tablet">
+                <span></span>
+                <div><i></i><i></i></div>
+              </div>
+              <div class="device mobile">
+                <span></span>
+                <div><i></i></div>
+              </div>
+            </div>
+            <figcaption>
+              Desktop · Tablet · Mobile — diagramas abstractos de adaptación, no capturas de
+              pantalla.
+            </figcaption>
+          </figure>
+          <h3>Accesibilidad en el comportamiento</h3>
+          <ul class="prose-list">
+            <li>Landmarks semánticos, listas y metadatos con dl/dt/dd.</li>
+            <li>Skip-link al contenido principal y focus-visible global.</li>
+            <li>
+              Menú con aria-expanded y aria-controls; Escape cierra el panel y devuelve el foco.
+            </li>
+            <li>
+              Decoraciones con aria-hidden y movimiento reducido mediante prefers-reduced-motion.
+            </li>
+          </ul>
+          <p>
+            Son medidas implementadas, no una certificación de accesibilidad. La revisión manual con
+            teclado sigue siendo parte del trabajo.
+          </p>
+        </section>
+
+        <section id="performance" aria-labelledby="performance-title">
+          <app-section-heading
+            id="performance-title"
+            eyebrow="05 / PERFORMANCE"
+            title="Controlar el coste de la interfaz"
+          />
+          <p>
+            Sin librerías UI ni de iconos: los visuals se construyen con HTML y CSS. La UI
+            compartida evita duplicación y las rutas secundarias se cargan bajo demanda.
+          </p>
+          <div class="callout">
+            <p class="eyebrow">PROBLEMA → DIAGNÓSTICO → SOLUCIÓN</p>
+            <h3>ProjectCard y el budget de CSS</h3>
+            <p>
+              Durante el desarrollo, el SCSS de ProjectCard superó el umbral de aviso de 4 kB:
+              aproximadamente 4,5 kB. Se eliminaron estilos duplicados, se consolidaron media
+              queries y reglas compartidas y se reutilizó la tipografía global para bajar de 4 kB.
+            </p>
+            <p>
+              El estado actual mantiene esa consolidación. La comprobación relevante es el CSS
+              compilado en producción, no el peso del archivo SCSS fuente.
+            </p>
+          </div>
+          <dl class="metadata">
+            <div>
+              <dt>INITIAL / WARNING</dt>
+              <dd>500 kB</dd>
+            </div>
+            <div>
+              <dt>COMPONENT CSS / WARNING</dt>
+              <dd>4 kB</dd>
+            </div>
+          </dl>
+          <p>
+            Los budgets permanecen en angular.json: 1 MB y 8 kB son los límites de error
+            respectivos. El objetivo es resolver los avisos antes de llegar a ellos.
+          </p>
+        </section>
+
+        <section id="testing" aria-labelledby="testing-title">
+          <app-section-heading
+            id="testing-title"
+            eyebrow="06 / TESTING"
+            title="Validar comportamiento, no estilos"
+          />
+          <p class="runner">
+            <span class="accent">Vitest</span> / Angular unit-test builder · jsdom
+          </p>
+          <p>
+            Los tests se centran en comportamiento y contenido relevante, evitando depender de
+            detalles visuales de CSS que harían la suite innecesariamente frágil.
+          </p>
+          <ul class="prose-list">
+            <li>Routing: Home, catálogo, case study, placeholders y 404.</li>
+            <li>Navegación: anchors a proyectos y contacto, enlaces de CV y repositorio.</li>
+            <li>Contenido: estado y stack de proyectos, experiencia y orden de las secciones.</li>
+            <li>
+              Interacción: apertura del menú móvil, cierre con Escape y restauración del foco.
+            </li>
+          </ul>
+          <p>
+            No se publica un porcentaje de cobertura ni un contador fijo: el resultado vigente se
+            obtiene ejecutando <code>npm test -- --watch=false</code>.
+          </p>
+        </section>
+
+        <section id="challenges" aria-labelledby="challenges-title">
+          <app-section-heading
+            id="challenges-title"
+            eyebrow="07 / CHALLENGES"
+            title="Problemas que aparecieron por el camino"
+          />
+          <div class="challenge-list">
+            <div>
+              <h3>01 / CSS budget</h3>
+              <p>
+                ProjectCard combina contenido y visual. Reducir duplicación permitió conservar ambos
+                dentro del budget, sin elevar el límite del proyecto.
+              </p>
+            </div>
+            <div>
+              <h3>02 / Densidad responsive</h3>
+              <p>
+                Experience y Tech Stack concentran mucha información. La jerarquía, los layouts
+                adaptativos, el wrapping de chips y una timeline móvil simplificada ayudan a
+                mantener la lectura.
+              </p>
+            </div>
+            <div>
+              <h3>03 / Evitar sobrearquitectura</h3>
+              <p>
+                Los datos estáticos siguen siendo arrays readonly. Signals se reservan para estado,
+                como el menú móvil, o parámetros reactivos de ruta; no para convertir todo el
+                contenido en estado mutable.
+              </p>
+            </div>
+          </div>
+          <h3>Trade-offs</h3>
+          <div class="tiles trade-offs">
+            <div>
+              <p class="eyebrow">SIN UI LIBRARY</p>
+              <p>Control visual y menos dependencias a cambio de mantener más CSS propio.</p>
+            </div>
+            <div>
+              <p class="eyebrow">SIN SSR TODAVÍA</p>
+              <p>
+                Se priorizó completar producto y experiencia antes de añadir SSR/prerender. SEO
+                avanzado queda para una iteración posterior.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="result" aria-labelledby="result-title">
+          <app-section-heading id="result-title" eyebrow="08 / RESULT" title="El resultado" />
+          <p>
+            Una Home completa conecta perfil, stack, proyectos, experiencia y contacto, con acceso
+            al CV. Este case study añade profundidad técnica sin cargarla toda en la página de
+            inicio.
+          </p>
+          <dl class="tiles results">
+            <div>
+              <dt>RESPONSIVE VALIDADO</dt>
+              <dd>375 → 1920 px</dd>
+            </div>
+            <div>
+              <dt>NAVEGACIÓN</dt>
+              <dd>Rutas + anchors</dd>
+            </div>
+            <div>
+              <dt>VALIDACIÓN</dt>
+              <dd>Tests + build de producción</dd>
+            </div>
+            <div>
+              <dt>DEPENDENCIAS UI</dt>
+              <dd>Sin librerías externas</dd>
+            </div>
+          </dl>
+          <p>
+            El build comprueba budgets y la suite verifica comportamiento. No se atribuyen métricas
+            de negocio ni resultados de Lighthouse que no se hayan medido.
+          </p>
+        </section>
+
+        <section id="learnings" aria-labelledby="learnings-title">
+          <app-section-heading
+            id="learnings-title"
+            eyebrow="09 / LEARNINGS"
+            title="Qué me llevo del proyecto"
+          />
+          <ol class="decisions">
+            <li>
+              <h3>01 / Diseñar sistema antes que páginas</h3>
+              <p>
+                Definir tokens y componentes antes de construir las secciones me permitió ajustar la
+                identidad visual desde una base común, en lugar de corregir cada bloque por
+                separado.
+              </p>
+            </li>
+            <li>
+              <h3>02 / La jerarquía importa tanto como el contenido</h3>
+              <p>
+                En móvil tuve que decidir qué se lee primero. Cambiar columnas no basta cuando
+                experiencia y tecnologías compiten por la atención.
+              </p>
+            </li>
+            <li>
+              <h3>03 / La calidad se construye durante todo el proceso</h3>
+              <p>
+                Los tests de navegación, los estados accesibles y los budgets introducen límites
+                concretos mientras construyo, no solo al terminar.
+              </p>
+            </li>
+          </ol>
+          <h3>Next iterations</h3>
+          <p>
+            Case studies adicionales, proyectos funcionales, nuevas microinteracciones, SEO
+            avanzado, una auditoría de rendimiento y preparación del deployment. Son siguientes
+            pasos; todavía no forman parte de este sprint.
+          </p>
+        </section>
+
+        <footer class="closing">
+          <p class="eyebrow">SIGUIENTE PASO</p>
+          <h2>Explorar otros proyectos</h2>
+          <div class="actions">
+            <a appButton routerLink="/" fragment="work">Volver a proyectos</a>
+            @if (project.repositoryUrl) {
+              <a [href]="project.repositoryUrl" target="_blank" rel="noopener noreferrer"
+                >GitHub ↗</a
+              >
+            }
+            <a routerLink="/" fragment="contact">Contactar</a>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </article>
+</main>

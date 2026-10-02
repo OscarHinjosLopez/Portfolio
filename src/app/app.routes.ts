@@ -11,6 +11,14 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'projects/portfolio-engineering',
+    title: 'Portfolio Engineering | Oscar Hinjos',
+    loadComponent: () =>
+      import('./features/projects/portfolio-engineering/portfolio-engineering.component').then(
+        (m) => m.PortfolioEngineeringComponent,
+      ),
+  },
+  {
     path: 'projects/:slug',
     loadComponent: () =>
       import('./features/projects/project-placeholder.component').then(
