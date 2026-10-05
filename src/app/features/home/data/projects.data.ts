@@ -17,10 +17,59 @@ export const PROJECTS: readonly Project[] = [
     featured: true,
     currentProject: true,
     repositoryUrl: 'https://github.com/OscarHinjosLopez/Portfolio',
+    visual: 'portfolio',
+    actions: [
+      {
+        label: 'Ver caso de estudio',
+        url: '/projects/portfolio-engineering',
+        type: 'internal',
+        variant: 'primary',
+      },
+      {
+        label: 'GitHub',
+        url: 'https://github.com/OscarHinjosLopez/Portfolio',
+        type: 'external',
+        variant: 'secondary',
+      },
+    ],
+  },
+  {
+    slug: 'sentinel',
+    index: '02',
+    category: 'ENTERPRISE PRODUCT',
+    title: 'Sentinel — Cybersecurity Operations Dashboard',
+    shortDescription:
+      'Dashboard SOC empresarial construido con Angular y TypeScript para gestionar amenazas, dispositivos y operaciones de seguridad.',
+    problem:
+      'Diseñar una interfaz data-dense capaz de presentar información de seguridad, estados críticos y operaciones en tiempo real sin perder claridad.',
+    solution:
+      'Arquitectura Angular orientada a producto con Signals y RxJS, componentes reutilizables y una interfaz preparada para flujos operativos complejos.',
+    technologies: ['Angular', 'TypeScript', 'Signals', 'RxJS', 'Material/CDK'],
+    stackStatus: 'implemented',
+    status: 'live',
+    featured: false,
+    visual: 'sentinel',
+    actions: [
+      {
+        label: 'Ver demo',
+        url: 'https://sentinel-cybersecurity-operations-d.vercel.app/',
+        type: 'external',
+        variant: 'primary',
+      },
+    ],
   },
   {
     slug: 'lol-scenario-trainer',
-    index: '02',
+    visual: 'scenario',
+    actions: [
+      {
+        label: 'Ver detalles del proyecto',
+        url: '/projects/lol-scenario-trainer',
+        type: 'internal',
+        variant: 'primary',
+      },
+    ],
+    index: '03',
     category: 'PRODUCT',
     title: 'LoL Scenario Trainer',
     shortDescription:
@@ -30,20 +79,6 @@ export const PROJECTS: readonly Project[] = [
     technologies: ['Ionic', 'Angular', 'Capacitor', 'Supabase', 'PostgreSQL'],
     stackStatus: 'planned',
     status: 'development',
-    featured: false,
-  },
-  {
-    slug: 'ai-knowledge-assistant',
-    index: '03',
-    category: 'CONCEPT',
-    title: 'AI Knowledge Assistant',
-    shortDescription:
-      'Concepto de aplicación frontend para interactuar con sistemas de conocimiento y respuestas generadas mediante IA.',
-    problem: 'Mostrar consultas, respuestas progresivas y fuentes con estados claros.',
-    solution: 'Frontend propuesto con streaming, historial, feedback y estados.',
-    technologies: ['Angular', 'TypeScript', 'RxJS', 'REST / Streaming'],
-    stackStatus: 'planned',
-    status: 'coming-soon',
     featured: false,
   },
 ];

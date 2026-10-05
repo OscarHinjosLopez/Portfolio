@@ -42,8 +42,13 @@ describe('Application routes', () => {
 
   it('updates the project title when reusing the placeholder route', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/ai-knowledge-assistant', ProjectPlaceholderComponent);
-    expect(harness.routeNativeElement?.textContent).toContain('AI Knowledge Assistant');
+    await harness.navigateByUrl('/projects/sentinel', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('Sentinel');
+    const demo = harness.routeNativeElement?.querySelector('a[target="_blank"]');
+    expect(demo?.getAttribute('href')).toBe(
+      'https://sentinel-cybersecurity-operations-d.vercel.app/',
+    );
+    expect(demo?.getAttribute('rel')).toBe('noopener noreferrer');
     await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('LoL Scenario Trainer');
     expect(harness.routeNativeElement?.querySelector('a')?.getAttribute('href')).toBe('/#work');
