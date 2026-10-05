@@ -159,11 +159,34 @@ URL y variante (`primary` / `secondary`); `Project.visual` selecciona la composi
 sin depender del estado LIVE. `repositoryUrl` se conserva para el case study existente.
 
 - `/projects/portfolio-engineering`: case study real.
-- `/projects/sentinel`: placeholder con demo; case study en construcción.
+- `/projects/sentinel`: case study técnico lazy-loaded, incorporado en Sprint 10.
 - `/projects/lol-scenario-trainer`: placeholder existente.
 - `/#work`: Portfolio featured y Sentinel + LoL en dos columnas desde 1024 px;
   una columna por debajo, con cards que estiran sin altura fija.
 
 Revisión manual: http://127.0.0.1:4200/#work a 375, 430, 768, 1024, 1440 y 1920 px;
 comprobar título largo, chips, CTA demo, ausencia de overflow, navegación con Tab,
-foco visible y apertura de la demo. Este sprint no incluye el case study de Sentinel.
+foco visible y apertura de la demo. Sprint 9 integró la card; Sprint 10 incorpora su case study.
+
+## Sentinel Case Study — Sprint 10
+
+Abre http://127.0.0.1:4200/projects/sentinel con el servidor activo. La ruta tiene
+título propio y trece secciones: Context, Product, Architecture, Authorization,
+Threats/Devices, Realtime, UX states, Accessibility, Testing, Performance,
+Challenges, Result y Learnings. Portfolio Engineering conserva su case study;
+LoL conserva el placeholder.
+
+El contenido se contrastó con el repositorio local de Sentinel. Explica Signals/RxJS,
+roles y permisos, contratos de repositorio, frontend enterprise y sus límites:
+autenticación y datos mock, realtime simulado y Audit como preview. No publica
+GitHub, métricas comerciales ni recuentos de tests no ejecutados. La card de Sentinel
+muestra «Ver caso de estudio» primero y «Ver demo» después.
+
+Incluye cuatro capturas reales WebP de la demo pública, dimensiones reservadas y
+carga lazy salvo el hero. [Fuentes y procedencia](docs/sentinel-case-study-sources.md)
+documentan los claims y las capturas. No se instalaron dependencias.
+
+Revisión manual a 375, 430, 768, 1024, 1440 y 1920 px: hero, imágenes, tabla de
+permisos, flujos, CTA y TOC sticky solo en desktop. Comprueba teclado y foco, enlaces
+de secciones, demo en otra pestaña, vuelta a `/#work` y enlace a `/#contact`.
+Este sprint no incluye SEO/Lighthouse final, despliegue ni Sprint 11.

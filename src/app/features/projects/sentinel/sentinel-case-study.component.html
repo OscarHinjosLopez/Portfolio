@@ -1,0 +1,585 @@
+<main id="main-content" tabindex="-1" class="container">
+  <article>
+    <header class="case-hero">
+      <a routerLink="/" fragment="work">← Volver a proyectos</a>
+      <div class="hero-label">
+        <p class="eyebrow">CASE STUDY / 02</p>
+        <span class="status">LIVE</span>
+      </div>
+      <h1 class="display-xl">Sentinel</h1>
+      <p class="subtitle">Cybersecurity Operations Dashboard</p>
+      <p class="intro body-lg">
+        Plataforma SOC construida con Angular para gestionar amenazas, dispositivos y operaciones de
+        seguridad mediante una interfaz empresarial orientada a datos.
+      </p>
+      <div class="actions">
+        <a
+          appButton
+          [href]="demoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver demo de Sentinel (nueva pestaña)"
+          >Ver demo <span aria-hidden="true">↗</span></a
+        >
+        <span class="eyebrow">PORTFOLIO PRODUCT / MOCK DATA</span>
+      </div>
+      <dl class="metadata">
+        <div>
+          <dt>ROLE</dt>
+          <dd>Frontend Engineering</dd>
+        </div>
+        <div>
+          <dt>PRODUCT</dt>
+          <dd>Cybersecurity Operations Dashboard</dd>
+        </div>
+        <div>
+          <dt>STACK</dt>
+          <dd>Angular</dd>
+        </div>
+        <div>
+          <dt>STATUS</dt>
+          <dd>Live</dd>
+        </div>
+      </dl>
+      <ul class="chips" aria-label="Stack del proyecto">
+        @for (technology of technologies; track technology) {
+          <li><app-tech-chip [label]="technology" /></li>
+        }
+      </ul>
+      <p class="note">
+        Autenticación y datos mock. Realtime simulado con un contrato de transporte de estilo
+        WebSocket; sin backend ni socket de producción.
+      </p>
+      <figure class="hero-capture">
+        <img
+          src="/assets/projects/sentinel/dashboard.webp"
+          width="1440"
+          height="900"
+          fetchpriority="high"
+          alt="Dashboard real de Sentinel en tema oscuro: navegación SOC, KPIs, actividad de amenazas y distribución de severidad."
+        />
+        <figcaption>CAPTURA REAL / DEMO PÚBLICA / DATOS FICTICIOS</figcaption>
+      </figure>
+    </header>
+
+    <div class="reading-layout">
+      <nav class="toc" aria-label="Índice del case study">
+        <p class="eyebrow">INSIDE SENTINEL</p>
+        <ol>
+          @for (section of sections; track section.id) {
+            <li>
+              <a routerLink="." [fragment]="section.id">{{ section.label }}</a>
+            </li>
+          }
+        </ol>
+      </nav>
+      <div class="story">
+        <section id="context" aria-labelledby="context-title">
+          <app-section-heading
+            id="context-title"
+            eyebrow="01 / CONTEXT"
+            title="Operaciones de seguridad sin perder claridad"
+          />
+          <p class="body-lg">
+            Un dashboard SOC concentra amenazas, dispositivos, eventos, prioridades y acciones. El
+            reto era mostrar esa densidad de datos manteniendo jerarquía, velocidad de uso y
+            claridad.
+          </p>
+          <p>
+            Construí Sentinel como un proyecto de portfolio para explorar problemas de frontend
+            enterprise: permisos, tiempo real, tablas complejas, estados de interfaz, accesibilidad
+            y testing. Los datos e incidentes son ficticios.
+          </p>
+          <ol class="tiles goals">
+            @for (goal of goals; track goal.title; let index = $index) {
+              <li>
+                <span class="eyebrow">0{{ index + 1 }}</span>
+                <h3>{{ goal.title }}</h3>
+                <p>{{ goal.text }}</p>
+              </li>
+            }
+          </ol>
+        </section>
+
+        <section id="product" aria-labelledby="product-title">
+          <app-section-heading
+            id="product-title"
+            eyebrow="02 / PRODUCT"
+            title="Un SOC construido como producto"
+          />
+          <div class="modules">
+            @for (module of modules; track module.title) {
+              <div>
+                <h3>{{ module.title }}</h3>
+                <p>{{ module.text }}</p>
+              </div>
+            }
+          </div>
+          <p>
+            La experiencia combina navegación por dominios, búsqueda y filtros, investigación en
+            detalle y feedback de acciones. Audit se presenta como preview, no como un sistema de
+            auditoría terminado.
+          </p>
+        </section>
+
+        <section id="architecture" aria-labelledby="architecture-title">
+          <app-section-heading
+            id="architecture-title"
+            eyebrow="03 / ARCHITECTURE"
+            title="Arquitectura frontend orientada a dominio"
+          />
+          <p>
+            La estructura real es feature-first. Las páginas y stores de Dashboard, Threats y
+            Devices consumen contratos de repositorio tipados; los adapters mock quedan separados de
+            la UI. Core concentra sesión, permisos, realtime, notificaciones y preferencias.
+          </p>
+          <div class="architecture" aria-label="Capas de la aplicación Angular">
+            <div class="foundation">
+              <span class="eyebrow">ANGULAR APPLICATION</span>
+              <p>Router → Shell autenticado → Features</p>
+            </div>
+            <div class="tiles">
+              <div>
+                <h3>Core</h3>
+                <p>Auth · HTTP interceptors · Guards · Realtime · Commands · Preferences</p>
+              </div>
+              <div>
+                <h3>Features</h3>
+                <p>
+                  Dashboard · Threats · Devices<br />UI → Signals store → Repository → Mock adapter
+                </p>
+              </div>
+              <div>
+                <h3>Shared + Layout</h3>
+                <p>UI reutilizable · Directivas · Utilidades · Shell · Navegación</p>
+              </div>
+            </div>
+          </div>
+          <h3>Angular as application foundation</h3>
+          <p>
+            Componentes standalone y rutas lazy delimitan cada dominio. TypeScript tipa consultas,
+            resultados, permisos y eventos. Angular Material/CDK aporta controles y overlays;
+            Signals y RxJS mantienen responsabilidades distintas.
+          </p>
+          <div class="tiles">
+            <div>
+              <h3>Signals</h3>
+              <p>
+                Estado síncrono de sesión, filtros, preferencias, carga y error. Los valores
+                computed derivan permisos, resultados y contadores sin duplicar estado.
+              </p>
+            </div>
+            <div>
+              <h3>RxJS</h3>
+              <p>
+                Respuestas asíncronas de repositorios y flujos de eventos. Los stores consumen
+                Observables y agrupan refrescos de amenazas con auditTime; Signals no sustituye
+                estos flujos.
+              </p>
+            </div>
+          </div>
+          <aside class="callout">
+            <h3>REST: un límite preparado, sin API activa</h3>
+            <p>
+              HttpClient y los interceptors están configurados. El interceptor de autenticación
+              limita el token demo al path /api del mismo origen. Los repositorios actuales trabajan
+              con datos mock: no hay llamadas a un backend REST productivo ni persistencia de
+              incidentes.
+            </p>
+          </aside>
+        </section>
+
+        <section id="authorization" aria-labelledby="authorization-title">
+          <app-section-heading
+            id="authorization-title"
+            eyebrow="04 / AUTHORIZATION"
+            title="Una interfaz que cambia según el rol"
+          />
+          <p>
+            Admin, Analyst y Viewer comparten una política explícita de permisos. Guards,
+            navegación, command palette y acciones consultan esa política; el permiso de
+            investigación también se comprueba en el repositorio mock.
+          </p>
+          <table class="roles">
+            <caption>
+              Política implementada en ROLE_PERMISSIONS
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Permiso</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Analyst</th>
+                <th scope="col">Viewer</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (permission of permissions; track permission.label) {
+                <tr>
+                  <th scope="row">{{ permission.label }}</th>
+                  @for (allowed of permission.roles; track $index) {
+                    <td>{{ allowed ? 'Sí' : 'No' }}</td>
+                  }
+                </tr>
+              }
+            </tbody>
+          </table>
+          <ol class="flow" aria-label="Flujo de autenticación">
+            @for (step of authFlow; track step) {
+              <li>{{ step }}</li>
+            }
+          </ol>
+          <p>
+            AuthService restaura la sesión antes de evaluar guards y descarta operaciones de login
+            obsoletas. El token ficticio vive en sessionStorage; los interceptors centralizan el
+            límite HTTP y los errores.
+          </p>
+          <aside class="callout">
+            <h3>RBAC frontend no es autorización de servidor</h3>
+            <p>
+              La autenticación es simulada. Una integración real necesita validar identidad y
+              permisos en cada operación del backend; ocultar un botón o proteger una ruta no ofrece
+              esa garantía.
+            </p>
+          </aside>
+        </section>
+
+        <section id="threats" aria-labelledby="threats-title">
+          <app-section-heading
+            id="threats-title"
+            eyebrow="05 / THREATS"
+            title="Gestionar información data-dense"
+          />
+          <p>
+            Threat Management combina búsqueda, filtros por severidad, estado y vector, orden y
+            paginación. La consulta se sincroniza con la URL para conservar contexto al recargar o
+            volver atrás. El detalle añade indicadores, timeline y transiciones de estado locales.
+          </p>
+          <figure>
+            <img
+              src="/assets/projects/sentinel/threats.webp"
+              width="1440"
+              height="900"
+              loading="lazy"
+              alt="Listado real de amenazas demo con búsqueda, filtros de severidad y estado, y columnas de origen, destino y confianza."
+            />
+            <figcaption>THREAT MANAGEMENT / CAPTURA REAL / INCIDENTES FICTICIOS</figcaption>
+          </figure>
+          <h3>Severidad: texto y color</h3>
+          <ul class="severity" aria-label="Niveles de severidad">
+            <li>Critical</li>
+            <li>High</li>
+            <li>Medium</li>
+            <li>Low</li>
+          </ul>
+          <p>
+            El color facilita priorizar, pero la etiqueta Critical, High, Medium o Low siempre
+            comunica la severidad como texto. El estado de investigación se muestra por separado.
+          </p>
+          <h3>Visibilidad sobre dispositivos</h3>
+          <p>
+            Devices ofrece inventario, búsqueda, filtros y detalle de postura de seguridad. Admin
+            puede iniciar un escaneo mock y simular aislamiento; el detalle conserva actividad y
+            findings del dispositivo. Estas acciones no afectan a endpoints reales.
+          </p>
+          <figure>
+            <img
+              src="/assets/projects/sentinel/devices.webp"
+              width="1440"
+              height="900"
+              loading="lazy"
+              alt="Inventario real de dispositivos demo: resumen de postura, filtros por estado y riesgo, y tabla de endpoints ficticios."
+            />
+            <figcaption>DEVICE INVENTORY / CAPTURA REAL / DISPOSITIVOS FICTICIOS</figcaption>
+          </figure>
+        </section>
+
+        <section id="realtime" aria-labelledby="realtime-title">
+          <app-section-heading
+            id="realtime-title"
+            eyebrow="06 / REALTIME"
+            title="Eventos sin refrescar la aplicación"
+          />
+          <p class="body-lg">
+            Realtime simulation: un flujo de eventos de estilo WebSocket, no una conexión a
+            infraestructura SOC real.
+          </p>
+          <ol class="flow" aria-label="Flujo de eventos realtime">
+            @for (step of eventFlow; track step) {
+              <li>{{ step }}</li>
+            }
+          </ol>
+          <p>
+            MockRealtimeTransport emite eventos y simula desconexiones. RealtimeService valida
+            payloads, descarta duplicados y eventos antiguos y limita la memoria de historial. La
+            reconexión usa esperas progresivas y el ciclo de conexión depende de la sesión.
+          </p>
+          <ul class="event-types" aria-label="Eventos implementados">
+            @for (event of events; track event) {
+              <li>
+                <code>{{ event }}</code>
+              </li>
+            }
+          </ul>
+          <p>
+            Los repositorios proyectan eventos aceptados y los stores refrescan sin reiniciar
+            filtros ni la página actual. Las notificaciones seleccionan cambios relevantes. Un
+            transporte WebSocket real y replay duradero quedan fuera de esta versión.
+          </p>
+        </section>
+
+        <section id="ux-states" aria-labelledby="ux-states-title">
+          <app-section-heading
+            id="ux-states-title"
+            eyebrow="07 / UX STATES"
+            title="Una aplicación también existe cuando no hay datos"
+          />
+          <div class="tiles states">
+            @for (state of states; track state.title) {
+              <div>
+                <h3>{{ state.title }}</h3>
+                <p>{{ state.text }}</p>
+              </div>
+            }
+          </div>
+          <h3>Command Palette</h3>
+          <p>
+            <kbd>Ctrl</kbd> + <kbd>K</kbd> abre navegación y acciones rápidas filtradas por
+            permisos. Flechas y Enter permiten seleccionar; Escape cierra el diálogo y devuelve el
+            foco.
+          </p>
+          <figure>
+            <img
+              src="/assets/projects/sentinel/command-palette.webp"
+              width="1440"
+              height="900"
+              loading="lazy"
+              alt="Command Palette real de Sentinel abierta sobre Devices, con búsqueda, destinos de navegación y ayuda de teclado."
+            />
+            <figcaption>COMMAND PALETTE / CAPTURA REAL / ACCESO ADMIN DEMO</figcaption>
+          </figure>
+          <h3>Dark / Light</h3>
+          <p>
+            Sentinel implementa ambos temas con tokens semánticos. La preferencia se valida y
+            persiste en localStorage, con la preferencia del sistema como alternativa. El portfolio
+            mantiene su propia identidad visual.
+          </p>
+        </section>
+
+        <section id="accessibility" aria-labelledby="accessibility-title">
+          <app-section-heading
+            id="accessibility-title"
+            eyebrow="08 / ACCESSIBILITY"
+            title="Operable también sin ratón"
+          />
+          <p>
+            Skip link, landmarks, etiquetas ARIA y foco visible acompañan la navegación por teclado.
+            El shell mueve el foco al contenido al cambiar de página y lo conserva durante cambios
+            de filtros; los diálogos restauran el foco al cerrar.
+          </p>
+          <ul class="prose-list">
+            <li>
+              Severidad y estados combinan texto y color; las gráficas añaden patrones visuales.
+            </li>
+            <li>
+              Los controles y overlays se prueban en temas dark y light y con movimiento reducido.
+            </li>
+            <li>
+              Playwright incluye axe y zoom real de Chromium al 200 % y 400 % en flujos críticos.
+            </li>
+          </ul>
+          <p>
+            La revisión toma WCAG 2.2 AA como referencia. Las comprobaciones automáticas no
+            equivalen a certificar conformidad completa ni sustituyen pruebas con NVDA o VoiceOver.
+          </p>
+        </section>
+
+        <section id="testing" aria-labelledby="testing-title">
+          <app-section-heading
+            id="testing-title"
+            eyebrow="09 / TESTING"
+            title="Testing a diferentes niveles"
+          />
+          <div class="tiles">
+            <div>
+              <h3>Unit & Integration / Vitest</h3>
+              <p>
+                Reglas de dominio, permisos, stores, servicios, guards e integración de realtime con
+                validación, reconexión y concurrencia.
+              </p>
+            </div>
+            <div>
+              <h3>E2E / Playwright</h3>
+              <p>
+                Login por roles, navegación, amenazas, dispositivos, preferencias y teclado. Un
+                entry de test separado permite eventos deterministas y no se incluye en producción.
+              </p>
+            </div>
+            <div>
+              <h3>Accessibility / axe</h3>
+              <p>
+                Revisión automatizada de rutas, detalles y diálogos en ambos temas, complementada
+                con foco y zoom en navegador.
+              </p>
+            </div>
+            <div>
+              <h3>Production smoke</h3>
+              <p>
+                El workflow del proyecto contempla login demo, dashboard, recarga de rutas profundas
+                y capturas usando el build real.
+              </p>
+            </div>
+          </div>
+          <p>
+            Se describen las suites presentes en el repositorio, sin publicar un recuento como si se
+            hubieran ejecutado de nuevo para este case study.
+          </p>
+        </section>
+
+        <section id="performance" aria-labelledby="performance-title">
+          <app-section-heading
+            id="performance-title"
+            eyebrow="10 / PERFORMANCE"
+            title="Una interfaz data-dense también tiene que responder rápido"
+          />
+          <ul class="prose-list">
+            <li>Rutas y diálogos lazy para separar el coste de cada feature.</li>
+            <li>
+              Gráficas ECharts modulares con renderer SVG y <code>&#64;defer (on viewport)</code>;
+              el espacio reservado limita saltos de layout.
+            </li>
+            <li>
+              Instancias de gráficas reutilizadas durante actualizaciones y liberadas al destruir la
+              vista.
+            </li>
+            <li>
+              Búsqueda de amenazas con espera de 300 ms y cancelación de consultas anteriores;
+              eventos agrupados antes de refrescar el listado.
+            </li>
+            <li>
+              Paginación, tracking por ID e historial acotado; budgets y un gate de bundles
+              verifican el coste y excluyen código de testing.
+            </li>
+          </ul>
+          <p>
+            Las técnicas están presentes en el código. No se atribuyen a la demo puntuaciones
+            Lighthouse, latencias de usuarios reales ni resultados de rendimiento medidos en esta
+            integración.
+          </p>
+        </section>
+
+        <section id="challenges" aria-labelledby="challenges-title">
+          <app-section-heading
+            id="challenges-title"
+            eyebrow="11 / CHALLENGES"
+            title="Decisiones que hicieron el proyecto más interesante"
+          />
+          <ol class="challenges">
+            @for (challenge of challenges; track challenge.title; let index = $index) {
+              <li>
+                <h3>
+                  <span class="accent">0{{ index + 1 }} /</span> {{ challenge.title }}
+                </h3>
+                <p>{{ challenge.problem }}</p>
+                <p>{{ challenge.solution }}</p>
+              </li>
+            }
+          </ol>
+          <h3>Trade-offs</h3>
+          <dl class="trade-offs">
+            <div>
+              <dt>MOCK BACKEND</dt>
+              <dd>
+                Permite desarrollar e investigar flujos frontend sin infraestructura ni incidentes
+                reales. A cambio, no hay persistencia ni seguridad de servidor; las mutaciones son
+                locales.
+              </dd>
+            </div>
+            <div>
+              <dt>SIMULATED REALTIME</dt>
+              <dd>
+                Hace verificables el orden, la reconexión y la actualización de UI. No proporciona
+                un socket productivo, handshake real ni replay duradero.
+              </dd>
+            </div>
+            <div>
+              <dt>CHART ENGINE</dt>
+              <dd>
+                ECharts cubre gráficas de línea, barras y distribución con imports modulares. El
+                motor sigue teniendo coste, por eso su carga se difiere.
+              </dd>
+            </div>
+          </dl>
+        </section>
+
+        <section id="result" aria-labelledby="result-title">
+          <app-section-heading
+            id="result-title"
+            eyebrow="12 / RESULT"
+            title="Un frontend enterprise completo"
+          />
+          <p class="body-lg">
+            Una aplicación desplegada que conecta experiencia SOC, reglas de interfaz y arquitectura
+            frontend dentro de un entorno de demostración.
+          </p>
+          <ul class="prose-list">
+            <li>Dashboard, investigación de amenazas e inventario con detalle.</li>
+            <li>Tres roles, permisos explícitos y acciones locales controladas.</li>
+            <li>Realtime simulado, notificaciones, estados de carga, error y vacío.</li>
+            <li>Responsive, temas dark/light, command palette y navegación por teclado.</li>
+            <li>Suites unitarias, de integración, E2E y accesibilidad en el repositorio.</li>
+          </ul>
+          <div class="demo-callout">
+            <p class="eyebrow">LIVE DEMO / EXPLORE THE PRODUCT</p>
+            <h3>Ver Sentinel en funcionamiento</h3>
+            <a
+              appButton
+              [href]="demoUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ver Sentinel en funcionamiento (nueva pestaña)"
+              >Ver Sentinel en funcionamiento <span aria-hidden="true">↗</span></a
+            >
+            <p>
+              En el login, elige Admin, Analyst o Viewer en «Demo accounts» para rellenar el
+              formulario. No necesitas una cuenta real.
+            </p>
+          </div>
+        </section>
+
+        <section id="learnings" aria-labelledby="learnings-title">
+          <app-section-heading
+            id="learnings-title"
+            eyebrow="13 / LEARNINGS"
+            title="Qué demuestra Sentinel"
+          />
+          <ol class="learnings">
+            @for (learning of learnings; track learning) {
+              <li>{{ learning }}</li>
+            }
+          </ol>
+          <h3>Next iterations / Posibilidades</h3>
+          <p>
+            Integración de backend, transporte WebSocket de producción y analítica ampliada son
+            posibles siguientes pasos, no capacidades actuales ni un roadmap comprometido.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <footer class="closing">
+      <p class="eyebrow">CONTINUE EXPLORING</p>
+      <h2>Explorar Sentinel</h2>
+      <div class="actions">
+        <a
+          appButton
+          [href]="demoUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ver demo de Sentinel (nueva pestaña)"
+          >Ver demo <span aria-hidden="true">↗</span></a
+        ><a appButton variant="secondary" routerLink="/" fragment="work">Volver a proyectos</a
+        ><a routerLink="/" fragment="contact">Contactar</a>
+      </div>
+    </footer>
+  </article>
+</main>

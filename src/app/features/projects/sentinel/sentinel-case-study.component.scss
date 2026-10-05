@@ -1,0 +1,305 @@
+@use '../../../../styles/variables' as v;
+@use '../../../../styles/mixins' as m;
+
+:host {
+  display: block;
+}
+.case-hero {
+  padding-block: v.$space-10 v.$space-16;
+}
+.hero-label,
+.actions,
+.chips,
+.severity {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: v.$space-4;
+}
+.hero-label {
+  margin-block: v.$space-16 v.$space-6;
+}
+.eyebrow,
+dt,
+figcaption {
+  font: v.$font-caption / v.$line-height-body v.$font-mono;
+  color: v.$text-secondary;
+}
+.accent {
+  color: #99cfda;
+}
+.status {
+  color: v.$success;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-pill;
+  padding: v.$space-1 v.$space-3;
+}
+.subtitle {
+  font-size: v.$font-display-lg;
+  line-height: 1.2;
+  max-width: 22ch;
+  margin-top: v.$space-4;
+}
+.intro {
+  max-width: 58ch;
+  margin-block: v.$space-8;
+}
+.intro,
+.note,
+section p,
+dd,
+.prose-list,
+.learnings {
+  color: v.$text-secondary;
+}
+.metadata,
+.tiles,
+.modules {
+  display: grid;
+  gap: v.$space-6;
+}
+.metadata {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-block: v.$space-10;
+}
+dd {
+  margin: v.$space-2 0 0;
+}
+.chips,
+.goals,
+.severity,
+.challenges,
+.event-types {
+  list-style: none;
+  padding: 0;
+}
+.chips {
+  gap: v.$space-2;
+}
+.note {
+  margin-top: v.$space-4;
+  font-size: v.$font-body-sm;
+  max-width: 70ch;
+}
+figure {
+  margin-top: v.$space-8;
+  overflow: hidden;
+  border: 1px solid v.$border-hover;
+  border-radius: v.$radius-md;
+  background: v.$surface-primary;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+figcaption {
+  padding: v.$space-4;
+}
+.toc {
+  display: none;
+}
+.story,
+.metadata > *,
+.tiles > * {
+  min-width: 0;
+}
+section,
+.closing {
+  border-top: 1px solid v.$border;
+  padding-block: v.$space-16;
+}
+section {
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+section > p,
+.tiles,
+.modules,
+.flow,
+.severity,
+.event-types,
+.prose-list,
+.learnings {
+  margin-top: v.$space-6;
+}
+section h3 {
+  margin-top: v.$space-8;
+}
+.tiles h3,
+.modules h3 {
+  font-size: v.$font-body-lg;
+  margin-top: v.$space-3;
+}
+.tiles p,
+.modules p,
+.challenges p {
+  margin-top: v.$space-3;
+}
+.goals li,
+.modules > div,
+.states > div,
+.trade-offs > div {
+  border-top: 1px solid v.$border;
+  padding-top: v.$space-4;
+}
+.architecture,
+.callout,
+.demo-callout {
+  padding: v.$space-6;
+  margin-top: v.$space-8;
+  border: 1px solid v.$border;
+  border-radius: v.$radius-md;
+  background: v.$surface-primary;
+}
+.foundation {
+  border-left: 2px solid #99cfda;
+  padding-left: v.$space-4;
+}
+.callout {
+  border-left: 2px solid v.$accent;
+}
+.callout h3,
+.demo-callout h3 {
+  margin-top: 0;
+}
+.callout p,
+.demo-callout p,
+.demo-callout a {
+  margin-top: v.$space-4;
+}
+.flow {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: v.$space-2;
+}
+.flow li {
+  padding: v.$space-3;
+  background: v.$surface-elevated;
+  border-left: 2px solid #99cfda;
+  font-size: v.$font-body-sm;
+}
+.flow li + li::before {
+  content: '↓ ';
+  color: #99cfda;
+}
+.roles {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: v.$space-8;
+  font-size: v.$font-caption;
+  table-layout: fixed;
+}
+.roles caption {
+  text-align: left;
+  margin-bottom: v.$space-3;
+  color: v.$text-secondary;
+}
+.roles th,
+.roles td {
+  text-align: center;
+  padding: v.$space-3 v.$space-1;
+  border-bottom: 1px solid v.$border;
+}
+.roles th:first-child {
+  text-align: left;
+  width: 46%;
+}
+.severity li {
+  border: 1px solid currentColor;
+  padding: v.$space-1 v.$space-3;
+  border-radius: v.$radius-pill;
+  color: #ef8b92;
+}
+.severity li:nth-child(2) {
+  color: #e6ad7f;
+}
+.severity li:nth-child(3) {
+  color: #d9c98b;
+}
+.severity li:nth-child(4) {
+  color: #8fc3ac;
+}
+.event-types {
+  display: flex;
+  flex-wrap: wrap;
+  gap: v.$space-2 v.$space-4;
+}
+code,
+kbd {
+  font-size: v.$font-caption;
+}
+code {
+  overflow-wrap: anywhere;
+}
+kbd {
+  border: 1px solid v.$border-hover;
+  border-radius: v.$radius-sm;
+  padding: v.$space-1;
+}
+.prose-list,
+.learnings {
+  padding-left: v.$space-5;
+}
+.prose-list li + li,
+.learnings li + li,
+.trade-offs > div + div {
+  margin-top: v.$space-4;
+}
+.demo-callout {
+  border-color: rgba(v.$accent, 0.4);
+}
+.closing h2 {
+  margin-block: v.$space-4 v.$space-8;
+}
+a {
+  text-underline-offset: 0.3em;
+}
+a:hover {
+  color: v.$accent-secondary;
+}
+
+@include m.min-width(v.$breakpoint-tablet) {
+  .metadata {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .tiles,
+  .modules {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .roles {
+    font-size: v.$font-body-sm;
+  }
+  .flow {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .flow li + li::before {
+    content: '→ ';
+  }
+}
+@include m.min-width(v.$breakpoint-desktop) {
+  .reading-layout {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: v.$space-10;
+  }
+  .toc {
+    display: block;
+    position: sticky;
+    top: calc(var(--navbar-height) + 2rem);
+    align-self: start;
+    padding-top: v.$space-8;
+  }
+  .toc ol {
+    list-style: none;
+    padding: 0;
+    margin-top: v.$space-6;
+  }
+  .toc li + li {
+    margin-top: v.$space-3;
+  }
+  .toc a {
+    font-size: v.$font-body-sm;
+    color: v.$text-secondary;
+  }
+}

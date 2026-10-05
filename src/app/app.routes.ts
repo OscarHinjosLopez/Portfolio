@@ -19,6 +19,14 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'projects/sentinel',
+    title: 'Sentinel | Cybersecurity Operations Dashboard | Oscar Hinjos',
+    loadComponent: () =>
+      import('./features/projects/sentinel/sentinel-case-study.component').then(
+        (m) => m.SentinelCaseStudyComponent,
+      ),
+  },
+  {
     path: 'projects/:slug',
     loadComponent: () =>
       import('./features/projects/project-placeholder.component').then(
