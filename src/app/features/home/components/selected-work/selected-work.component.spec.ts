@@ -15,8 +15,8 @@ describe('SelectedWorkComponent', () => {
     expect(element.querySelectorAll('article').length).toBe(3);
     expect([...element.querySelectorAll('h3')].map((title) => title.textContent)).toEqual([
       'Portfolio Engineering',
+      'Sentinel — Cybersecurity Operations Dashboard',
       'LoL Scenario Trainer',
-      'AI Knowledge Assistant',
     ]);
     expect(element.querySelectorAll('app-project-card.featured').length).toBe(1);
     expect(element.querySelector('app-project-card.featured h3')?.textContent).toBe(

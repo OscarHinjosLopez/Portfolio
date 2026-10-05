@@ -29,41 +29,35 @@
       </ul>
     </div>
     <div class="actions">
-      @if (project().status !== 'coming-soon') {
-        <a
-          class="project-link"
-          [routerLink]="['/projects', project().slug]"
-          [attr.aria-label]="
-            (project().status === 'live' ? 'Ver caso de estudio de ' : 'Ver detalles de ') +
-            project().title
-          "
-        >
-          {{ project().status === 'live' ? 'Ver caso de estudio' : 'Ver detalles del proyecto' }}
-          <span aria-hidden="true">↗</span>
-        </a>
-      }
-      @if (project().repositoryUrl) {
-        <a
-          class="repository-link"
-          [href]="project().repositoryUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          [attr.aria-label]="'Repositorio de ' + project().title + ' (nueva pestaña)'"
-          >GitHub <span aria-hidden="true">↗</span></a
-        >
+      @for (action of project().actions; track action.url) {
+        @if (action.type === 'internal') {
+          <a
+            [class.project-link]="action.variant === 'primary'"
+            [routerLink]="action.url"
+            [attr.aria-label]="action.label + ' · ' + project().title"
+          >
+            {{ action.label }} <span aria-hidden="true">↗</span>
+          </a>
+        } @else {
+          <a
+            [class.project-link]="action.variant === 'primary'"
+            [href]="action.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="action.label + ' · ' + project().title + ' (nueva pestaña)'"
+          >
+            {{ action.label }} <span aria-hidden="true">↗</span>
+          </a>
+        }
       }
       @if (project().currentProject) {
         <span class="current">Estás viendo este proyecto</span>
-      } @else if (project().status === 'live' && project().liveUrl) {
-        <a [href]="project().liveUrl" target="_blank" rel="noopener noreferrer"
-          >Ver proyecto <span aria-hidden="true">↗</span></a
-        >
       }
     </div>
   </div>
   <div class="visual" [attr.data-status]="project().status" aria-hidden="true">
-    @switch (project().status) {
-      @case ('live') {
+    @switch (project().visual) {
+      @case ('portfolio') {
         <div class="interface">
           <div class="interface-nav">
             <span class="mark">OH.</span><span class="nav-lines"></span>
@@ -78,7 +72,7 @@
         </div>
         <p class="visual-caption">COMPONENTS / SYSTEM / EXPERIENCE</p>
       }
-      @case ('development') {
+      @case ('scenario') {
         <div class="scenario">
           <span class="visual-label">SCENARIO 04</span>
           <div class="scenario-map"><span></span><span></span><span></span></div>
@@ -87,15 +81,23 @@
         </div>
         <p class="visual-caption">EXPLORACIÓN CONCEPTUAL / EN DESARROLLO</p>
       }
-      @case ('coming-soon') {
-        <div class="knowledge">
-          <div class="query-block"><span class="visual-label">QUERY</span></div>
-          <p class="visual-label">RESPONSE</p>
-          <div class="text-lines"></div>
-          <div class="text-lines short"></div>
-          <div class="source-blocks"><span>SOURCE 01</span><span>SOURCE 02</span></div>
+      @case ('sentinel') {
+        <div class="interface soc">
+          <div class="interface-nav visual-label">◉ SECURITY OPERATIONS</div>
+          <div class="soc-grid">
+            <div class="rail text-lines"></div>
+            <div class="interface-body">
+              <div class="mini-grid visual-label">
+                <span>THREATS<br />12</span><span>DEVICES<br />48</span><span>ALERTS<br />4</span>
+              </div>
+              <div class="chart"></div>
+              <div class="risk visual-label"><span>CRITICAL</span></div>
+              <div class="risk visual-label"><span>HIGH</span></div>
+              <div class="risk visual-label"><span>MEDIUM</span></div>
+            </div>
+          </div>
         </div>
-        <p class="visual-caption">EXPLORACIÓN CONCEPTUAL</p>
+        <p class="visual-caption">SOC / REPRESENTACIÓN ABSTRACTA</p>
       }
     }
   </div>

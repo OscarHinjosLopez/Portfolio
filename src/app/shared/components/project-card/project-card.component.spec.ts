@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { By } from '@angular/platform-browser';
+import { RouterLink, provideRouter } from '@angular/router';
 import { ProjectCardComponent } from './project-card.component';
 import { PROJECTS } from '../../../features/home/data/projects.data';
 import { PROJECT_STATUS_LABELS } from '../../../core/models/project.model';
@@ -32,24 +33,45 @@ describe('ProjectCardComponent', () => {
       );
       expect(element.querySelector('.visual')?.getAttribute('aria-hidden')).toBe('true');
       expect(element.textContent).not.toContain('Live Demo');
-      const details = element.querySelector(`a[href="/projects/${project.slug}"]`);
-      if (project.status === 'coming-soon') {
-        expect(element.querySelectorAll('a').length).toBe(0);
-      } else {
-        expect(details).toBeTruthy();
-        expect(details?.textContent).toContain(
-          project.status === 'live' ? 'Ver caso de estudio' : 'Ver detalles',
-        );
+      for (const action of project.actions) {
+        const link = element.querySelector(`a[href="${action.url}"]`);
+        expect(link?.textContent).toContain(action.label);
+        if (action.type === 'external') {
+          expect(link?.getAttribute('target')).toBe('_blank');
+          expect(link?.getAttribute('rel')).toBe('noopener noreferrer');
+          expect(link?.getAttribute('aria-label')).toContain('nueva pestaña');
+          expect(link?.hasAttribute('routerLink')).toBe(false);
+        } else {
+          expect(
+            fixture.debugElement
+              .queryAll(By.directive(RouterLink))
+              .some((node) => node.nativeElement === link),
+          ).toBe(true);
+          expect(link?.hasAttribute('target')).toBe(false);
+        }
       }
-      if (project.status === 'live') {
-        expect(
-          element.querySelector('a[href="' + project.repositoryUrl + '"]')?.getAttribute('rel'),
-        ).toBe('noopener noreferrer');
-        expect(element.textContent).toContain('Est\u00e1s viendo este proyecto');
-        expect(element.querySelector('a[href="/"]')).toBeNull();
-      } else {
-        expect(element.querySelector('a[target="_blank"]')).toBeNull();
-      }
+      expect(element.textContent?.includes('Estás viendo este proyecto')).toBe(
+        !!project.currentProject,
+      );
     });
   }
+  it('shows Sentinel as LIVE with its real demo as the primary and only action', async () => {
+    const fixture = TestBed.createComponent(ProjectCardComponent);
+    fixture.componentRef.setInput('project', PROJECTS[1]);
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelector('.status')?.textContent).toBe('LIVE');
+    expect(
+      [...element.querySelectorAll('app-tech-chip')].map((chip) => chip.textContent?.trim()),
+    ).toEqual(['Angular', 'TypeScript', 'Signals', 'RxJS', 'Material/CDK']);
+    const link = element.querySelector('.actions a');
+    expect(link?.getAttribute('href')).toBe(
+      'https://sentinel-cybersecurity-operations-d.vercel.app/',
+    );
+    expect(link?.textContent).toContain('Ver demo');
+    expect(link?.classList.contains('project-link')).toBe(true);
+    expect(element.querySelectorAll('.actions a')).toHaveLength(1);
+    expect(element.textContent).not.toContain('GitHub');
+    expect(element.textContent).not.toContain('Ver caso de estudio');
+  });
 });

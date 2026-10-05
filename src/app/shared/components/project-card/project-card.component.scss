@@ -36,8 +36,7 @@ ul,
 }
 article,
 .interface,
-.scenario,
-.knowledge {
+.scenario {
   background: v.$surface-primary;
 }
 article {
@@ -88,8 +87,7 @@ dt,
 .status,
 .description,
 dd,
-.current,
-.repository-link {
+.current {
   color: v.$text-secondary;
 }
 .status {
@@ -111,7 +109,7 @@ h3,
 .description,
 .headline-block,
 .scenario-map,
-:is(.scenario, .knowledge) p {
+.scenario p {
   margin-top: v.$space-4;
 }
 .reasoning {
@@ -167,20 +165,18 @@ a {
   gap: v.$space-6;
 }
 .interface,
-.scenario,
-.knowledge {
+.scenario {
   width: 100%;
   margin-inline: auto;
   border: 1px solid v.$border-hover;
   border-radius: v.$radius-md;
 }
-.interface,
-.knowledge {
+.interface {
   max-width: 28rem;
 }
-.scenario,
-.knowledge {
+.scenario {
   padding: v.$space-5;
+  max-width: 16rem;
 }
 .interface-nav {
   padding: v.$space-4;
@@ -191,6 +187,7 @@ a {
   height: 3rem;
 }
 .headline-block {
+  width: 70%;
   background: linear-gradient(90deg, v.$text-secondary, rgba(v.$text-secondary, 0.2));
 }
 .text-lines {
@@ -203,22 +200,15 @@ a {
   );
 }
 .mini-grid,
-.source-blocks {
-  margin-top: v.$space-6;
-}
-.mini-grid,
-.choices,
-.source-blocks {
+.choices {
   display: grid;
   gap: v.$space-2;
 }
 .mini-grid {
+  margin-top: v.$space-6;
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
-.source-blocks {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-:is(.mini-grid, .choices, .source-blocks) span {
+:is(.mini-grid, .choices) span {
   background: v.$surface-elevated;
 }
 .visual-caption {
@@ -235,16 +225,10 @@ a {
     transparent 52%
   );
 }
-:is(.choices, .source-blocks) span,
-.query-block {
+.choices span {
   padding: v.$space-2;
-}
-:is(.choices, .source-blocks) span {
   font: var(--caption) var(--mono);
   color: v.$text-secondary;
-}
-.scenario {
-  max-width: 16rem;
 }
 .scenario-map span {
   position: absolute;
@@ -269,13 +253,6 @@ a {
   grid-template-columns: minmax(0, 1fr);
   margin-top: v.$space-2;
 }
-.query-block {
-  border: 1px solid v.$border-hover;
-}
-.headline-block,
-.short {
-  width: 70%;
-}
 @include m.min-width(v.$breakpoint-tablet) {
   .project-content {
     padding: v.$space-8;
@@ -297,4 +274,28 @@ a {
     border-left: var(--border);
     padding: v.$space-8;
   }
+}
+
+.soc-grid {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+}
+.chart {
+  height: 3.5rem;
+  margin-block: 1rem;
+  background: rgba(v.$accent, 0.3);
+  clip-path: polygon(0 80%, 20% 40%, 60% 10%, 100% 20%, 100% 28%, 60% 18%, 20% 48%, 0 88%);
+}
+.risk {
+  padding-block: 0.4rem;
+  border-top: var(--border);
+}
+.risk span {
+  color: #d99191;
+}
+.risk:nth-last-child(2) span {
+  color: #d6a478;
+}
+.risk:last-child span {
+  color: #c8bd83;
 }

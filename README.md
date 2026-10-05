@@ -142,3 +142,28 @@ cuatro columnas desde 768 px. Los chips envuelven su contenido sin ocultar texto
 - Comprueba título y meta description en el documento.
 
 En un despliegue SPA, el servidor debe devolver index.html para rutas de la aplicación.
+
+## Selected Work — Sprint 9
+
+Orden de proyectos: **01 Portfolio Engineering** (LIVE, featured),
+**02 Sentinel — Cybersecurity Operations Dashboard** (LIVE) y
+**03 LoL Scenario Trainer** (IN DEVELOPMENT, stack planificado).
+
+Sentinel usa Angular, TypeScript, Signals, RxJS y Material/CDK. Su acción principal
+«Ver demo» abre https://sentinel-cybersecurity-operations-d.vercel.app/ en una nueva
+pestaña con `noopener noreferrer`. No se publica un repositorio de Sentinel sin
+validación. El visual SOC es una representación abstracta HTML/CSS, no una captura.
+
+`Project.actions` declara enlaces tipados (`internal` / `external`) con etiqueta,
+URL y variante (`primary` / `secondary`); `Project.visual` selecciona la composición
+sin depender del estado LIVE. `repositoryUrl` se conserva para el case study existente.
+
+- `/projects/portfolio-engineering`: case study real.
+- `/projects/sentinel`: placeholder con demo; case study en construcción.
+- `/projects/lol-scenario-trainer`: placeholder existente.
+- `/#work`: Portfolio featured y Sentinel + LoL en dos columnas desde 1024 px;
+  una columna por debajo, con cards que estiran sin altura fija.
+
+Revisión manual: http://127.0.0.1:4200/#work a 375, 430, 768, 1024, 1440 y 1920 px;
+comprobar título largo, chips, CTA demo, ausencia de overflow, navegación con Tab,
+foco visible y apertura de la demo. Este sprint no incluye el case study de Sentinel.
