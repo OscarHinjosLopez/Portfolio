@@ -8,6 +8,7 @@ import { NotFoundComponent } from './features/not-found/not-found.component';
 import { DesignSystemComponent } from './features/design-system/design-system.component';
 import { PortfolioEngineeringComponent } from './features/projects/portfolio-engineering/portfolio-engineering.component';
 import { Title } from '@angular/platform-browser';
+import { SentinelCaseStudyComponent } from './features/projects/sentinel/sentinel-case-study.component';
 
 describe('Application routes', () => {
   beforeEach(() => {
@@ -42,16 +43,42 @@ describe('Application routes', () => {
 
   it('updates the project title when reusing the placeholder route', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/sentinel', ProjectPlaceholderComponent);
-    expect(harness.routeNativeElement?.textContent).toContain('Sentinel');
-    const demo = harness.routeNativeElement?.querySelector('a[target="_blank"]');
-    expect(demo?.getAttribute('href')).toBe(
-      'https://sentinel-cybersecurity-operations-d.vercel.app/',
-    );
-    expect(demo?.getAttribute('rel')).toBe('noopener noreferrer');
+    await harness.navigateByUrl('/projects/unknown-project', ProjectPlaceholderComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('Proyecto');
     await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('LoL Scenario Trainer');
     expect(harness.routeNativeElement?.querySelector('a')?.getAttribute('href')).toBe('/#work');
+  });
+
+  it('lazy-loads Sentinel with its title, section links and Home return actions', async () => {
+    const route = routes.find((route) => route.path === 'projects/sentinel');
+    expect(route?.component).toBeUndefined();
+    expect(route?.loadComponent).toBeDefined();
+    const harness = await RouterTestingHarness.create();
+    await harness.navigateByUrl('/projects/sentinel', SentinelCaseStudyComponent);
+    expect(TestBed.inject(Title).getTitle()).toBe(
+      'Sentinel | Cybersecurity Operations Dashboard | Oscar Hinjos',
+    );
+    expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toBe('Sentinel');
+    expect(harness.routeNativeElement?.textContent).not.toContain('Case study en construcción');
+    const link = harness.routeNativeElement?.querySelector<HTMLAnchorElement>(
+      '.toc a[href="/projects/sentinel#architecture"]',
+    );
+    expect(link).toBeTruthy();
+    link?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/projects/sentinel#architecture');
+    harness.routeNativeElement
+      ?.querySelector<HTMLAnchorElement>('.closing a[href="/#work"]')
+      ?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#work');
+    await harness.navigateByUrl('/projects/sentinel', SentinelCaseStudyComponent);
+    harness.routeNativeElement
+      ?.querySelector<HTMLAnchorElement>('.closing a[href="/#contact"]')
+      ?.click();
+    await harness.fixture.whenStable();
+    expect(TestBed.inject(Router).url).toBe('/#contact');
   });
 
   it('loads the portfolio case study and returns to projects and contact', async () => {

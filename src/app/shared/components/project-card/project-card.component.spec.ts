@@ -55,7 +55,7 @@ describe('ProjectCardComponent', () => {
       );
     });
   }
-  it('shows Sentinel as LIVE with its real demo as the primary and only action', async () => {
+  it('shows Sentinel as LIVE with its case study first and real demo second', async () => {
     const fixture = TestBed.createComponent(ProjectCardComponent);
     fixture.componentRef.setInput('project', PROJECTS[1]);
     await fixture.whenStable();
@@ -64,14 +64,17 @@ describe('ProjectCardComponent', () => {
     expect(
       [...element.querySelectorAll('app-tech-chip')].map((chip) => chip.textContent?.trim()),
     ).toEqual(['Angular', 'TypeScript', 'Signals', 'RxJS', 'Material/CDK']);
-    const link = element.querySelector('.actions a');
+    const links = [...element.querySelectorAll('.actions a')];
+    expect(links[0].getAttribute('href')).toBe('/projects/sentinel');
+    expect(links[0].textContent).toContain('Ver caso de estudio');
+    expect(links[0].classList.contains('project-link')).toBe(true);
+    const link = links[1];
     expect(link?.getAttribute('href')).toBe(
       'https://sentinel-cybersecurity-operations-d.vercel.app/',
     );
     expect(link?.textContent).toContain('Ver demo');
-    expect(link?.classList.contains('project-link')).toBe(true);
-    expect(element.querySelectorAll('.actions a')).toHaveLength(1);
+    expect(links).toHaveLength(2);
+    expect(PROJECTS[1].actions.map((action) => action.variant)).toEqual(['primary', 'secondary']);
     expect(element.textContent).not.toContain('GitHub');
-    expect(element.textContent).not.toContain('Ver caso de estudio');
   });
 });

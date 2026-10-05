@@ -51,10 +51,16 @@ export const PROJECTS: readonly Project[] = [
     visual: 'sentinel',
     actions: [
       {
+        label: 'Ver caso de estudio',
+        url: '/projects/sentinel',
+        type: 'internal',
+        variant: 'primary',
+      },
+      {
         label: 'Ver demo',
         url: 'https://sentinel-cybersecurity-operations-d.vercel.app/',
         type: 'external',
-        variant: 'primary',
+        variant: 'secondary',
       },
     ],
   },
