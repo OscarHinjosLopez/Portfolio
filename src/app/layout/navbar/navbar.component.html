@@ -24,9 +24,13 @@
       <ul class="navigation-links">
         @for (link of links; track link.fragment) {
           <li>
-            <a [routerLink]="['/']" [fragment]="link.fragment" (click)="closeMenu(true)">{{
-              link.label
-            }}</a>
+            <a
+              [routerLink]="['/']"
+              [fragment]="link.fragment"
+              [attr.aria-current]="activeSection() === link.fragment ? 'location' : null"
+              (click)="closeMenu(true)"
+              >{{ link.label }}</a
+            >
           </li>
         }
       </ul>
@@ -36,6 +40,7 @@
         size="sm"
         [routerLink]="['/']"
         fragment="contact"
+        [attr.aria-current]="activeSection() === 'contact' ? 'location' : null"
         (click)="closeMenu(true)"
         >Contact</a
       >

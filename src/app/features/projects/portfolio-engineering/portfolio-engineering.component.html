@@ -1,4 +1,10 @@
-<main id="main-content" tabindex="-1" class="container">
+<main
+  [appScrollSpy]="sectionIds"
+  #spy="scrollSpy"
+  id="main-content"
+  tabindex="-1"
+  class="container"
+>
   <article>
     <header class="case-hero">
       <div class="actions">
@@ -49,7 +55,12 @@
         <ol>
           @for (section of sections; track section.id) {
             <li>
-              <a routerLink="." [fragment]="section.id">{{ section.label }}</a>
+              <a
+                routerLink="."
+                [fragment]="section.id"
+                [attr.aria-current]="spy.active() === section.id ? 'location' : null"
+                >{{ section.label }}</a
+              >
             </li>
           }
         </ol>
@@ -90,7 +101,10 @@
             organiza sus propios datos y secciones; projects incorpora esta página sin ampliar el
             componente de inicio.
           </p>
-          <pre aria-label="Estructura simplificada del repositorio"><code>{{ tree }}</code></pre>
+          <pre
+            tabindex="0"
+            aria-label="Estructura simplificada del repositorio"
+          ><code>{{ tree }}</code></pre>
           <ol class="decisions">
             @for (decision of decisions; track decision.title; let index = $index) {
               <li>

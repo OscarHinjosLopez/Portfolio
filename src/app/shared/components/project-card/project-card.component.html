@@ -36,7 +36,7 @@
             [routerLink]="action.url"
             [attr.aria-label]="action.label + ' · ' + project().title"
           >
-            {{ action.label }} <span aria-hidden="true">↗</span>
+            {{ action.label }} <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
         } @else {
           <a
@@ -46,7 +46,7 @@
             rel="noopener noreferrer"
             [attr.aria-label]="action.label + ' · ' + project().title + ' (nueva pestaña)'"
           >
-            {{ action.label }} <span aria-hidden="true">↗</span>
+            {{ action.label }} <span class="link-arrow" aria-hidden="true">↗</span>
           </a>
         }
       }

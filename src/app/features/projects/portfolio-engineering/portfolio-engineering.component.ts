@@ -1,3 +1,4 @@
+import { ScrollSpyDirective } from '../../../shared/directives/scroll-spy.directive';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
@@ -8,7 +9,13 @@ import { PROJECTS } from '../../home/data/projects.data';
 @Component({
   selector: 'app-portfolio-engineering',
   standalone: true,
-  imports: [RouterLink, ButtonComponent, TechChipComponent, SectionHeadingComponent],
+  imports: [
+    ScrollSpyDirective,
+    RouterLink,
+    ButtonComponent,
+    TechChipComponent,
+    SectionHeadingComponent,
+  ],
   templateUrl: './portfolio-engineering.component.html',
   styleUrl: './portfolio-engineering.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -78,4 +85,5 @@ export class PortfolioEngineeringComponent {
 └── features/      home · projects
                    design-system · not-found`;
   readonly widths = [375, 430, 768, 1024, 1440, 1920];
+  readonly sectionIds = this.sections.map((section) => section.id);
 }

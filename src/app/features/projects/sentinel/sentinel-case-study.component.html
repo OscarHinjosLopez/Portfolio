@@ -1,4 +1,10 @@
-<main id="main-content" tabindex="-1" class="container">
+<main
+  [appScrollSpy]="sectionIds"
+  #spy="scrollSpy"
+  id="main-content"
+  tabindex="-1"
+  class="container"
+>
   <article>
     <header class="case-hero">
       <a routerLink="/" fragment="work">← Volver a proyectos</a>
@@ -19,7 +25,7 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Ver demo de Sentinel (nueva pestaña)"
-          >Ver demo <span aria-hidden="true">↗</span></a
+          >Ver demo <span class="link-arrow" aria-hidden="true">↗</span></a
         >
         <span class="eyebrow">PORTFOLIO PRODUCT / MOCK DATA</span>
       </div>
@@ -68,7 +74,12 @@
         <ol>
           @for (section of sections; track section.id) {
             <li>
-              <a routerLink="." [fragment]="section.id">{{ section.label }}</a>
+              <a
+                routerLink="."
+                [fragment]="section.id"
+                [attr.aria-current]="spy.active() === section.id ? 'location' : null"
+                >{{ section.label }}</a
+              >
             </li>
           }
         </ol>
@@ -537,7 +548,8 @@
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver Sentinel en funcionamiento (nueva pestaña)"
-              >Ver Sentinel en funcionamiento <span aria-hidden="true">↗</span></a
+              >Ver Sentinel en funcionamiento
+              <span class="link-arrow" aria-hidden="true">↗</span></a
             >
             <p>
               En el login, elige Admin, Analyst o Viewer en «Demo accounts» para rellenar el
@@ -576,7 +588,7 @@
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Ver demo de Sentinel (nueva pestaña)"
-          >Ver demo <span aria-hidden="true">↗</span></a
+          >Ver demo <span class="link-arrow" aria-hidden="true">↗</span></a
         ><a appButton variant="secondary" routerLink="/" fragment="work">Volver a proyectos</a
         ><a routerLink="/" fragment="contact">Contactar</a>
       </div>

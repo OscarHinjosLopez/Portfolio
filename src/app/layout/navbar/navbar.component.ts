@@ -9,6 +9,7 @@ import {
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../shared/components/button/button.component';
+import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 
 @Component({
   selector: 'app-navbar',
@@ -21,6 +22,7 @@ import { ButtonComponent } from '../../shared/components/button/button.component
 })
 export class NavbarComponent {
   readonly menuOpen = signal(false);
+  readonly activeSection = inject(ScrollSpyService).homeSection;
   private readonly menuToggle = viewChild<unknown, ElementRef<HTMLButtonElement>>('menuToggle', {
     read: ElementRef,
   });
