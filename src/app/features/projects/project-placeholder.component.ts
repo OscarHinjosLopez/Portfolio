@@ -28,9 +28,13 @@ import { PROJECTS } from '../home/data/projects.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectPlaceholderComponent {
-  private readonly params = toSignal(inject(ActivatedRoute).paramMap);
+  private readonly route = inject(ActivatedRoute);
+  private readonly params = toSignal(this.route.paramMap);
   readonly project = computed(() =>
-    PROJECTS.find((project) => project.slug === this.params()?.get('slug')),
+    PROJECTS.find(
+      (project) =>
+        project.slug === (this.params()?.get('slug') ?? this.route.snapshot.data['slug']),
+    ),
   );
   projectTitle(): string {
     return this.project()?.title ?? 'Proyecto';
