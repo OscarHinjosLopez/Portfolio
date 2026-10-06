@@ -1,0 +1,770 @@
+[
+  {
+    "name": "home",
+    "profile": "mobile",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1365.0184,
+        "largest-contentful-paint": 1365.9396,
+        "speed-index": 1365.0184,
+        "total-blocking-time": 30,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "section#top > div.container > div.hero-content > p.hero-description",
+      "lcpText": "Construyo aplicaciones web modernas, escalables y orientadas a producto con Ang…",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "duration": 144,
+          "startTime": 622.9698
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 107,
+          "startTime": 1515.9396
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 577
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 5,
+        "numScripts": 2,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 314,
+        "numTasksOver10ms": 3,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.06119999999999999,
+        "throughput": 418582882.89192027,
+        "maxRtt": 0.06119999999999999,
+        "maxServerLatency": 7.969799999999998,
+        "totalByteWeight": 119924,
+        "totalTaskTime": 147.2739999999999,
+        "mainDocumentTransferSize": 14527
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1364.7325,
+        "largest-contentful-paint": 1514.7325,
+        "speed-index": 1364.7325,
+        "total-blocking-time": 31,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "section#top > div.container > div.hero-content > p.hero-description",
+      "lcpText": "Construyo aplicaciones web modernas, escalables y orientadas a producto con Ang…",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/",
+          "duration": 143,
+          "startTime": 620.36625
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 112,
+          "startTime": 1664.7325
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 577
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 5,
+        "numScripts": 2,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 302,
+        "numTasksOver10ms": 3,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.06075,
+        "throughput": 429700987.6586644,
+        "maxRtt": 0.06075,
+        "maxServerLatency": 7.36625,
+        "totalByteWeight": 119994,
+        "totalTaskTime": 151.3430000000001,
+        "mainDocumentTransferSize": 14560
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": -0.28589999999985594,
+        "largest-contentful-paint": 148.79290000000015,
+        "speed-index": -0.28589999999985594,
+        "total-blocking-time": 1,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  {
+    "name": "home",
+    "profile": "desktop",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 333.0657,
+        "largest-contentful-paint": 373.0657,
+        "speed-index": 333.0657,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "section#top > div.container > div.hero-content > h1#hero-title",
+      "lcpText": "Frontend\nEngineer.",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 577
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 5,
+        "numScripts": 2,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 290,
+        "numTasksOver10ms": 3,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.06615,
+        "throughput": 415861288.6516528,
+        "maxRtt": 0.06615,
+        "maxServerLatency": 6.53285,
+        "totalByteWeight": 119924,
+        "totalTaskTime": 150.264,
+        "mainDocumentTransferSize": 14527
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 333.9592,
+        "largest-contentful-paint": 373.9592,
+        "speed-index": 333.9592,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "section#top > div.container > div.hero-content > h1#hero-title",
+      "lcpText": "Frontend\nEngineer.",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 577
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 5,
+        "numScripts": 2,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 292,
+        "numTasksOver10ms": 3,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.0624,
+        "throughput": 415024632.0676154,
+        "maxRtt": 0.0624,
+        "maxServerLatency": 6.9796,
+        "totalByteWeight": 119994,
+        "totalTaskTime": 155.41200000000015,
+        "mainDocumentTransferSize": 14560
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": 0.8935000000000173,
+        "largest-contentful-paint": 0.8935000000000173,
+        "speed-index": 0.8935000000000173,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  {
+    "name": "portfolio",
+    "profile": "mobile",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1515.5951,
+        "largest-contentful-paint": 1665.5951,
+        "speed-index": 1515.5951,
+        "total-blocking-time": 42,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.intro",
+      "lcpText": "Diseño y desarrollo de un portfolio profesional construido desde cero con Angul…",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/projects/portfolio-engineering",
+          "duration": 102,
+          "startTime": 618.79755
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 102,
+          "startTime": 1665.5951
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 327
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 6,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 220,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.05745,
+        "throughput": 418168476.80602646,
+        "maxRtt": 0.05745,
+        "maxServerLatency": 7.79755,
+        "totalByteWeight": 125346,
+        "totalTaskTime": 115.03100000000002,
+        "mainDocumentTransferSize": 11397
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1515.9238,
+        "largest-contentful-paint": 1665.9238,
+        "speed-index": 1515.9238,
+        "total-blocking-time": 38,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.intro",
+      "lcpText": "Diseño y desarrollo de un portfolio profesional construido desde cero con Angul…",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/projects/portfolio-engineering",
+          "duration": 96,
+          "startTime": 616.9619
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 88,
+          "startTime": 1665.9238
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 327
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 6,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 220,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 1,
+        "numTasksOver50ms": 0,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.062099999999999995,
+        "throughput": 277471236.5678652,
+        "maxRtt": 0.062099999999999995,
+        "maxServerLatency": 7.9619,
+        "totalByteWeight": 125417,
+        "totalTaskTime": 104.54399999999998,
+        "mainDocumentTransferSize": 11431
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": 0.3287000000000262,
+        "largest-contentful-paint": 0.3287000000000262,
+        "speed-index": 0.3287000000000262,
+        "total-blocking-time": -4,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  {
+    "name": "portfolio",
+    "profile": "desktop",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 374.7228,
+        "largest-contentful-paint": 374.7228,
+        "speed-index": 374.7228,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > h1.display-xl",
+      "lcpText": "Portfolio\nEngineering.",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 327
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 6,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 196,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 1,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.06359999999999999,
+        "throughput": 385828386.9753007,
+        "maxRtt": 0.06359999999999999,
+        "maxServerLatency": 7.3614,
+        "totalByteWeight": 125346,
+        "totalTaskTime": 115.42400000000005,
+        "mainDocumentTransferSize": 11397
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 373.4347,
+        "largest-contentful-paint": 373.4347,
+        "speed-index": 373.4347,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > h1.display-xl",
+      "lcpText": "Portfolio\nEngineering.",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 327
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 6,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 199,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 1,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.06615,
+        "throughput": 373681950.9352502,
+        "maxRtt": 0.06615,
+        "maxServerLatency": 6.71735,
+        "totalByteWeight": 125417,
+        "totalTaskTime": 113.38000000000007,
+        "mainDocumentTransferSize": 11431
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": -1.2880999999999858,
+        "largest-contentful-paint": -1.2880999999999858,
+        "speed-index": -1.2880999999999858,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  {
+    "name": "sentinel",
+    "profile": "mobile",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1521.6417,
+        "largest-contentful-paint": 1971.6417,
+        "speed-index": 1521.6417,
+        "total-blocking-time": 20.5,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.intro",
+      "lcpText": "Plataforma SOC construida con Angular para gestionar amenazas, dispositivos y o…",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 55869,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/projects/sentinel",
+          "duration": 128,
+          "startTime": 625.82085
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 92,
+          "startTime": 2121.6417
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 432
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 7,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 255,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 1,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.09315,
+        "throughput": 68886713.18742871,
+        "maxRtt": 0.09315,
+        "maxServerLatency": 10.82085,
+        "totalByteWeight": 200512,
+        "totalTaskTime": 132.39200000000008,
+        "mainDocumentTransferSize": 13856
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 1515.1932,
+        "largest-contentful-paint": 1814.2555,
+        "speed-index": 1515.1932,
+        "total-blocking-time": 19.999999999999886,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.intro",
+      "lcpText": "Plataforma SOC construida con Angular para gestionar amenazas, dispositivos y o…",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 0,
+      "longTasks": [
+        {
+          "url": "http://127.0.0.1:4173/projects/sentinel",
+          "duration": 114,
+          "startTime": 619.12775
+        },
+        {
+          "url": "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+          "duration": 88.00000000000023,
+          "startTime": 1964.2555
+        }
+      ],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 432
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 7,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 253,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 1,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.056249999999999994,
+        "throughput": 324619398.60126597,
+        "maxRtt": 0.056249999999999994,
+        "maxServerLatency": 7.127749999999999,
+        "totalByteWeight": 155655,
+        "totalTaskTime": 117.0970000000001,
+        "mainDocumentTransferSize": 14199
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": -6.448499999999967,
+        "largest-contentful-paint": -157.38619999999992,
+        "speed-index": -6.448499999999967,
+        "total-blocking-time": -0.5000000000001137,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  {
+    "name": "sentinel",
+    "profile": "desktop",
+    "baseline": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 375.4052,
+        "largest-contentful-paint": 455.4052,
+        "speed-index": 375.4052,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.subtitle",
+      "lcpText": "Cybersecurity Operations Dashboard",
+      "labelMismatchScore": 0,
+      "imageDeliveryWastedBytes": 22845,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 432
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 7,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 222,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.0774,
+        "throughput": 514628180.08986956,
+        "maxRtt": 0.0774,
+        "maxServerLatency": 7.7026,
+        "totalByteWeight": 200512,
+        "totalTaskTime": 129.82400000000004,
+        "mainDocumentTransferSize": 13856
+      }
+    },
+    "final": {
+      "runs": 3,
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 376.2227,
+        "largest-contentful-paint": 416.2227,
+        "speed-index": 376.2227,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      },
+      "lcpElement": "main#main-content > article > header.case-hero > p.subtitle",
+      "lcpText": "Cybersecurity Operations Dashboard",
+      "labelMismatchScore": 1,
+      "imageDeliveryWastedBytes": 22845,
+      "longTasks": [],
+      "dom": {
+        "statistic": "Total elements",
+        "value": {
+          "type": "numeric",
+          "granularity": 1,
+          "value": 432
+        }
+      },
+      "runWarnings": [],
+      "diagnostics": {
+        "numRequests": 7,
+        "numScripts": 3,
+        "numStylesheets": 1,
+        "numFonts": 0,
+        "numTasks": 231,
+        "numTasksOver10ms": 2,
+        "numTasksOver25ms": 2,
+        "numTasksOver50ms": 1,
+        "numTasksOver100ms": 0,
+        "numTasksOver500ms": 0,
+        "rtt": 0.05865,
+        "throughput": 396191129.52322894,
+        "maxRtt": 0.05865,
+        "maxServerLatency": 8.11135,
+        "totalByteWeight": 201067,
+        "totalTaskTime": 132.324,
+        "mainDocumentTransferSize": 14199
+      }
+    },
+    "delta": {
+      "scores": {
+        "performance": 0,
+        "accessibility": 0,
+        "best-practices": 0,
+        "seo": 0
+      },
+      "metrics": {
+        "first-contentful-paint": 0.8174999999999955,
+        "largest-contentful-paint": -39.182500000000005,
+        "speed-index": 0.8174999999999955,
+        "total-blocking-time": 0,
+        "cumulative-layout-shift": 0
+      }
+    }
+  }
+]

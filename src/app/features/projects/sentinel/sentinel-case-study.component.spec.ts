@@ -106,7 +106,14 @@ describe('SentinelCaseStudyComponent', () => {
       expect(img.getAttribute('height')).toBe('900');
       expect(img.alt.length).toBeGreaterThan(20);
     }
-    expect(images[0].getAttribute('fetchpriority')).toBe('high');
+    expect(images[0].hasAttribute('fetchpriority')).toBe(false);
+    expect(images[0].getAttribute('loading')).not.toBe('lazy');
+    for (const img of images) {
+      expect(img.getAttribute('srcset')).toMatch(/-720\.webp\s+720w/);
+      expect(img.getAttribute('srcset')).toMatch(/\/[^/]+\.webp\s+1440w/);
+      expect(img.getAttribute('sizes')).toBeTruthy();
+      expect(img.getAttribute('decoding')).toBe('async');
+    }
     expect(images.slice(1).every((img) => img.getAttribute('loading') === 'lazy')).toBe(true);
   });
 });
