@@ -1,0 +1,108 @@
+@use 'variables' as v;
+
+:root {
+  --motion-fast: #{v.$transition-fast};
+  --motion-normal: #{v.$transition-normal};
+  --motion-slow: #{v.$transition-slow};
+  --motion-ease: #{v.$ease-ui};
+  --motion-distance: 8px;
+}
+
+/* Shared navigation and motion patterns; content is visible by default. */
+main section[id] {
+  scroll-margin-top: calc(var(--navbar-height) + 1rem);
+}
+a {
+  transition: color var(--motion-fast) var(--motion-ease);
+  text-underline-offset: 0.3em;
+}
+a[aria-current='location'] {
+  color: v.$accent-secondary !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px;
+}
+.link-arrow {
+  display: inline-block;
+  transition: transform var(--motion-fast) var(--motion-ease);
+}
+a:focus-visible .link-arrow {
+  transform: translate(2px, -2px);
+}
+a[appButton]:active {
+  transform: translateY(1px);
+}
+.hero-content h1,
+.case-hero h1,
+.case-hero .subtitle,
+#contact h2 {
+  text-wrap: balance;
+}
+.hero-description,
+.case-hero .intro,
+.contact-copy {
+  text-wrap: pretty;
+}
+
+@media (hover: hover) {
+  a:hover .link-arrow {
+    transform: translate(2px, -2px);
+  }
+  a:not([appButton]):not(.brand):hover {
+    text-decoration: underline;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-enter {
+    animation: enter-content var(--motion-slow) var(--motion-ease) both;
+  }
+  .reveal-enter:focus-within {
+    animation: none;
+  }
+  .hero-content > :is(.availability, h1, .hero-description, .hero-actions) {
+    animation: enter-content var(--motion-slow) var(--motion-ease) backwards;
+  }
+  .hero-content h1 {
+    animation-delay: 50ms;
+  }
+  .hero-description {
+    animation-delay: 100ms;
+  }
+  .hero-actions {
+    animation-delay: 150ms;
+  }
+  .navigation-panel.is-open {
+    animation: enter-content var(--motion-fast) var(--motion-ease);
+  }
+}
+@keyframes enter-content {
+  from {
+    opacity: 0.65;
+    transform: translateY(var(--motion-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (pointer: coarse) {
+  app-project-card .actions a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+  .navigation-panel a[appButton] {
+    min-height: 44px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-enter,
+  .hero-content > *,
+  .navigation-panel {
+    animation: none !important;
+  }
+  app-project-card article,
+  a[appButton],
+  .link-arrow {
+    transform: none !important;
+  }
+}

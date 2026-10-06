@@ -1,5 +1,6 @@
 @use './styles/index' as styles;
 @use './styles/availability';
+@use './styles/motion';
 
 :root {
   --navbar-height: #{styles.$navbar-height-mobile};
@@ -41,8 +42,10 @@ html {
   *,
   *::before,
   *::after {
-    transition-duration: 0s;
-    animation-duration: 0s;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
     animation-iteration-count: 1;
     scroll-behavior: auto;
   }

@@ -1,8 +1,29 @@
 import { TestBed } from '@angular/core/testing';
 import { Router, provideRouter } from '@angular/router';
 import { NavbarComponent } from './navbar.component';
+import { ScrollSpyService } from '../../core/services/scroll-spy.service';
 
 describe('NavbarComponent', () => {
+  it('reflects the shared active section with aria-current in the same mobile and desktop links', async () => {
+    const fixture = TestBed.createComponent(NavbarComponent);
+    const active = TestBed.inject(ScrollSpyService).homeSection;
+    active.set('work');
+    await fixture.whenStable();
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelector('a[aria-current="location"]')?.getAttribute('href')).toBe(
+      '/#work',
+    );
+    fixture.componentInstance.toggleMenu();
+    active.set('contact');
+    await fixture.whenStable();
+    expect(element.querySelectorAll('a[aria-current]')).toHaveLength(1);
+    expect(element.querySelector('a[aria-current="location"]')?.getAttribute('href')).toBe(
+      '/#contact',
+    );
+    active.set(null);
+    await fixture.whenStable();
+    expect(element.querySelector('a[aria-current]')).toBeNull();
+  });
   it('navigates to Contact and closes the mobile menu', async () => {
     const fixture = TestBed.createComponent(NavbarComponent);
     await fixture.whenStable();

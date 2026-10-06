@@ -190,3 +190,39 @@ Revisión manual a 375, 430, 768, 1024, 1440 y 1920 px: hero, imágenes, tabla d
 permisos, flujos, CTA y TOC sticky solo en desktop. Comprueba teclado y foco, enlaces
 de secciones, demo en otra pestaña, vuelta a `/#work` y enlace a `/#contact`.
 Este sprint no incluye SEO/Lighthouse final, despliegue ni Sprint 11.
+
+## Microinteractions + UX polish — Sprint 11
+
+Home y ambos case studies comparten un scrollspy con IntersectionObserver. Una
+línea de lectura bajo la navbar selecciona una sección sin competir por ratios de
+intersección de bloques largos. Se recalcula en resize; observers y listeners se
+limpian al destruir la vista. Navbar y TOCs usan `aria-current="location"`, con
+color y subrayado sutil. Hero y los espacios entre secciones pueden no marcar ningún enlace.
+
+Las siete secciones principales de Home usan reveal una vez. El contenido parte
+visible; al intersectar se anima 400 ms con 8 px y opacity. Sin IntersectionObserver
+o con reduced motion permanece visible. La entrada del Hero termina en 550 ms;
+no hay animaciones infinitas ni librerías nuevas. Los tokens CSS reutilizan los
+valores SCSS existentes: 150/250/400 ms y el easing de UI.
+
+`prefers-reduced-motion: reduce` elimina animaciones, delays, transiciones
+decorativas, transforms de cards/botones/flechas y smooth scroll, conservando
+foco visible y feedback de estado. Las flechas existentes se desplazan como máximo
+2 px; las acciones de cards alcanzan 44 px de altura en touch. Chips y capturas
+permanecen estáticos. El bloque de código desplazable de Portfolio Engineering
+recibe foco con Tab para poder desplazarse por teclado.
+
+Se conserva la restauración oficial del Router con anchors, posiciones de Browser
+Back y apertura de nuevas páginas arriba. `scroll-margin-top` comparte el offset
+de navbar + 1 rem. Sin view transitions, spinners artificiales ni rediseño.
+
+Validación: Prettier; 58 tests en 22 archivos; production build con 0 warnings;
+Home y ambos case studies a 375, 430, 768, 1024, 1440 y 1920 px sin overflow;
+axe WCAG A/AA en las tres páginas a 375/1440 px sin infracciones. Se comprobaron
+TOCs, Navbar activa, deep links, menú móvil, teclado, skip link, touch targets,
+Browser Back y reduced motion.
+
+Bundle inicial: 289 875 → 297 032 bytes (+7 157 bytes, aproximadamente 2,47 %).
+Transferencia estimada: 76,56 → 78,60 kB. CSS de componentes sin incremento:
+ProjectCard 3 960 bytes; Portfolio Engineering 3 951 bytes; Sentinel 3 990 bytes.
+Budgets y dependencias intactos. No se realizó SEO, Lighthouse final ni despliegue.

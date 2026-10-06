@@ -1,3 +1,4 @@
+import { ScrollSpyDirective } from '../../../shared/directives/scroll-spy.directive';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { ButtonComponent } from '../../../shared/components/button/button.component';
@@ -8,7 +9,13 @@ import { PROJECTS } from '../../home/data/projects.data';
 @Component({
   selector: 'app-sentinel-case-study',
   standalone: true,
-  imports: [RouterLink, ButtonComponent, TechChipComponent, SectionHeadingComponent],
+  imports: [
+    ScrollSpyDirective,
+    RouterLink,
+    ButtonComponent,
+    TechChipComponent,
+    SectionHeadingComponent,
+  ],
   templateUrl: './sentinel-case-study.component.html',
   styleUrl: './sentinel-case-study.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -134,4 +141,5 @@ export class SentinelCaseStudyComponent {
     'Signals y RxJS funcionan mejor cuando cada herramienta tiene una responsabilidad clara.',
     'Accesibilidad y estados de interfaz deben formar parte del desarrollo desde el inicio.',
   ];
+  readonly sectionIds = this.sections.map((section) => section.id);
 }
