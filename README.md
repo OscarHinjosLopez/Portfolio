@@ -229,6 +229,15 @@ Budgets y dependencias intactos. No se realizó SEO, Lighthouse final ni desplie
 
 # SEO
 
+Las auditorías de rendimiento y accesibilidad del Sprint 13 están documentadas en
+[docs/sprint13-performance-report.md](docs/sprint13-performance-report.md).
+Tras `npm run build -- --stats-json`, ejecutar `npm run audit:lighthouse -- final`
+para tres runs por página/perfil y `node scripts/audit-browser.mjs` para axe,
+teclado, foco, recursos e hidratación. Lighthouse es una dependencia de desarrollo;
+el script de navegador reutiliza Playwright y axe existentes mediante `BROWSER_TOOLS_ROOT`.
+`CHROME_PATH` permite seleccionar Chrome local; `LIGHTHOUSE_RUNS` controla los runs.
+Los informes completos se guardan localmente y sus resúmenes compactos se versionan.
+
 Angular 22.2.1 genera HTML estático con `@angular/ssr`, `outputMode: "static"` y
 `RenderMode.Prerender`; el navegador hidrata las páginas. No se necesita un servidor Node.
 Las tres páginas públicas, Design System, el placeholder LoL y la 404 se prerenderizan.

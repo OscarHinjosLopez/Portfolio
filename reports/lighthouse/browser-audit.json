@@ -1,0 +1,1547 @@
+{
+  "results": [
+    {
+      "route": "/",
+      "width": 375,
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1936
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Menú",
+          "label": "Abrir menú de navegación",
+          "href": null,
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3991.625
+        },
+        {
+          "tag": "A",
+          "text": "Ver proyectos ↓",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 6540.56591796875
+        },
+        {
+          "tag": "A",
+          "text": "Descargar CV ↗",
+          "label": null,
+          "href": "/assets/cv-oscar-hinjos.pdf",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 6618.93017578125
+        },
+        {
+          "tag": "A",
+          "text": "Ver caso de estudio ↗",
+          "label": "Ver caso de estudio · Portfolio Engineering",
+          "href": "/projects/portfolio-engineering",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5888.4375
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": "GitHub · Portfolio Engineering (nueva pestaña)",
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2380.8125
+        },
+        {
+          "tag": "A",
+          "text": "Ver caso de estudio ↗",
+          "label": "Ver caso de estudio · Sentinel — Cybersecurity Operations Dashboard",
+          "href": "/projects/sentinel",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5888.4375
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo · Sentinel — Cybersecurity Operations Dashboard (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3077.25
+        },
+        {
+          "tag": "A",
+          "text": "Ver detalles del proyecto ↗",
+          "label": "Ver detalles del proyecto · LoL Scenario Trainer",
+          "href": "/projects/lol-scenario-trainer",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7361.0625
+        },
+        {
+          "tag": "A",
+          "text": "hinjoslopezoscar@gmail.com",
+          "label": null,
+          "href": "mailto:hinjoslopezoscar@gmail.com",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 9232.9619140625
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3750.52734375
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3283.26123046875
+        },
+        {
+          "tag": "A",
+          "text": "Descargar CV ↓",
+          "label": null,
+          "href": "/assets/cv-oscar-hinjos.pdf",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5294.90771484375
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2112
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2743.125
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2380.8125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3711.8125
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 44,
+          "width": 44
+        },
+        {
+          "text": "Menú",
+          "height": 44,
+          "width": 90.71875
+        },
+        {
+          "text": "Ver caso de estudio ↗",
+          "height": 44,
+          "width": 133.828125
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 44,
+          "width": 54.109375
+        },
+        {
+          "text": "Ver caso de estudio ↗",
+          "height": 44,
+          "width": 133.828125
+        },
+        {
+          "text": "Ver demo ↗",
+          "height": 44,
+          "width": 69.9375
+        },
+        {
+          "text": "Ver detalles del proyecto ↗",
+          "height": 44,
+          "width": 167.296875
+        },
+        {
+          "text": "OH.",
+          "height": 48,
+          "width": 44
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 44,
+          "width": 62.34375
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 44,
+          "width": 54.109375
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 44,
+          "width": 84.359375
+        }
+      ],
+      "images": []
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 375,
+      "initialRequests": [
+        "http://127.0.0.1:4173/projects/portfolio-engineering",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/chunk-BEmNBLnp.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1936
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Menú",
+          "label": "Abrir menú de navegación",
+          "href": null,
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3991.625
+        },
+        {
+          "tag": "A",
+          "text": "← Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3795.47314453125
+        },
+        {
+          "tag": "A",
+          "text": "Ver código en GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4312.14697265625
+        },
+        {
+          "tag": "PRE",
+          "text": "src/app/\n├── core/          config · models\n├── shared/        compone",
+          "label": "Estructura simplificada del repositorio",
+          "href": null,
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 67376.875
+        },
+        {
+          "tag": "A",
+          "text": "Explorar proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7317.796875
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4729.63916015625
+        },
+        {
+          "tag": "A",
+          "text": "Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7248.69384765625
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1694.38623046875
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1751.17236328125
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2112
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2743.125
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2380.8125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3711.8125
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 44,
+          "width": 44
+        },
+        {
+          "text": "Menú",
+          "height": 44,
+          "width": 90.71875
+        },
+        {
+          "text": "OH.",
+          "height": 48,
+          "width": 44
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 44,
+          "width": 62.34375
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 44,
+          "width": 54.109375
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 44,
+          "width": 84.359375
+        }
+      ],
+      "images": []
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 375,
+      "initialRequests": [
+        "http://127.0.0.1:4173/projects/sentinel",
+        "http://127.0.0.1:4173/assets/projects/sentinel/dashboard-720.webp",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/chunk-CJ2mWkmY.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1936
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Menú",
+          "label": "Abrir menú de navegación",
+          "href": null,
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3991.625
+        },
+        {
+          "tag": "A",
+          "text": "← Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3114.234375
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo de Sentinel (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5537.50341796875
+        },
+        {
+          "tag": "A",
+          "text": "Ver Sentinel en funcionamiento ↗",
+          "label": "Ver Sentinel en funcionamiento (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 11834.427734375
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo de Sentinel (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5537.50341796875
+        },
+        {
+          "tag": "A",
+          "text": "Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7248.69384765625
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1751.17236328125
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2112
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2743.125
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2380.8125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3711.8125
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 44,
+          "width": 44
+        },
+        {
+          "text": "Menú",
+          "height": 44,
+          "width": 90.71875
+        },
+        {
+          "text": "OH.",
+          "height": 48,
+          "width": 44
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 44,
+          "width": 62.34375
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 44,
+          "width": 54.109375
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 44,
+          "width": 84.359375
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/dashboard-720.webp",
+          "naturalWidth": 333,
+          "renderedWidth": 333,
+          "decoding": "async",
+          "loading": "auto"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/threats-720.webp",
+          "naturalWidth": 333,
+          "renderedWidth": 333,
+          "decoding": "async",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/devices-720.webp",
+          "naturalWidth": 333,
+          "renderedWidth": 333,
+          "decoding": "async",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/command-palette-720.webp",
+          "naturalWidth": 333,
+          "renderedWidth": 333,
+          "decoding": "async",
+          "loading": "lazy"
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "initialRequests": [
+        "http://127.0.0.1:4173/",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1557.819580078125
+        },
+        {
+          "tag": "A",
+          "text": "Work",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1752
+        },
+        {
+          "tag": "A",
+          "text": "Experience",
+          "label": null,
+          "href": "/#experience",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3528
+        },
+        {
+          "tag": "A",
+          "text": "Skills",
+          "label": null,
+          "href": "/#skills",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1644.75
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "label": null,
+          "href": "/#about",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2028
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3071.25
+        },
+        {
+          "tag": "A",
+          "text": "Ver proyectos ↓",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7055.875
+        },
+        {
+          "tag": "A",
+          "text": "Descargar CV ↗",
+          "label": null,
+          "href": "/assets/cv-oscar-hinjos.pdf",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7142.53125
+        },
+        {
+          "tag": "A",
+          "text": "Ver caso de estudio ↗",
+          "label": "Ver caso de estudio · Portfolio Engineering",
+          "href": "/projects/portfolio-engineering",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3540.375
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": "GitHub · Portfolio Engineering (nueva pestaña)",
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1489.875
+        },
+        {
+          "tag": "A",
+          "text": "Ver caso de estudio ↗",
+          "label": "Ver caso de estudio · Sentinel — Cybersecurity Operations Dashboard",
+          "href": "/projects/sentinel",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3540.375
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo · Sentinel — Cybersecurity Operations Dashboard (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1896.75
+        },
+        {
+          "tag": "A",
+          "text": "Ver detalles del proyecto ↗",
+          "label": "Ver detalles del proyecto · LoL Scenario Trainer",
+          "href": "/projects/lol-scenario-trainer",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4401
+        },
+        {
+          "tag": "A",
+          "text": "hinjoslopezoscar@gmail.com",
+          "label": null,
+          "href": "mailto:hinjoslopezoscar@gmail.com",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 36941.09912109375
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4113.3955078125
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3600.720703125
+        },
+        {
+          "tag": "A",
+          "text": "Descargar CV ↓",
+          "label": null,
+          "href": "/assets/cv-oscar-hinjos.pdf",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5806.58203125
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3056.94287109375
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2836.25
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2483.125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3780
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 38.390625,
+          "width": 40.578125
+        },
+        {
+          "text": "Ver caso de estudio ↗",
+          "height": 24,
+          "width": 147.515625
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 24,
+          "width": 62.078125
+        },
+        {
+          "text": "Ver caso de estudio ↗",
+          "height": 24,
+          "width": 147.515625
+        },
+        {
+          "text": "Ver demo ↗",
+          "height": 24,
+          "width": 79.03125
+        },
+        {
+          "text": "Ver detalles del proyecto ↗",
+          "height": 24,
+          "width": 183.375
+        },
+        {
+          "text": "OH.",
+          "height": 60.796875,
+          "width": 50.28125
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 40,
+          "width": 70.90625
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 40,
+          "width": 62.078125
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 40,
+          "width": 94.5
+        }
+      ],
+      "images": []
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 1440,
+      "initialRequests": [
+        "http://127.0.0.1:4173/projects/portfolio-engineering",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/chunk-BEmNBLnp.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1557.819580078125
+        },
+        {
+          "tag": "A",
+          "text": "Work",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1752
+        },
+        {
+          "tag": "A",
+          "text": "Experience",
+          "label": null,
+          "href": "/#experience",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3528
+        },
+        {
+          "tag": "A",
+          "text": "Skills",
+          "label": null,
+          "href": "/#skills",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1644.75
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "label": null,
+          "href": "/#about",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2028
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3071.25
+        },
+        {
+          "tag": "A",
+          "text": "← Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4283.73046875
+        },
+        {
+          "tag": "A",
+          "text": "Ver código en GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 4866.9873046875
+        },
+        {
+          "tag": "A",
+          "text": "Context",
+          "label": null,
+          "href": "/projects/portfolio-engineering#context",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1029.375
+        },
+        {
+          "tag": "A",
+          "text": "Architecture",
+          "label": null,
+          "href": "/projects/portfolio-engineering#architecture",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1608.75
+        },
+        {
+          "tag": "A",
+          "text": "Design System",
+          "label": null,
+          "href": "/projects/portfolio-engineering#design-system",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1935.9375
+        },
+        {
+          "tag": "A",
+          "text": "Responsive",
+          "label": null,
+          "href": "/projects/portfolio-engineering#responsive",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1477.5
+        },
+        {
+          "tag": "A",
+          "text": "Performance",
+          "label": null,
+          "href": "/projects/portfolio-engineering#performance",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1668.4375
+        },
+        {
+          "tag": "A",
+          "text": "Testing",
+          "label": null,
+          "href": "/projects/portfolio-engineering#testing",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 932.8125
+        },
+        {
+          "tag": "A",
+          "text": "Challenges",
+          "label": null,
+          "href": "/projects/portfolio-engineering#challenges",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1441.25
+        },
+        {
+          "tag": "A",
+          "text": "Result",
+          "label": null,
+          "href": "/projects/portfolio-engineering#result",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 799.0625
+        },
+        {
+          "tag": "A",
+          "text": "Learnings",
+          "label": null,
+          "href": "/projects/portfolio-engineering#learnings",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1271.25
+        },
+        {
+          "tag": "PRE",
+          "text": "src/app/\n├── core/          config · models\n├── shared/        compone",
+          "label": "Estructura simplificada del repositorio",
+          "href": null,
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 176384
+        },
+        {
+          "tag": "A",
+          "text": "Explorar proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7941.53125
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5082.609375
+        },
+        {
+          "tag": "A",
+          "text": "Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7865.15625
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez/Portfolio",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1912.470703125
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1976.6162109375
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3056.94287109375
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2836.25
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2483.125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3780
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 38.390625,
+          "width": 40.578125
+        },
+        {
+          "text": "OH.",
+          "height": 60.796875,
+          "width": 50.28125
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 40,
+          "width": 70.90625
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 40,
+          "width": 62.078125
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 40,
+          "width": 94.5
+        }
+      ],
+      "images": []
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 1440,
+      "initialRequests": [
+        "http://127.0.0.1:4173/projects/sentinel",
+        "http://127.0.0.1:4173/assets/projects/sentinel/dashboard.webp",
+        "http://127.0.0.1:4173/chunk-BhcP3Com.js",
+        "http://127.0.0.1:4173/main-YGEAP2N2.js",
+        "http://127.0.0.1:4173/chunk-CJ2mWkmY.js",
+        "http://127.0.0.1:4173/styles-CQZAEY4G.css",
+        "http://127.0.0.1:4173/favicon.svg"
+      ],
+      "structure": {
+        "main": 1,
+        "h1": 1,
+        "idsUnique": true,
+        "brokenReferences": [],
+        "positiveTabindex": 0,
+        "skippedHeadings": false,
+        "overflow": false,
+        "screenshotsFocusable": false
+      },
+      "axeViolations": 0,
+      "labelMismatchViolations": 0,
+      "errors": [],
+      "warnings": [],
+      "keyboardStops": [
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1557.819580078125
+        },
+        {
+          "tag": "A",
+          "text": "Work",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1752
+        },
+        {
+          "tag": "A",
+          "text": "Experience",
+          "label": null,
+          "href": "/#experience",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3528
+        },
+        {
+          "tag": "A",
+          "text": "Skills",
+          "label": null,
+          "href": "/#skills",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1644.75
+        },
+        {
+          "tag": "A",
+          "text": "About",
+          "label": null,
+          "href": "/#about",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2028
+        },
+        {
+          "tag": "A",
+          "text": "Contact",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3071.25
+        },
+        {
+          "tag": "A",
+          "text": "← Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3466.375
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo de Sentinel (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5947.703125
+        },
+        {
+          "tag": "A",
+          "text": "Context",
+          "label": null,
+          "href": "/projects/sentinel#context",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1029.375
+        },
+        {
+          "tag": "A",
+          "text": "Product",
+          "label": null,
+          "href": "/projects/sentinel#product",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1035
+        },
+        {
+          "tag": "A",
+          "text": "Architecture",
+          "label": null,
+          "href": "/projects/sentinel#architecture",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1608.75
+        },
+        {
+          "tag": "A",
+          "text": "Authorization",
+          "label": null,
+          "href": "/projects/sentinel#authorization",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1795.625
+        },
+        {
+          "tag": "A",
+          "text": "Threats & Devices",
+          "label": null,
+          "href": "/projects/sentinel#threats",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2380.625
+        },
+        {
+          "tag": "A",
+          "text": "Realtime",
+          "label": null,
+          "href": "/projects/sentinel#realtime",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1142.5
+        },
+        {
+          "tag": "A",
+          "text": "UX states",
+          "label": null,
+          "href": "/projects/sentinel#ux-states",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1232.8125
+        },
+        {
+          "tag": "A",
+          "text": "Accessibility",
+          "label": null,
+          "href": "/projects/sentinel#accessibility",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1596.25
+        },
+        {
+          "tag": "A",
+          "text": "Testing",
+          "label": null,
+          "href": "/projects/sentinel#testing",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 932.8125
+        },
+        {
+          "tag": "A",
+          "text": "Performance",
+          "label": null,
+          "href": "/projects/sentinel#performance",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1668.4375
+        },
+        {
+          "tag": "A",
+          "text": "Challenges",
+          "label": null,
+          "href": "/projects/sentinel#challenges",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1441.25
+        },
+        {
+          "tag": "A",
+          "text": "Result",
+          "label": null,
+          "href": "/projects/sentinel#result",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 799.0625
+        },
+        {
+          "tag": "A",
+          "text": "Learnings",
+          "label": null,
+          "href": "/projects/sentinel#learnings",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1271.25
+        },
+        {
+          "tag": "A",
+          "text": "Ver Sentinel en funcionamiento ↗",
+          "label": "Ver Sentinel en funcionamiento (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 12902.96875
+        },
+        {
+          "tag": "A",
+          "text": "Ver demo ↗",
+          "label": "Ver demo de Sentinel (nueva pestaña)",
+          "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 5947.703125
+        },
+        {
+          "tag": "A",
+          "text": "Volver a proyectos",
+          "label": null,
+          "href": "/#work",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 7865.15625
+        },
+        {
+          "tag": "A",
+          "text": "Contactar",
+          "label": null,
+          "href": "/#contact",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 1976.6162109375
+        },
+        {
+          "tag": "A",
+          "text": "OH.",
+          "label": "OH. — Oscar Hinjos · Inicio",
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3056.94287109375
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn ↗",
+          "label": null,
+          "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2836.25
+        },
+        {
+          "tag": "A",
+          "text": "GitHub ↗",
+          "label": null,
+          "href": "https://github.com/OscarHinjosLopez",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 2483.125
+        },
+        {
+          "tag": "A",
+          "text": "Volver arriba ↑",
+          "label": null,
+          "href": "/#top",
+          "outline": "solid",
+          "outlineWidth": "2px",
+          "area": 3780
+        }
+      ],
+      "targets": [
+        {
+          "text": "OH.",
+          "height": 38.390625,
+          "width": 40.578125
+        },
+        {
+          "text": "OH.",
+          "height": 60.796875,
+          "width": 50.28125
+        },
+        {
+          "text": "LinkedIn ↗",
+          "height": 40,
+          "width": 70.90625
+        },
+        {
+          "text": "GitHub ↗",
+          "height": 40,
+          "width": 62.078125
+        },
+        {
+          "text": "Volver arriba ↑",
+          "height": 40,
+          "width": 94.5
+        }
+      ],
+      "images": [
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/dashboard.webp",
+          "naturalWidth": 1182,
+          "renderedWidth": 1182,
+          "decoding": "async",
+          "loading": "auto"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/threats.webp",
+          "naturalWidth": 998,
+          "renderedWidth": 998,
+          "decoding": "async",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/devices.webp",
+          "naturalWidth": 998,
+          "renderedWidth": 998,
+          "decoding": "async",
+          "loading": "lazy"
+        },
+        {
+          "src": "http://127.0.0.1:4173/assets/projects/sentinel/command-palette.webp",
+          "naturalWidth": 998,
+          "renderedWidth": 998,
+          "decoding": "async",
+          "loading": "lazy"
+        }
+      ]
+    }
+  ],
+  "mobileMenu": "PASS",
+  "reducedMotion": "PASS",
+  "auxiliaryRoutes": "PASS",
+  "screenReader": "Manual NVDA/VoiceOver recommended; not executed"
+}

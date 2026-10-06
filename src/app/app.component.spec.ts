@@ -33,7 +33,7 @@ describe('AppComponent', () => {
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelector('header nav .brand')?.getAttribute('aria-label')).toBe(
-      'Oscar Hinjos · Inicio',
+      'OH. — Oscar Hinjos · Inicio',
     );
     expect(element.querySelector('footer')?.textContent).toContain(
       `© ${new Date().getFullYear()} Oscar Hinjos`,
