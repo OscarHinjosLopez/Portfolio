@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://portfolio-phi-flax-36.vercel.app/sitemap.xml

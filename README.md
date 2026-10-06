@@ -226,3 +226,25 @@ Bundle inicial: 289 875 → 297 032 bytes (+7 157 bytes, aproximadamente 2,47 %)
 Transferencia estimada: 76,56 → 78,60 kB. CSS de componentes sin incremento:
 ProjectCard 3 960 bytes; Portfolio Engineering 3 951 bytes; Sentinel 3 990 bytes.
 Budgets y dependencias intactos. No se realizó SEO, Lighthouse final ni despliegue.
+
+# SEO
+
+Angular 22.2.1 genera HTML estático con `@angular/ssr`, `outputMode: "static"` y
+`RenderMode.Prerender`; el navegador hidrata las páginas. No se necesita un servidor Node.
+Las tres páginas públicas, Design System, el placeholder LoL y la 404 se prerenderizan.
+
+`src/app/core/config/site.config.ts` contiene el dominio canónico actual.
+`seo.config.ts` define los metadatos por ruta; `SeoTitleStrategy` aplica títulos, canonical,
+robots, Open Graph, Twitter y JSON-LD mediante `SeoService` en cada navegación.
+Home describe WebSite, ProfilePage y Person; los case studies, WebPage y CreativeWork.
+Las imágenes locales de `public/assets/og/` son PNG de 1200 × 630.
+
+Para cambiar de dominio, editar únicamente `SITE_CONFIG.url` y ejecutar `npm run build`:
+el build regenera `public/robots.txt` y `public/sitemap.xml`. El sitemap contiene solo
+Home y los dos case studies. Design System y LoL son `noindex,follow`; errores,
+`noindex,nofollow`. `vercel.json` sirve las rutas estáticas y devuelve HTTP 404 para URLs desconocidas.
+
+Validación: `npm run format:check`, `npm test -- --watch=false`, `npm run build`
+y `npm run check:prerender`. Este último inspecciona el output configurado, contenido HTML,
+metadatos, JSON-LD, dimensiones PNG, robots y las tres URLs del sitemap.
+El informe de implementación está en [docs/sprint12-seo-report.md](docs/sprint12-seo-report.md).

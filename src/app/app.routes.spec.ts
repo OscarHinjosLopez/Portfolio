@@ -1,5 +1,6 @@
 import { TestBed } from '@angular/core/testing';
-import { Router, provideRouter } from '@angular/router';
+import { SeoTitleStrategy } from './core/services/seo-title.strategy';
+import { Router, TitleStrategy, provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
 import { routes } from './app.routes';
 import { HomeComponent } from './features/home/home.component';
@@ -12,7 +13,9 @@ import { SentinelCaseStudyComponent } from './features/projects/sentinel/sentine
 
 describe('Application routes', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [provideRouter(routes)] });
+    TestBed.configureTestingModule({
+      providers: [provideRouter(routes), { provide: TitleStrategy, useClass: SeoTitleStrategy }],
+    });
   });
 
   it('should show the design system catalog at /design-system', async () => {
@@ -37,14 +40,14 @@ describe('Application routes', () => {
 
   it('should show a placeholder for a project slug', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/unknown-project', ProjectPlaceholderComponent);
+    await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('Case study en construcción');
   });
 
-  it('updates the project title when reusing the placeholder route', async () => {
+  it('navigates from an unknown project to the known placeholder', async () => {
     const harness = await RouterTestingHarness.create();
-    await harness.navigateByUrl('/projects/unknown-project', ProjectPlaceholderComponent);
-    expect(harness.routeNativeElement?.textContent).toContain('Proyecto');
+    await harness.navigateByUrl('/projects/unknown-project', NotFoundComponent);
+    expect(harness.routeNativeElement?.textContent).toContain('404');
     await harness.navigateByUrl('/projects/lol-scenario-trainer', ProjectPlaceholderComponent);
     expect(harness.routeNativeElement?.textContent).toContain('LoL Scenario Trainer');
     expect(harness.routeNativeElement?.querySelector('a')?.getAttribute('href')).toBe('/#work');
@@ -57,7 +60,7 @@ describe('Application routes', () => {
     const harness = await RouterTestingHarness.create();
     await harness.navigateByUrl('/projects/sentinel', SentinelCaseStudyComponent);
     expect(TestBed.inject(Title).getTitle()).toBe(
-      'Sentinel | Cybersecurity Operations Dashboard | Oscar Hinjos',
+      'Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos',
     );
     expect(harness.routeNativeElement?.querySelector('h1')?.textContent).toBe('Sentinel');
     expect(harness.routeNativeElement?.textContent).not.toContain('Case study en construcción');
@@ -84,7 +87,9 @@ describe('Application routes', () => {
   it('loads the portfolio case study and returns to projects and contact', async () => {
     const harness = await RouterTestingHarness.create();
     await harness.navigateByUrl('/projects/portfolio-engineering', PortfolioEngineeringComponent);
-    expect(TestBed.inject(Title).getTitle()).toBe('Portfolio Engineering | Oscar Hinjos');
+    expect(TestBed.inject(Title).getTitle()).toBe(
+      'Portfolio Engineering | Angular Case Study | Oscar Hinjos',
+    );
     expect(harness.routeNativeElement?.querySelector('#architecture')).toBeTruthy();
     const contextLink = harness.routeNativeElement?.querySelector<HTMLAnchorElement>('.toc a');
     expect(contextLink?.getAttribute('href')).toBe('/projects/portfolio-engineering#context');

@@ -6,12 +6,15 @@ import {
   provideBrowserGlobalErrorListeners,
 } from '@angular/core';
 import { ViewportScroller } from '@angular/common';
-import { provideRouter, withInMemoryScrolling } from '@angular/router';
+import { provideRouter, TitleStrategy, withInMemoryScrolling } from '@angular/router';
+import { SeoTitleStrategy } from './core/services/seo-title.strategy';
 import { routes } from './app.routes';
+import { provideClientHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
+    { provide: TitleStrategy, useClass: SeoTitleStrategy },
     provideAppInitializer(() => {
       const scroller = inject(ViewportScroller);
       const document = inject(DOCUMENT);
@@ -27,5 +30,6 @@ export const appConfig: ApplicationConfig = {
       routes,
       withInMemoryScrolling({ anchorScrolling: 'enabled', scrollPositionRestoration: 'enabled' }),
     ),
+    provideClientHydration(),
   ],
 };
