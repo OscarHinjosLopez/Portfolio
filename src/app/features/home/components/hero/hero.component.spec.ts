@@ -15,15 +15,13 @@ describe('HeroComponent', () => {
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     const title = element.querySelector('h1')?.textContent?.replace(/\s+/g, ' ').trim();
-    expect(title).toMatch(/Frontend\s*Engineer\./);
+    expect(title).toMatch(/Frontend\s*Developer\./);
     expect(element.querySelectorAll('h1').length).toBe(1);
-    expect(element.textContent).toContain('Oscar Hinjos');
-    expect(element.textContent).toContain('Disponible para nuevas oportunidades');
+    expect(element.textContent).toContain('Hola, soy Oscar');
+    expect(element.textContent).toContain('Disponible · Madrid');
     expect(element.textContent).toContain(
       'Construyo aplicaciones web modernas, escalables y orientadas a producto',
     );
-    expect(element.textContent).toContain('Madrid · España');
-    expect(element.textContent).toContain('Disponible para remoto / híbrido');
   });
 
   it('renders exactly the primary technologies and prepared CTAs', async () => {
@@ -34,7 +32,7 @@ describe('HeroComponent', () => {
       chip.textContent?.trim(),
     );
     expect(chips).toEqual(['Angular', 'TypeScript', 'React', 'RxJS']);
-    expect(element.querySelector('a[href="/#work"]')?.textContent).toContain('Ver proyectos');
+    expect(element.querySelector('a[href="/#contact"]')?.textContent).toContain('Hablemos');
     const cvLink = element.querySelector<HTMLAnchorElement>('a[download]');
     expect(cvLink?.getAttribute('href')).toBe(CV_URL);
     expect(cvLink?.getAttribute('download')).toBe('CV_Oscar_Hinjos.pdf');

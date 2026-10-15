@@ -1,0 +1,92 @@
+{
+  "responsive": [
+    {
+      "route": "/",
+      "width": 375,
+      "mainWidth": 375,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/",
+      "width": 430,
+      "mainWidth": 430,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "mainWidth": 768,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/",
+      "width": 1024,
+      "mainWidth": 1024,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "mainWidth": 1440,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/",
+      "width": 1920,
+      "mainWidth": 1920,
+      "hero": "Frontend\nEngineer."
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 375,
+      "mainWidth": 375,
+      "hero": "Portfolio\nEngineering."
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 768,
+      "mainWidth": 768,
+      "hero": "Portfolio\nEngineering."
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 1440,
+      "mainWidth": 1280,
+      "hero": "Portfolio\nEngineering."
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "width": 1920,
+      "mainWidth": 1280,
+      "hero": "Portfolio\nEngineering."
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 375,
+      "mainWidth": 375,
+      "hero": "Sentinel"
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 768,
+      "mainWidth": 768,
+      "hero": "Sentinel"
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 1440,
+      "mainWidth": 1280,
+      "hero": "Sentinel"
+    },
+    {
+      "route": "/projects/sentinel",
+      "width": 1920,
+      "mainWidth": 1280,
+      "hero": "Sentinel"
+    }
+  ],
+  "cvDownloads": "PASS (Hero and Contact)",
+  "deepLinks": "PASS",
+  "back": "PASS",
+  "mobileRecruiterFlow": "PASS"
+}

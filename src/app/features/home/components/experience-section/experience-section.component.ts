@@ -11,7 +11,7 @@ import { EXPERIENCES } from '../../data/experience.data';
     <div class="container">
       <app-section-heading
         id="experience-heading"
-        eyebrow="04 / EXPERIENCE"
+        eyebrow="03 / EXPERIENCE"
         title="Experiencia profesional"
         description="Experiencia desarrollando y evolucionando aplicaciones web en entornos enterprise, sector público, industria y producto SaaS."
       />

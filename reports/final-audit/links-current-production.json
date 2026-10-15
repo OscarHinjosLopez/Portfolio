@@ -1,0 +1,1030 @@
+{
+  "phase": "current-production",
+  "base": "https://portfolio-phi-flax-36.vercel.app",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 85347
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "status": 200,
+      "bytes": 49440
+    },
+    {
+      "route": "/projects/sentinel",
+      "status": 200,
+      "bytes": 62254
+    },
+    {
+      "route": "/design-system",
+      "status": 200,
+      "bytes": 47176
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "status": 200,
+      "bytes": 14653
+    }
+  ],
+  "links": [
+    {
+      "route": "/",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Work",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experience",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Skills",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "About",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contact",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Ver proyectos ↓",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/assets/cv-oscar-hinjos.pdf",
+      "type": "DOWNLOAD",
+      "label": "Descargar CV ↗",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/projects/portfolio-engineering",
+      "type": "INTERNAL",
+      "label": "Ver caso de estudio ↗",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez/Portfolio",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/projects/sentinel",
+      "type": "INTERNAL",
+      "label": "Ver caso de estudio ↗",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "type": "EXTERNAL",
+      "label": "Ver demo ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/projects/lol-scenario-trainer",
+      "type": "INTERNAL",
+      "label": "Ver detalles del proyecto ↗",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "mailto:hinjoslopezoscar@gmail.com",
+      "type": "MAILTO",
+      "label": "hinjoslopezoscar@gmail.com",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/assets/cv-oscar-hinjos.pdf",
+      "type": "DOWNLOAD",
+      "label": "Descargar CV ↓",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Work",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experience",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Skills",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "About",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contact",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "← Volver a proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "https://github.com/OscarHinjosLopez/Portfolio",
+      "type": "EXTERNAL",
+      "label": "Ver código en GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#context",
+      "type": "ANCHOR",
+      "label": "Context",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#architecture",
+      "type": "ANCHOR",
+      "label": "Architecture",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#design-system",
+      "type": "ANCHOR",
+      "label": "Design System",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#responsive",
+      "type": "ANCHOR",
+      "label": "Responsive",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#performance",
+      "type": "ANCHOR",
+      "label": "Performance",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#testing",
+      "type": "ANCHOR",
+      "label": "Testing",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#challenges",
+      "type": "ANCHOR",
+      "label": "Challenges",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#result",
+      "type": "ANCHOR",
+      "label": "Result",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/projects/portfolio-engineering#learnings",
+      "type": "ANCHOR",
+      "label": "Learnings",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Explorar proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contactar",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Volver a proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "https://github.com/OscarHinjosLopez/Portfolio",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contactar",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Work",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experience",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Skills",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "About",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contact",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "← Volver a proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "type": "EXTERNAL",
+      "label": "Ver demo ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#context",
+      "type": "ANCHOR",
+      "label": "Context",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#product",
+      "type": "ANCHOR",
+      "label": "Product",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#architecture",
+      "type": "ANCHOR",
+      "label": "Architecture",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#authorization",
+      "type": "ANCHOR",
+      "label": "Authorization",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#threats",
+      "type": "ANCHOR",
+      "label": "Threats & Devices",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#realtime",
+      "type": "ANCHOR",
+      "label": "Realtime",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#ux-states",
+      "type": "ANCHOR",
+      "label": "UX states",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#accessibility",
+      "type": "ANCHOR",
+      "label": "Accessibility",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#testing",
+      "type": "ANCHOR",
+      "label": "Testing",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#performance",
+      "type": "ANCHOR",
+      "label": "Performance",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#challenges",
+      "type": "ANCHOR",
+      "label": "Challenges",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#result",
+      "type": "ANCHOR",
+      "label": "Result",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/projects/sentinel#learnings",
+      "type": "ANCHOR",
+      "label": "Learnings",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "type": "EXTERNAL",
+      "label": "Ver Sentinel en funcionamiento ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "type": "EXTERNAL",
+      "label": "Ver demo ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Volver a proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contactar",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/sentinel",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Work",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experience",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Skills",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "About",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contact",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "Enlace interno · Inicio",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "https://angular.dev/",
+      "type": "EXTERNAL",
+      "label": "Angular · enlace externo ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "Volver al inicio",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/projects/portfolio-engineering",
+      "type": "INTERNAL",
+      "label": "Ver caso de estudio ↗",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "https://github.com/OscarHinjosLopez/Portfolio",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Work",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experience",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Skills",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "About",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contact",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Volver a proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OH .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    }
+  ],
+  "resources": [
+    {
+      "asset": "/robots.txt",
+      "status": 200,
+      "type": "text/plain; charset=utf-8",
+      "bytes": 85,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml",
+      "bytes": 355,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/favicon.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 258,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/cv-oscar-hinjos.pdf",
+      "status": 200,
+      "type": "application/pdf",
+      "bytes": 78104,
+      "cache": "public, max-age=0, must-revalidate",
+      "sha256": "26e764bca2f149d370ff891cdabe240a37f684cdd13ad888fa6ed011379c5183"
+    },
+    {
+      "asset": "/assets/og/home.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 28761,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/og/portfolio-engineering.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 26249,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/og/sentinel.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 122563,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/dashboard.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 70028,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/dashboard-720.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 24616,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/threats.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 59606,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/threats-720.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 19840,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/devices.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 49050,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/devices-720.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 16454,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/command-palette.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 47184,
+      "cache": "public, max-age=0, must-revalidate"
+    },
+    {
+      "asset": "/assets/projects/sentinel/command-palette-720.webp",
+      "status": 200,
+      "type": "image/webp",
+      "bytes": 16650,
+      "cache": "public, max-age=0, must-revalidate"
+    }
+  ],
+  "external": [
+    {
+      "url": "https://github.com/OscarHinjosLopez/Portfolio",
+      "status": 200,
+      "finalUrl": "https://github.com/OscarHinjosLopez/Portfolio",
+      "manualReview": false
+    },
+    {
+      "url": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "status": 200,
+      "finalUrl": "https://sentinel-cybersecurity-operations-d.vercel.app/",
+      "manualReview": false
+    },
+    {
+      "url": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "status": 999,
+      "finalUrl": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "manualReview": true
+    },
+    {
+      "url": "https://github.com/OscarHinjosLopez",
+      "status": 200,
+      "finalUrl": "https://github.com/OscarHinjosLopez",
+      "manualReview": false
+    },
+    {
+      "url": "https://angular.dev/",
+      "status": 200,
+      "finalUrl": "https://angular.dev/",
+      "manualReview": false
+    }
+  ],
+  "issues": []
+}

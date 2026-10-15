@@ -11,7 +11,7 @@ export async function siteUrl() {
   return url;
 }
 
-export const indexablePaths = ['/', '/projects/portfolio-engineering', '/projects/sentinel'];
+export const indexablePaths = ['/'];
 const origin = await siteUrl();
 await writeFile(
   new URL('../public/robots.txt', import.meta.url),

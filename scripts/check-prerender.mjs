@@ -25,20 +25,6 @@ const routes = [
     ['Person', 'WebSite', 'ProfilePage'],
     'home',
   ],
-  [
-    '/projects/portfolio-engineering',
-    'Portfolio Engineering | Angular Case Study | Oscar Hinjos',
-    'Portfolio Engineering',
-    ['WebPage', 'CreativeWork'],
-    'portfolio-engineering',
-  ],
-  [
-    '/projects/sentinel',
-    'Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos',
-    'Sentinel',
-    ['WebPage', 'CreativeWork'],
-    'sentinel',
-  ],
 ];
 const decode = (text) =>
   text.replaceAll('&amp;', '&').replaceAll('&quot;', '"').replaceAll('&#39;', "'");
@@ -83,6 +69,9 @@ for (const [route, title, heading, types, image] of routes) {
   meta('og:site_name');
   meta('og:image:alt');
   assert.equal(meta('og:image'), `${origin}/assets/og/${image}.png`);
+  assert.equal(meta('og:image:width'), '1200');
+  assert.equal(meta('og:image:height'), '630');
+  assert.equal(meta('og:image:type'), 'image/png');
   assert.equal(meta('twitter:card'), 'summary_large_image');
   assert.equal(meta('twitter:title'), title);
   assert.equal(meta('twitter:description'), meta('description'));
@@ -102,7 +91,7 @@ for (const [route, title, heading, types, image] of routes) {
     `${file}: content + complete metadata + JSON-LD (${Buffer.byteLength(scripts[0][1])} bytes) OK`,
   );
 }
-for (const image of ['home', 'portfolio-engineering', 'sentinel']) {
+for (const image of ['home']) {
   const png = await readFile(path.join(root, 'assets/og', `${image}.png`));
   assert.equal(png.subarray(1, 4).toString(), 'PNG');
   assert.equal(png.readUInt32BE(16), 1200);
@@ -112,7 +101,6 @@ for (const image of ['home', 'portfolio-engineering', 'sentinel']) {
 }
 for (const [route, robots] of [
   ['design-system', 'noindex,follow'],
-  ['projects/lol-scenario-trainer', 'noindex,follow'],
   ['404', 'noindex,nofollow'],
 ]) {
   const html = await readFile(path.join(root, route, 'index.html'), 'utf8');
@@ -120,6 +108,13 @@ for (const [route, robots] of [
     (tag) => attribute(tag, 'name') === 'robots',
   );
   assert.equal(attribute(tag ?? '', 'content'), robots);
+  if (route === '404') {
+    assert.equal(
+      (html.match(/<link\b[^>]*>/gi) ?? []).filter((tag) => attribute(tag, 'rel') === 'canonical')
+        .length,
+      0,
+    );
+  }
   assert.ok(!html.includes('"@type":"Person"'));
 }
 assert.match(
@@ -132,4 +127,4 @@ assert.deepEqual(
   routes.map((route) => origin + route[0]),
 );
 await stat(path.join(root, '404/index.html'));
-console.log('Six static routes, robots, sitemap (exactly 3 URLs), OG assets: OK');
+console.log('Three static routes, robots, sitemap (exactly 1 URL), OG asset: OK');

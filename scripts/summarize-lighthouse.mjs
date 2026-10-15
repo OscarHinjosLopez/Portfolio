@@ -17,7 +17,7 @@ const summaries = {};
 for (const phase of ['baseline', 'final'])
   summaries[phase] = JSON.parse(await readFile(`reports/lighthouse/${phase}/summary.json`, 'utf8'));
 const comparisons = [];
-for (const name of ['home', 'portfolio', 'sentinel']) {
+for (const name of ['home']) {
   for (const profile of ['mobile', 'desktop']) {
     const entry = { name, profile };
     for (const phase of ['baseline', 'final']) {

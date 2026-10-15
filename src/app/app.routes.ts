@@ -19,33 +19,7 @@ export const routes: Routes = [
         (m) => m.DesignSystemComponent,
       ),
   },
-  {
-    path: 'projects/portfolio-engineering',
-    title: SEO.portfolio.title,
-    data: { seo: SEO.portfolio },
-    loadComponent: () =>
-      import('./features/projects/portfolio-engineering/portfolio-engineering.component').then(
-        (m) => m.PortfolioEngineeringComponent,
-      ),
-  },
-  {
-    path: 'projects/sentinel',
-    title: SEO.sentinel.title,
-    data: { seo: SEO.sentinel },
-    loadComponent: () =>
-      import('./features/projects/sentinel/sentinel-case-study.component').then(
-        (m) => m.SentinelCaseStudyComponent,
-      ),
-  },
-  {
-    path: 'projects/lol-scenario-trainer',
-    title: SEO.placeholder.title,
-    data: { seo: SEO.placeholder, slug: 'lol-scenario-trainer' },
-    loadComponent: () =>
-      import('./features/projects/project-placeholder.component').then(
-        (m) => m.ProjectPlaceholderComponent,
-      ),
-  },
+
   {
     path: '404',
     title: SEO.notFound.title,

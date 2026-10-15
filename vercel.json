@@ -8,20 +8,8 @@
       "dest": "/index.html"
     },
     {
-      "src": "/projects/portfolio-engineering/?",
-      "dest": "/projects/portfolio-engineering/index.html"
-    },
-    {
-      "src": "/projects/sentinel/?",
-      "dest": "/projects/sentinel/index.html"
-    },
-    {
       "src": "/design-system/?",
       "dest": "/design-system/index.html"
-    },
-    {
-      "src": "/projects/lol-scenario-trainer/?",
-      "dest": "/projects/lol-scenario-trainer/index.html"
     },
     {
       "handle": "filesystem"

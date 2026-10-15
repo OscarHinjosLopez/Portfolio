@@ -32,13 +32,10 @@ a[appButton]:active {
   transform: translateY(1px);
 }
 .hero-content h1,
-.case-hero h1,
-.case-hero .subtitle,
 #contact h2 {
   text-wrap: balance;
 }
 .hero-description,
-.case-hero .intro,
 .contact-copy {
   text-wrap: pretty;
 }
@@ -85,11 +82,6 @@ a[appButton]:active {
   }
 }
 @media (pointer: coarse) {
-  app-project-card .actions a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-  }
   app-navbar .brand,
   app-navbar .menu-toggle[appButton],
   app-footer a,
@@ -106,7 +98,6 @@ a[appButton]:active {
   .navigation-panel {
     animation: none !important;
   }
-  app-project-card article,
   a[appButton],
   .link-arrow {
     transform: none !important;

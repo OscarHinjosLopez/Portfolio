@@ -8,6 +8,7 @@
 
 # Node
 /node_modules
+/.vercel
 npm-debug.log
 yarn-error.log
 
@@ -45,3 +46,4 @@ Thumbs.db
 
 # Full local Lighthouse runs; commit compact summaries instead.
 /reports/lighthouse/*/*-[0-9].json
+/reports/redesign/

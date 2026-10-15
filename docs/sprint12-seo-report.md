@@ -1,3 +1,5 @@
+> Documento histórico anterior a la retirada de los proyectos. Sus rutas, capturas y resultados no describen la versión actual.
+
 # Sprint 12 — SEO y prerender
 
 ## Archivos y render

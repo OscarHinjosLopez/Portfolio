@@ -7,7 +7,7 @@ describe('TechStackComponent', () => {
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelector('section')?.id).toBe('skills');
-    expect(element.querySelector('h2')?.textContent).toBe('Tecnologías con las que construyo');
+    expect(element.querySelector('h2')?.textContent).toBe('Stack');
     const professional = element.querySelector('.stack-layout')?.textContent ?? '';
     for (const technology of [
       'Angular',

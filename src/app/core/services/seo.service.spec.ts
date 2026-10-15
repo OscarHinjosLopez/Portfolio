@@ -32,6 +32,9 @@ describe('Route SEO', () => {
     expect(content('og:url')).toBe(`${SITE_CONFIG.url}/`);
     expect(content('twitter:card')).toBe('summary_large_image');
     expect(content('og:image')).toBe(`${SITE_CONFIG.url}/assets/og/home.png`);
+    expect(content('og:image:width')).toBe('1200');
+    expect(content('og:image:height')).toBe('630');
+    expect(content('og:image:type')).toBe('image/png');
     expect(graph().map((node) => node['@type'])).toEqual(['Person', 'WebSite', 'ProfilePage']);
     expect(graph()[0]['name']).toBe('Oscar Hinjos López');
     expect(graph()[0]['sameAs']).toEqual([
@@ -41,22 +44,8 @@ describe('Route SEO', () => {
     expect(graph()[0]).not.toHaveProperty('email');
   });
 
-  for (const page of [SEO.sentinel, SEO.portfolio]) {
-    it(`provides specific metadata and CreativeWork for ${page.schema}`, async () => {
-      await RouterTestingHarness.create(page.canonicalPath);
-      expect(TestBed.inject(Title).getTitle()).toBe(page.title);
-      expect(canonical()).toBe(SITE_CONFIG.url + page.canonicalPath);
-      expect(content('og:image')).toBe(SITE_CONFIG.url + page.image);
-      expect(content('og:type')).toBe('article');
-      expect(graph().map((node) => node['@type'])).toEqual(['WebPage', 'CreativeWork']);
-      expect(graph()[1]['creator']).toEqual({ '@id': `${SITE_CONFIG.url}/#person` });
-    });
-  }
-
   it('replaces metadata on navigation, fragments and Back without retaining noindex or old JSON-LD', async () => {
-    const harness = await RouterTestingHarness.create('/projects/sentinel');
-    await harness.navigateByUrl('/projects/portfolio-engineering');
-    expect(content('og:title')).toBe(SEO.portfolio.title);
+    const harness = await RouterTestingHarness.create('/');
     await harness.navigateByUrl('/design-system');
     expect(content('robots')).toBe('noindex,follow');
     expect(document.querySelectorAll('script[type="application/ld+json"]')).toHaveLength(0);
@@ -76,14 +65,28 @@ describe('Route SEO', () => {
     expect(TestBed.inject(Title).getTitle()).toBe(SEO.home.title);
   });
 
-  it('keeps placeholders and unknown URLs out of the index', async () => {
-    const harness = await RouterTestingHarness.create('/projects/lol-scenario-trainer');
+  it('keeps non-public and unknown URLs out of the index', async () => {
+    const harness = await RouterTestingHarness.create('/design-system');
     expect(content('robots')).toBe('noindex,follow');
     await harness.navigateByUrl('/projects/unknown');
     expect(content('robots')).toBe('noindex,nofollow');
     expect(TestBed.inject(Title).getTitle()).toBe(SEO.notFound.title);
-    expect(canonical()).toBe(`${SITE_CONFIG.url}/projects/unknown`);
+    expect(canonical()).toBeUndefined();
+    expect(content('og:url')).toBeUndefined();
     expect(document.querySelectorAll('script[type="application/ld+json"]')).toHaveLength(0);
+  });
+
+  it('removes canonical on errors and restores it when returning to a valid route', async () => {
+    const harness = await RouterTestingHarness.create('/');
+    expect(canonical()).toBe(`${SITE_CONFIG.url}/`);
+    await harness.navigateByUrl('/ruta-inexistente');
+    expect(document.querySelectorAll('link[rel="canonical"]')).toHaveLength(0);
+    expect(content('robots')).toBe('noindex,nofollow');
+    await harness.navigateByUrl('/#contact');
+    expect(document.querySelectorAll('link[rel="canonical"]')).toHaveLength(1);
+    expect(canonical()).toBe(`${SITE_CONFIG.url}/`);
+    expect(content('og:url')).toBe(`${SITE_CONFIG.url}/`);
+    expect(content('robots')).toBe('index,follow');
   });
 
   it('deduplicates stale head metadata inherited from a document', () => {

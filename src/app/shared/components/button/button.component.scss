@@ -8,7 +8,7 @@
   gap: v.$space-2;
   max-width: 100%;
   border: 1px solid transparent;
-  border-radius: v.$radius-md;
+  border-radius: v.$radius-pill;
   font: inherit;
   font-size: v.$font-body-sm;
   font-weight: v.$font-weight-medium;
@@ -26,7 +26,7 @@
 }
 :host([data-size='md']) {
   min-height: 2.75rem;
-  padding: v.$space-3 v.$space-5;
+  padding: 14px 24px;
 }
 :host([data-size='lg']) {
   min-height: 3.25rem;
@@ -46,9 +46,9 @@
 }
 
 :host([data-variant='secondary']) {
-  background: v.$surface-primary;
+  background: transparent;
   color: v.$text-primary;
-  border-color: v.$border;
+  border-color: v.$text-primary;
   &:hover:not(:disabled) {
     background: v.$surface-elevated;
     border-color: v.$border-hover;
