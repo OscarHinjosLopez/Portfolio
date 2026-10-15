@@ -10,7 +10,8 @@ const runs = Number(process.env['LIGHTHOUSE_RUNS'] ?? 3);
 if (!Number.isInteger(runs) || runs < 1 || runs > 5) throw new Error('LIGHTHOUSE_RUNS must be 1–5');
 const directory = `reports/lighthouse/${phase}`;
 await mkdir(directory, { recursive: true });
-const server = await startStaticServer();
+const auditBase = process.env['AUDIT_BASE_URL'] ?? 'http://127.0.0.1:4173';
+const server = process.env['AUDIT_BASE_URL'] ? undefined : await startStaticServer();
 let chrome;
 const results = [];
 try {
@@ -19,15 +20,11 @@ try {
       process.env['CHROME_PATH'] ?? 'C:/Program Files/Google/Chrome/Application/chrome.exe',
     chromeFlags: ['--headless', '--disable-gpu', '--no-first-run'],
   });
-  for (const [name, route] of [
-    ['home', '/'],
-    ['portfolio', '/projects/portfolio-engineering'],
-    ['sentinel', '/projects/sentinel'],
-  ]) {
+  for (const [name, route] of [['home', '/']]) {
     for (const profile of ['mobile', 'desktop']) {
       for (let run = 1; run <= runs; run++) {
         const result = await lighthouse(
-          `http://127.0.0.1:4173${route}`,
+          new URL(route, auditBase).href,
           {
             port: chrome.port,
             logLevel: 'error',
@@ -50,6 +47,7 @@ try {
         );
         const entry = {
           name,
+          url: new URL(route, auditBase).href,
           route,
           profile,
           run,
@@ -77,6 +75,6 @@ try {
   try {
     await chrome?.kill();
   } finally {
-    await new Promise((resolve) => server.close(resolve));
+    if (server) await new Promise((resolve) => server.close(resolve));
   }
 }

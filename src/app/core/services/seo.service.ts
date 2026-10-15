@@ -10,7 +10,7 @@ export class SeoService {
   private readonly meta = inject(Meta);
 
   update(data: SeoData): void {
-    const url = new URL(data.canonicalPath, SITE_CONFIG.url).href;
+    const url = data.canonicalPath ? new URL(data.canonicalPath, SITE_CONFIG.url).href : undefined;
     const image = new URL(data.image ?? '/assets/og/home.png', SITE_CONFIG.url).href;
     const imageAlt =
       data.imageAlt ?? 'Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React.';
@@ -29,25 +29,32 @@ export class SeoService {
       'og:title': data.title,
       'og:description': data.description,
       'og:type': data.type ?? 'website',
-      'og:url': url,
       'og:image': image,
       'og:image:alt': imageAlt,
+      'og:image:width': '1200',
+      'og:image:height': '630',
+      'og:image:type': 'image/png',
       'og:site_name': SITE_CONFIG.name,
       'og:locale': SITE_CONFIG.locale,
     }))
       this.setMeta('property', property, content);
     this.document.querySelectorAll('link[rel="canonical"]').forEach((node) => node.remove());
-    const canonical = this.document.createElement('link');
-    canonical.rel = 'canonical';
-    canonical.href = url;
-    this.document.head.appendChild(canonical);
+    if (url) {
+      this.setMeta('property', 'og:url', url);
+      const canonical = this.document.createElement('link');
+      canonical.rel = 'canonical';
+      canonical.href = url;
+      this.document.head.appendChild(canonical);
+    } else {
+      this.meta.getTags('property="og:url"').forEach((node) => this.meta.removeTagElement(node));
+    }
     this.document
       .querySelectorAll('script[type="application/ld+json"]')
       .forEach((node) => node.remove());
-    if (data.schema) {
+    if (data.schema && url) {
       const script = this.document.createElement('script');
       script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(this.structuredData(data, url));
+      script.textContent = JSON.stringify(this.structuredData());
       this.document.head.appendChild(script);
     }
   }
@@ -61,67 +68,36 @@ export class SeoService {
     this.meta.updateTag({ [attribute]: key, content }, selector);
   }
 
-  private structuredData(data: SeoData, url: string): JsonLdValue {
+  private structuredData(): JsonLdValue {
     const home = `${SITE_CONFIG.url}/`;
     const person = { '@id': `${home}#person` };
-    const graph: JsonLdValue[] =
-      data.schema === 'home'
-        ? [
-            {
-              '@type': 'Person',
-              ...person,
-              name: SITE_CONFIG.author,
-              alternateName: 'Oscar Hinjos',
-              jobTitle: 'Frontend Engineer',
-              url: home,
-              sameAs: [SITE_CONFIG.profile.linkedin, SITE_CONFIG.profile.github],
-              knowsAbout: ['Angular', 'TypeScript', 'RxJS', 'React'],
-            },
-            {
-              '@type': 'WebSite',
-              '@id': `${home}#website`,
-              name: SITE_CONFIG.name,
-              url: home,
-              inLanguage: SITE_CONFIG.language,
-              author: person,
-            },
-            {
-              '@type': 'ProfilePage',
-              '@id': `${home}#profile`,
-              url: home,
-              inLanguage: SITE_CONFIG.language,
-              mainEntity: person,
-            },
-          ]
-        : [
-            {
-              '@type': 'WebPage',
-              '@id': `${url}#page`,
-              name: data.title,
-              description: data.description,
-              url,
-              inLanguage: SITE_CONFIG.language,
-              author: person,
-              mainEntity: { '@id': `${url}#work` },
-            },
-            {
-              '@type': 'CreativeWork',
-              '@id': `${url}#work`,
-              name: data.schema === 'portfolio' ? 'Portfolio Engineering' : 'Sentinel',
-              description: data.description,
-              url,
-              inLanguage: SITE_CONFIG.language,
-              creator: person,
-              about:
-                data.schema === 'portfolio'
-                  ? 'Angular frontend engineering'
-                  : 'Cybersecurity Operations Dashboard',
-              keywords:
-                data.schema === 'portfolio'
-                  ? ['Angular', 'TypeScript', 'SCSS', 'Accessibility', 'Testing']
-                  : ['Angular', 'Signals', 'RxJS', 'RBAC', 'Accessibility'],
-            },
-          ];
+    const graph: JsonLdValue[] = [
+      {
+        '@type': 'Person',
+        ...person,
+        name: SITE_CONFIG.author,
+        alternateName: 'Oscar Hinjos',
+        jobTitle: 'Frontend Engineer',
+        url: home,
+        sameAs: [SITE_CONFIG.profile.linkedin, SITE_CONFIG.profile.github],
+        knowsAbout: ['Angular', 'TypeScript', 'RxJS', 'React'],
+      },
+      {
+        '@type': 'WebSite',
+        '@id': `${home}#website`,
+        name: SITE_CONFIG.name,
+        url: home,
+        inLanguage: SITE_CONFIG.language,
+        author: person,
+      },
+      {
+        '@type': 'ProfilePage',
+        '@id': `${home}#profile`,
+        url: home,
+        inLanguage: SITE_CONFIG.language,
+        mainEntity: person,
+      },
+    ];
     return { '@context': 'https://schema.org', '@graph': graph };
   }
 }

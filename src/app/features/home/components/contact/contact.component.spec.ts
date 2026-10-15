@@ -12,7 +12,7 @@ describe('ContactComponent', () => {
     expect(element.querySelector('section#contact')?.getAttribute('aria-labelledby')).toBe(
       'contact-heading',
     );
-    expect(element.querySelector('h2')?.textContent).toBe('¿Construimos algo?');
+    expect(element.querySelector('h2')?.textContent).toBe('¿Construimos algo juntos?');
     const email = element.querySelector('a[href="mailto:hinjoslopezoscar@gmail.com"]');
     expect(email?.textContent).toBe('hinjoslopezoscar@gmail.com');
     expect(element.textContent?.replace(/\s+/g, ' ')).toContain(

@@ -1,0 +1,895 @@
+{
+  "phase": "local-candidate",
+  "base": "http://127.0.0.1:4173",
+  "date": "2026-10-06T10:43:05.142Z",
+  "pages": [
+    {
+      "route": "/",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/",
+      "headersMs": 37.8117,
+      "htmlBytes": 85492,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "Oscar Hinjos | Frontend Engineer | Angular & TypeScript",
+      "canonical": ["https://portfolio-phi-flax-36.vercel.app/"],
+      "robots": "index,follow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "Frontend Engineer especializado en Angular, TypeScript y RxJS. Portfolio de Oscar Hinjos con experiencia, proyectos y case studies de frontend."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "Oscar Hinjos | Frontend Engineer | Angular & TypeScript"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "Frontend Engineer especializado en Angular, TypeScript y RxJS. Portfolio de Oscar Hinjos con experiencia, proyectos y case studies de frontend."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "website"
+        },
+        "og:url": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/"
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "Oscar Hinjos | Frontend Engineer | Angular & TypeScript"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "Frontend Engineer especializado en Angular, TypeScript y RxJS. Portfolio de Oscar Hinjos con experiencia, proyectos y case studies de frontend."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        }
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Person",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/#person",
+              "name": "Oscar Hinjos López",
+              "alternateName": "Oscar Hinjos",
+              "jobTitle": "Frontend Engineer",
+              "url": "https://portfolio-phi-flax-36.vercel.app/",
+              "sameAs": [
+                "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+                "https://github.com/OscarHinjosLopez"
+              ],
+              "knowsAbout": ["Angular", "TypeScript", "RxJS", "React"]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/#website",
+              "name": "Oscar Hinjos — Frontend Engineer",
+              "url": "https://portfolio-phi-flax-36.vercel.app/",
+              "inLanguage": "es-ES",
+              "author": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              }
+            },
+            {
+              "@type": "ProfilePage",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/#profile",
+              "url": "https://portfolio-phi-flax-36.vercel.app/",
+              "inLanguage": "es-ES",
+              "mainEntity": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              }
+            }
+          ]
+        }
+      ],
+      "staticH1": "Frontend Engineer ."
+    },
+    {
+      "route": "/projects/portfolio-engineering",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/projects/portfolio-engineering",
+      "headersMs": 3.5527000000000015,
+      "htmlBytes": 49571,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "Portfolio Engineering | Angular Case Study | Oscar Hinjos",
+      "canonical": ["https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering"],
+      "robots": "index,follow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "Case study del portfolio de Oscar Hinjos: arquitectura Angular, Design System, responsive, accesibilidad, testing y rendimiento."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "Portfolio Engineering | Angular Case Study | Oscar Hinjos"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "Case study del portfolio de Oscar Hinjos: arquitectura Angular, Design System, responsive, accesibilidad, testing y rendimiento."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "article"
+        },
+        "og:url": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering"
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/portfolio-engineering.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Case study Portfolio Engineering — Angular y TypeScript"
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "Portfolio Engineering | Angular Case Study | Oscar Hinjos"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "Case study del portfolio de Oscar Hinjos: arquitectura Angular, Design System, responsive, accesibilidad, testing y rendimiento."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/portfolio-engineering.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Case study Portfolio Engineering — Angular y TypeScript"
+        }
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering#page",
+              "name": "Portfolio Engineering | Angular Case Study | Oscar Hinjos",
+              "description": "Case study del portfolio de Oscar Hinjos: arquitectura Angular, Design System, responsive, accesibilidad, testing y rendimiento.",
+              "url": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering",
+              "inLanguage": "es-ES",
+              "author": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              },
+              "mainEntity": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering#work"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering#work",
+              "name": "Portfolio Engineering",
+              "description": "Case study del portfolio de Oscar Hinjos: arquitectura Angular, Design System, responsive, accesibilidad, testing y rendimiento.",
+              "url": "https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering",
+              "inLanguage": "es-ES",
+              "creator": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              },
+              "about": "Angular frontend engineering",
+              "keywords": ["Angular", "TypeScript", "SCSS", "Accessibility", "Testing"]
+            }
+          ]
+        }
+      ],
+      "staticH1": "Portfolio Engineering ."
+    },
+    {
+      "route": "/projects/sentinel",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/projects/sentinel",
+      "headersMs": 2.7468000000000075,
+      "htmlBytes": 62385,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos",
+      "canonical": ["https://portfolio-phi-flax-36.vercel.app/projects/sentinel"],
+      "robots": "index,follow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "Case study de Sentinel, un dashboard SOC construido con Angular, Signals y RxJS con RBAC, tiempo real, accesibilidad y testing."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "Case study de Sentinel, un dashboard SOC construido con Angular, Signals y RxJS con RBAC, tiempo real, accesibilidad y testing."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "article"
+        },
+        "og:url": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel"
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/sentinel.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Sentinel — Cybersecurity Operations Dashboard con captura real del dashboard"
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "Case study de Sentinel, un dashboard SOC construido con Angular, Signals y RxJS con RBAC, tiempo real, accesibilidad y testing."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/sentinel.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Sentinel — Cybersecurity Operations Dashboard con captura real del dashboard"
+        }
+      },
+      "schemas": [
+        {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel#page",
+              "name": "Sentinel | Angular Cybersecurity Dashboard | Oscar Hinjos",
+              "description": "Case study de Sentinel, un dashboard SOC construido con Angular, Signals y RxJS con RBAC, tiempo real, accesibilidad y testing.",
+              "url": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel",
+              "inLanguage": "es-ES",
+              "author": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              },
+              "mainEntity": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel#work"
+              }
+            },
+            {
+              "@type": "CreativeWork",
+              "@id": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel#work",
+              "name": "Sentinel",
+              "description": "Case study de Sentinel, un dashboard SOC construido con Angular, Signals y RxJS con RBAC, tiempo real, accesibilidad y testing.",
+              "url": "https://portfolio-phi-flax-36.vercel.app/projects/sentinel",
+              "inLanguage": "es-ES",
+              "creator": {
+                "@id": "https://portfolio-phi-flax-36.vercel.app/#person"
+              },
+              "about": "Cybersecurity Operations Dashboard",
+              "keywords": ["Angular", "Signals", "RxJS", "RBAC", "Accessibility"]
+            }
+          ]
+        }
+      ],
+      "staticH1": "Sentinel"
+    },
+    {
+      "route": "/design-system",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/design-system",
+      "headersMs": 3.615700000000004,
+      "htmlBytes": 47309,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "Design System | Oscar Hinjos",
+      "canonical": ["https://portfolio-phi-flax-36.vercel.app/design-system"],
+      "robots": "noindex,follow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "Catálogo interno de componentes y estilos del portfolio de Oscar Hinjos."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "Design System | Oscar Hinjos"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "Catálogo interno de componentes y estilos del portfolio de Oscar Hinjos."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "website"
+        },
+        "og:url": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/design-system"
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "Design System | Oscar Hinjos"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "Catálogo interno de componentes y estilos del portfolio de Oscar Hinjos."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        }
+      },
+      "schemas": [],
+      "staticH1": "Design System"
+    },
+    {
+      "route": "/projects/lol-scenario-trainer",
+      "status": 200,
+      "url": "http://127.0.0.1:4173/projects/lol-scenario-trainer",
+      "headersMs": 2.7283999999999935,
+      "htmlBytes": 14795,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "LoL Scenario Trainer | Oscar Hinjos",
+      "canonical": ["https://portfolio-phi-flax-36.vercel.app/projects/lol-scenario-trainer"],
+      "robots": "noindex,follow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "Case study de LoL Scenario Trainer en construcción."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "LoL Scenario Trainer | Oscar Hinjos"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "Case study de LoL Scenario Trainer en construcción."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "website"
+        },
+        "og:url": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/projects/lol-scenario-trainer"
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "LoL Scenario Trainer | Oscar Hinjos"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "Case study de LoL Scenario Trainer en construcción."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        }
+      },
+      "schemas": [],
+      "staticH1": "Case study en construcción"
+    },
+    {
+      "route": "/ruta-inexistente",
+      "status": 404,
+      "url": "http://127.0.0.1:4173/ruta-inexistente",
+      "headersMs": 2.102100000000007,
+      "htmlBytes": 14183,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "title": "Página no encontrada | Oscar Hinjos",
+      "canonical": [],
+      "robots": "noindex,nofollow",
+      "metadata": {
+        "description": {
+          "count": 1,
+          "value": "La página solicitada no existe en el portfolio de Oscar Hinjos."
+        },
+        "og:title": {
+          "count": 1,
+          "value": "Página no encontrada | Oscar Hinjos"
+        },
+        "og:description": {
+          "count": 1,
+          "value": "La página solicitada no existe en el portfolio de Oscar Hinjos."
+        },
+        "og:type": {
+          "count": 1,
+          "value": "website"
+        },
+        "og:url": {
+          "count": 0,
+          "value": ""
+        },
+        "og:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "og:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        },
+        "og:image:width": {
+          "count": 1,
+          "value": "1200"
+        },
+        "og:image:height": {
+          "count": 1,
+          "value": "630"
+        },
+        "twitter:card": {
+          "count": 1,
+          "value": "summary_large_image"
+        },
+        "twitter:title": {
+          "count": 1,
+          "value": "Página no encontrada | Oscar Hinjos"
+        },
+        "twitter:description": {
+          "count": 1,
+          "value": "La página solicitada no existe en el portfolio de Oscar Hinjos."
+        },
+        "twitter:image": {
+          "count": 1,
+          "value": "https://portfolio-phi-flax-36.vercel.app/assets/og/home.png"
+        },
+        "twitter:image:alt": {
+          "count": 1,
+          "value": "Oscar Hinjos — Frontend Engineer. Angular, TypeScript, RxJS y React."
+        }
+      },
+      "schemas": [],
+      "staticH1": "404"
+    }
+  ],
+  "assets": [
+    {
+      "pathname": "/robots.txt",
+      "status": 200,
+      "bytes": 85,
+      "headersMs": 1.6013999999999982,
+      "headers": {
+        "content-type": "text/plain",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/sitemap.xml",
+      "status": 200,
+      "bytes": 355,
+      "headersMs": 1.6740999999999957,
+      "headers": {
+        "content-type": "application/xml",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/favicon.svg",
+      "status": 200,
+      "bytes": 259,
+      "headersMs": 1.7396999999999991,
+      "headers": {
+        "content-type": "image/svg+xml",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/assets/cv-oscar-hinjos.pdf",
+      "status": 200,
+      "bytes": 78104,
+      "headersMs": 2.044799999999995,
+      "headers": {
+        "content-type": "application/pdf",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/assets/og/home.png",
+      "status": 200,
+      "bytes": 28761,
+      "headersMs": 2.0319000000000074,
+      "headers": {
+        "content-type": "image/png",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "dimensions": [1200, 630]
+    },
+    {
+      "pathname": "/assets/og/portfolio-engineering.png",
+      "status": 200,
+      "bytes": 26249,
+      "headersMs": 1.1251999999999924,
+      "headers": {
+        "content-type": "image/png",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "dimensions": [1200, 630]
+    },
+    {
+      "pathname": "/assets/og/sentinel.png",
+      "status": 200,
+      "bytes": 122563,
+      "headersMs": 1.0811999999999955,
+      "headers": {
+        "content-type": "image/png",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      },
+      "dimensions": [1200, 630]
+    },
+    {
+      "pathname": "/assets/projects/sentinel/dashboard.webp",
+      "status": 200,
+      "bytes": 70028,
+      "headersMs": 1.113500000000002,
+      "headers": {
+        "content-type": "image/webp",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/assets/projects/sentinel/dashboard-720.webp",
+      "status": 200,
+      "bytes": 24616,
+      "headersMs": 1.008499999999998,
+      "headers": {
+        "content-type": "image/webp",
+        "content-encoding": null,
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/styles-CQZAEY4G.css",
+      "status": 200,
+      "bytes": 5028,
+      "headersMs": 1.1621000000000095,
+      "headers": {
+        "content-type": "text/css",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-BhcP3Com.js",
+      "status": 200,
+      "bytes": 269827,
+      "headersMs": 6.534400000000005,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/main-MPY5KYC3.js",
+      "status": 200,
+      "bytes": 64839,
+      "headersMs": 2.2964999999999947,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-DouYrWsC.js",
+      "status": 200,
+      "bytes": 23525,
+      "headersMs": 1.1380000000000052,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-DyWXtN2Z.js",
+      "status": 200,
+      "bytes": 33173,
+      "headersMs": 1.278800000000004,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-D2YTFfUO.js",
+      "status": 200,
+      "bytes": 8739,
+      "headersMs": 0.8543999999999983,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-CmIqLvVm.js",
+      "status": 200,
+      "bytes": 1605,
+      "headersMs": 0.8614999999999924,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    },
+    {
+      "pathname": "/chunk-C6RE5gPU.js",
+      "status": 200,
+      "bytes": 495,
+      "headersMs": 0.7952000000000083,
+      "headers": {
+        "content-type": "text/javascript",
+        "content-encoding": "gzip",
+        "cache-control": null,
+        "strict-transport-security": null,
+        "x-content-type-options": null,
+        "referrer-policy": null,
+        "permissions-policy": null,
+        "content-security-policy": null,
+        "x-vercel-cache": null
+      }
+    }
+  ],
+  "issues": [],
+  "robots": "User-agent: *\nAllow: /\nSitemap: https://portfolio-phi-flax-36.vercel.app/sitemap.xml\n",
+  "sitemap": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">\n  <url><loc>https://portfolio-phi-flax-36.vercel.app/</loc></url>\n  <url><loc>https://portfolio-phi-flax-36.vercel.app/projects/portfolio-engineering</loc></url>\n  <url><loc>https://portfolio-phi-flax-36.vercel.app/projects/sentinel</loc></url>\n</urlset>\n",
+  "httpsRedirect": null
+}

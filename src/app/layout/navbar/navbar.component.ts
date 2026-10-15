@@ -28,10 +28,10 @@ export class NavbarComponent {
   });
   private readonly router = inject(Router);
   readonly links = [
-    { label: 'Work', fragment: 'work' },
-    { label: 'Experience', fragment: 'experience' },
-    { label: 'Skills', fragment: 'skills' },
-    { label: 'About', fragment: 'about' },
+    { label: 'Stack', fragment: 'skills' },
+    { label: 'Experiencia', fragment: 'experience' },
+    { label: 'Proyectos', fragment: 'work' },
+    { label: 'Sobre mí', fragment: 'about' },
   ] as const;
 
   constructor() {

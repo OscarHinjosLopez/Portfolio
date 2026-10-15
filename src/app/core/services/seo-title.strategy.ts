@@ -11,6 +11,6 @@ export class SeoTitleStrategy extends TitleStrategy {
     let route = snapshot.root;
     while (route.firstChild) route = route.firstChild;
     const data = route.data['seo'] as SeoData | undefined;
-    this.seo.update(data ?? { ...SEO.notFound, canonicalPath: snapshot.url.split(/[?#]/)[0] });
+    this.seo.update(data ?? SEO.notFound);
   }
 }

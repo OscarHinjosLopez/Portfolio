@@ -50,3 +50,25 @@ html {
     scroll-behavior: auto;
   }
 }
+
+@font-face {
+  font-family: 'Sora';
+  src: url('/assets/fonts/sora.woff2') format('woff2');
+  font-weight: 100 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  src: url('/assets/fonts/source-sans-3.woff2') format('woff2');
+  font-weight: 200 900;
+  font-display: swap;
+}
+h1,
+h2,
+h3,
+.brand {
+  font-family: 'Sora', sans-serif;
+}
+body {
+  font-size: 18px;
+}

@@ -26,10 +26,9 @@ import { RevealOnScrollDirective } from '../../shared/directives/reveal-on-scrol
     ScrollSpyDirective,
     RevealOnScrollDirective,
   ],
-  template:
-    '<main id="main-content" tabindex="-1" [appScrollSpy]="sections" scrollSpyScope="home"><app-hero /><app-credentials-strip appReveal /><app-tech-stack appReveal /><app-selected-work appReveal /><app-experience-section appReveal /><app-how-i-build appReveal /><app-about appReveal /><app-contact appReveal /></main>',
+  templateUrl: './home.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent {
-  readonly sections = ['skills', 'work', 'experience', 'about', 'contact'];
+  readonly sections = ['skills', 'experience', 'work', 'about', 'contact'];
 }

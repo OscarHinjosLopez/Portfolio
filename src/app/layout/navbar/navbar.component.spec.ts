@@ -49,20 +49,20 @@ describe('NavbarComponent', () => {
     const element = fixture.nativeElement as HTMLElement;
     const links = [...element.querySelectorAll('#primary-navigation a')];
     expect(links.map((link) => link.textContent?.trim())).toEqual([
-      'Work',
-      'Experience',
-      'Skills',
-      'About',
-      'Contact',
+      'Stack',
+      'Experiencia',
+      'Proyectos',
+      'Sobre mí',
+      'Contacto',
     ]);
     expect(links.map((link) => link.getAttribute('href'))).toEqual([
-      '/#work',
-      '/#experience',
       '/#skills',
+      '/#experience',
+      '/#work',
       '/#about',
       '/#contact',
     ]);
-    expect(element.querySelector('.brand')?.textContent).toBe('OH.');
+    expect(element.querySelector('.brand')?.textContent).toBe('OHL.');
     expect(element.querySelector('nav')?.getAttribute('aria-label')).toBe('Navegación principal');
   });
 
@@ -105,7 +105,7 @@ describe('NavbarComponent', () => {
     element.querySelector<HTMLAnchorElement>('#primary-navigation a')?.click();
     await fixture.whenStable();
     expect(fixture.componentInstance.menuOpen()).toBe(false);
-    expect(TestBed.inject(Router).url).toBe('/#work');
+    expect(TestBed.inject(Router).url).toBe('/#skills');
   });
 
   it('navigates to About and closes the mobile menu', async () => {

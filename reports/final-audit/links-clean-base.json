@@ -1,0 +1,329 @@
+{
+  "phase": "clean-base",
+  "base": "http://127.0.0.1:4173",
+  "routes": [
+    {
+      "route": "/",
+      "status": 200,
+      "bytes": 61552
+    },
+    {
+      "route": "/design-system",
+      "status": 200,
+      "bytes": 36126
+    }
+  ],
+  "links": [
+    {
+      "route": "/",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OHL .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Stack",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experiencia",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "Sobre mí",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contacto",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Hablemos →",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/assets/cv-oscar-hinjos.pdf",
+      "type": "DOWNLOAD",
+      "label": "Descargar CV ↓",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "mailto:hinjoslopezoscar@gmail.com",
+      "type": "MAILTO",
+      "label": "hinjoslopezoscar@gmail.com",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/assets/cv-oscar-hinjos.pdf",
+      "type": "DOWNLOAD",
+      "label": "Descargar CV ↓",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OHL .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "#main-content",
+      "type": "ANCHOR",
+      "label": "Saltar al contenido principal",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "OHL .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#skills",
+      "type": "ANCHOR",
+      "label": "Stack",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#experience",
+      "type": "ANCHOR",
+      "label": "Experiencia",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#work",
+      "type": "ANCHOR",
+      "label": "Proyectos",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#about",
+      "type": "ANCHOR",
+      "label": "Sobre mí",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#contact",
+      "type": "ANCHOR",
+      "label": "Contacto",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "Enlace interno · Inicio",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "https://angular.dev/",
+      "type": "EXTERNAL",
+      "label": "Angular · enlace externo ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "/",
+      "type": "INTERNAL",
+      "label": "Volver al inicio",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "OHL .",
+      "target": "",
+      "rel": ""
+    },
+    {
+      "route": "/design-system",
+      "href": "https://www.linkedin.com/in/oscar-hinjos-l%C3%B3pez-b3498320b",
+      "type": "EXTERNAL",
+      "label": "LinkedIn ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "https://github.com/OscarHinjosLopez",
+      "type": "EXTERNAL",
+      "label": "GitHub ↗",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    {
+      "route": "/design-system",
+      "href": "/#top",
+      "type": "ANCHOR",
+      "label": "Volver arriba ↑",
+      "target": "",
+      "rel": ""
+    }
+  ],
+  "resources": [
+    {
+      "asset": "/robots.txt",
+      "status": 200,
+      "type": "text/plain",
+      "bytes": 85,
+      "cache": null
+    },
+    {
+      "asset": "/sitemap.xml",
+      "status": 200,
+      "type": "application/xml",
+      "bytes": 176,
+      "cache": null
+    },
+    {
+      "asset": "/favicon.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 259,
+      "cache": null
+    },
+    {
+      "asset": "/assets/cv-oscar-hinjos.pdf",
+      "status": 200,
+      "type": "application/pdf",
+      "bytes": 78104,
+      "cache": null,
+      "sha256": "26e764bca2f149d370ff891cdabe240a37f684cdd13ad888fa6ed011379c5183"
+    },
+    {
+      "asset": "/assets/og/home.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 28761,
+      "cache": null
+    },
+    {
+      "asset": "/assets/oscar-hinjos.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 1854195,
+      "cache": null
+    }
+  ],
+  "external": [],
+  "issues": []
+}

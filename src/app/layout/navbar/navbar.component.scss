@@ -113,3 +113,14 @@ header {
     gap: v.$space-6;
   }
 }
+
+.navigation-panel > a {
+  background: #0e1116;
+  color: #fafaf7;
+  border-radius: 999px;
+  padding: 10px 20px;
+}
+.navigation-links a {
+  font-size: 16px;
+  font-weight: 600;
+}

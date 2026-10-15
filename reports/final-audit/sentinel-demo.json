@@ -1,0 +1,6 @@
+{
+  "status": 200,
+  "url": "https://sentinel-cybersecurity-operations-d.vercel.app/login?returnUrl=%2Fdashboard",
+  "headings": ["Sign in to Sentinel", "Demo accounts"],
+  "errors": []
+}

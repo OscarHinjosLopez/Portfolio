@@ -10,7 +10,7 @@ describe('FooterComponent', () => {
     await fixture.whenStable();
     const element = fixture.nativeElement as HTMLElement;
     expect(element.querySelector('footer')).toBeTruthy();
-    expect(element.querySelector('.brand')?.textContent).toBe('OH.');
+    expect(element.querySelector('.brand')?.textContent).toBe('OHL.');
     expect(fixture.componentInstance.currentYear).toBe(new Date().getFullYear());
     expect(element.textContent).toContain(`© ${new Date().getFullYear()} Oscar Hinjos`);
     expect(element.textContent).toContain('Built with Angular');

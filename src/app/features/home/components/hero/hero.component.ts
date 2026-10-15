@@ -16,6 +16,7 @@ export const CV_URL = PROFILE.cv;
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeroComponent {
+  readonly profile = PROFILE;
   readonly cvUrl = CV_URL;
   readonly technologies = ['Angular', 'TypeScript', 'React', 'RxJS'] as const;
 }

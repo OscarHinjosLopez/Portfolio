@@ -2,23 +2,35 @@
   <div class="container hero-layout">
     <div class="hero-content">
       <p class="availability">
-        <span class="availability-dot" aria-hidden="true"></span>Disponible para nuevas
-        oportunidades
+        <span class="availability-dot" aria-hidden="true"></span>Disponible · Madrid
       </p>
-      <p class="hero-name">Oscar Hinjos</p>
-      <h1 id="hero-title" class="display-xl">
-        Frontend<br />Engineer<span class="title-dot">.</span>
-      </h1>
+      <h1 id="hero-title">Hola, soy Oscar.<br /><span>Frontend Developer.</span></h1>
       <p class="hero-description">
         Construyo aplicaciones web modernas, escalables y orientadas a producto con Angular, React y
         TypeScript.
       </p>
       <div class="hero-actions">
-        <a appButton [routerLink]="['/']" fragment="work"
-          >Ver proyectos <span aria-hidden="true">↓</span></a
+        <a appButton [routerLink]="['/']" fragment="contact"
+          >Hablemos <span aria-hidden="true">→</span></a
         >
         <a appButton variant="secondary" [href]="cvUrl" download="CV_Oscar_Hinjos.pdf"
-          >Descargar CV <span class="link-arrow" aria-hidden="true">↗</span></a
+          >Descargar CV <span aria-hidden="true">↓</span></a
+        >
+        <a
+          appButton
+          variant="secondary"
+          [href]="profile.github"
+          target="_blank"
+          rel="noopener noreferrer"
+          >GitHub ↗</a
+        >
+        <a
+          appButton
+          variant="secondary"
+          [href]="profile.linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn ↗</a
         >
       </div>
       <ul class="hero-technologies" aria-label="Stack principal">
@@ -27,10 +39,16 @@
         }
       </ul>
     </div>
-    <aside class="hero-metadata" aria-label="Ubicación y modalidad de trabajo">
-      <p class="metadata-label">01 / FRONTEND ENGINEER</p>
-      <p class="metadata-location">Madrid · España</p>
-      <p class="metadata-availability">Disponible para remoto / híbrido</p>
-    </aside>
+    <div class="portrait">
+      <div class="orbit" aria-hidden="true"></div>
+      <img
+        class="portrait-photo"
+        src="/assets/oscar-hinjos.png"
+        alt="Oscar Hinjos López"
+        width="1122"
+        height="1402"
+        fetchpriority="high"
+      />
+    </div>
   </div>
 </section>

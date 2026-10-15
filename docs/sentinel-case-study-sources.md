@@ -1,3 +1,5 @@
+> Documento histórico anterior a la retirada de los proyectos. Sus rutas, capturas y resultados no describen la versión actual.
+
 # Sentinel case study — fuentes y alcance
 
 Revisión del 5 de octubre de 2026. Fuente técnica: repositorio local independiente

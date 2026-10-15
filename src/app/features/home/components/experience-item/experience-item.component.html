@@ -21,11 +21,14 @@
       </p>
     </header>
     <p class="summary">{{ experience().summary }}</p>
-    <ul class="highlights">
-      @for (highlight of experience().highlights; track highlight) {
-        <li>{{ highlight }}</li>
-      }
-    </ul>
+    <details>
+      <summary>Responsabilidades y contribuciones</summary>
+      <ul class="highlights">
+        @for (highlight of experience().highlights; track highlight) {
+          <li>{{ highlight }}</li>
+        }
+      </ul>
+    </details>
     <ul class="technologies" aria-label="Tecnologías utilizadas">
       @for (technology of experience().technologies; track technology) {
         <li><app-tech-chip [label]="technology" /></li>
